@@ -1,0 +1,60 @@
+.modal
+	position: fixed
+	z-index: -1
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	opacity: 0
+	visibility: hidden
+	+vertical
+	+gpu
+	transition: opacity 0.3s, visibility 0.3s, z-index 0.3s
+	background-color: rgba($black, .8) 
+	&.is-open
+		opacity: 1
+		visibility: visible
+		z-index: 100
+	&__container
+		padding: 20px
+		position: relative
+		z-index: 1
+		font-size: 14px
+		vertical-align: middle
+		display: inline-block
+		background-color: #fff
+		&_right
+			position: absolute
+			top: 0
+			bottom: 0
+			right: 0
+			width: 400px
+			height: 100vh
+	&__close
+		position: absolute
+		top: 20px
+		right: 20px
+		background-color: transparent
+		font-size: 0
+		color: $grey
+		.icon
+			font-size: 12px
+			fill: $grey
+	&__title
+		font-size: 20px
+		color: $black
+		font-weight: 500
+		margin-bottom: 32px
+	&__search
+		margin-bottom: 36px
+	&__text
+		font-size: 15px
+		color: $black
+		margin-bottom: 200px
+		&_bold
+			font-weight: 500
+		&_left
+			text-align: left
+	&__image
+		padding-bottom: 100%
+		background-repeat: no-repeat

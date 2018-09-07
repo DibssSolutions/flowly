@@ -1,0 +1,17 @@
+{% import "partials/_mixins.html" as mixins %}
+
+{% macro modalSearch(props) %}
+    <form action="/" class="modal-search">
+
+        <button class="modal-search__find" type="button">{{ mixins.icon('search') }}</button>
+
+        <input type="text" class="modal-search__input" placeholder="{{props.placeholder}}" value="{{props.value or ''}}">
+
+        {% if props.btn_close %}
+            <button class="modal-search__close" type="button">{{ mixins.icon('close') }}</button>
+        {% else %}
+            <button class="modal-search__next {% if props.btn_next_active %}is-active{% endif %}" type="button">{{ mixins.icon('arrow-right') }}</button>
+        {% endif %}
+
+    </form>
+{% endmacro %}

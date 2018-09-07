@@ -1,0 +1,46 @@
+{% import "partials/_mixins.html" as mixins %}
+{% import "components/_search.html" as Search %}
+
+{% macro modal_1() %}
+<div class="modal__search">
+    {{Search.modalSearch({'placeholder': 'Вставьте адрес страницы'})}}
+</div>
+<div class="modal__text">
+    Находите понравившиеся товары в интернете и добавляйте их в коллекции
+</div>
+{% endmacro %}
+
+{% macro modal_2() %}
+<div class="modal__search">
+    {{Search.modalSearch({'placeholder': 'Вставьте адрес страницы', 'value': 'https://www.lamoda.ru/p/ra014d...', btn_next_active: true})}}
+</div>
+<div class="modal__text">
+    Секундочку ...
+</div>
+{% endmacro %}
+
+{% macro modal_2() %}
+<div class="modal__search">
+    {{Search.modalSearch({'placeholder': 'Вставьте адрес страницы', 'value': 'https://www.lamoda.ru/p/ra014d...', btn_next_active: true})}}
+</div>
+<div class="modal__text">
+    Секундочку ...
+</div>
+{% endmacro %}
+
+{% macro modal_3() %}
+<div class="modal__search">
+    {{Search.modalSearch({'placeholder': 'Вставьте адрес страницы', 'value': 'https://www.lamoda.ru/p/ra014d...', btn_close: true})}}
+</div>
+<div class="modal__text modal__text_bold modal__text_left">
+    Выберите необходимые фотографии
+</div>
+<div class="modal__products">
+    <div class="modal__product">
+        <div class="product">
+            
+        </div>
+    </div>
+</div>
+{% endmacro %}
+

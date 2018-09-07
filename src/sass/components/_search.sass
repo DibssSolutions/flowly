@@ -1,0 +1,59 @@
+.modal-search
+	position: relative
+	font-size: 0
+	width: 100%
+	border: 2px solid $blue
+	border-radius: 5px
+	height: 50px
+	padding-left: 36px
+	+vertical
+	&__find
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		left: 12px
+		font-size: 0
+		background-color: transparent
+		color: $grey
+		.icon
+			font-size: 16px
+			line-height: 1
+	&__input
+		width: 100%
+		font-size: 15px
+		font-family: $helvCyr
+		color: $black
+		display: inline-block
+		vertical-align: middle
+		font-weight: 500
+		&::placeholder
+			font-family: $helvCyr
+			color: $grey
+			font-weight: 500
+		&:focus
+			&::placeholder
+				font-size: 0
+	&__next, 
+	&__close
+		position: absolute
+		right: 12px
+		top: 50%
+		transform: translateY(-50%)
+	&__next
+		height: 35px
+		width: 35px
+		border-radius: 50%
+		color: $blue
+		color: $blue
+		background-color: $light-blue
+		.icon
+			font-size: 16px
+			fill: $blue
+	&__close
+		background-color: transparent
+		.icon
+			font-size: 12px
+			fill: $grey
+			
+			
+

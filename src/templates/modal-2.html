@@ -1,0 +1,20 @@
+--- title: modal-follow-card ---
+{% import "partials/_modal-follow-card.html" as modal %}
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+    <div class="modal is-open">
+        <div class="modal__container modal__container_right">
+            <button class="modal__close">
+                {{mixins.icon('close')}}
+            </button>
+            <h4 class="modal__title">
+                Зафоловить карточку
+            </h4>
+            {{modal.modal_2()}}
+            <div class="modal__image" style="background-image: url(./img/illustration_1.jpg);"></div>
+        </div>
+    </div>
+
+{% endblock %}
