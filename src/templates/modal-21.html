@@ -1,0 +1,36 @@
+--- title: modal-follow-card ---
+{% import "partials/_modal-follow-card.html" as modal %}
+{% extends "layouts/_modal.html" %}
+{% set modalModifier = 'modal__container_w400' %}
+{% set modalTitle = 'Новая коллекция' %}
+{% block content %}
+
+   <form action="/" id="card-form">
+        <div class="form-control">
+            <input type="text" class="input" placeholder="Название"/>
+        </div>
+        <div class="form-control">
+            <input type="text" class="input" placeholder="Описание"/>
+        </div>
+        <div class="form-control">
+            <select name='1' id="1" class="js-select" data-placeholder="Выберите категорию">
+                <option value=""></option>
+                <option value="1">Категория-1</option>
+                <option value="2">Категория-2</option>
+                <option value="3">Категория-3</option>
+                <option value="4">Категория-4</option>
+            </select>
+        </div>
+        <div class="form-control">
+            <input type="file">
+        </div>
+        <div class="form-control">
+            {{mixins.toggler()}}
+        </div>
+        <div class="modal__buttons">
+                <button type="submit" form="card-form" class="btn btn_blue">Создать коллекцию</button>
+                <button type="button" class="btn btn_link">Отмена</button>
+            </div>
+    </form>
+
+{% endblock %}

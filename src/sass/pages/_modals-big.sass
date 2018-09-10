@@ -1,0 +1,38 @@
+.modal__container
+    &_800_600
+        height: 600px
+        width: 800px
+        +clr
+
+.modal
+    &__left,
+    &__right
+        float: left
+        width: 50%
+        height: 100%
+        position: relative
+    &__left
+        +vertical
+        font-size: 0
+        text-align: center
+        overflow: hidden
+    &__blur
+        position: absolute
+        +coverdiv
+        +cover
+        filter: blur(72.2px)
+        transition: filter 1s
+    &__right
+        padding: 20px
+    &__image-inner
+        border-radius: 8px
+        display: inline-block
+        vertical-align: middle
+        width: 221px
+        height: 350px
+        +cover
+        position: relative
+        z-index: 5
+        background-blend-mode: screen
+
+    

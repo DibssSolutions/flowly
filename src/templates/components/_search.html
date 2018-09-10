@@ -15,3 +15,10 @@
 
     </form>
 {% endmacro %}
+
+{% macro search() %}
+    <div class="search">
+        <input type="text" class="input input_search" placeholder="Поиск">
+        <button class="input-search-icon" type="button">{{ mixins.icon('search') }}</button>
+    </div>
+{% endmacro %}

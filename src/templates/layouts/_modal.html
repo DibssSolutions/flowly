@@ -1,0 +1,46 @@
+{% import "partials/_mixins.html" as mixins %}
+{% import "components/_search.html" as Search %}
+{% import "components/_product.html" as Product %}
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            {% if title %}{{ title }}
+            {% else %}Template{% endif %}
+        </title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#fff">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" media="all" href="css/app.css">
+        {# {% include "../partials/_media-tags.html" %} #}
+    </head>
+    <body>
+
+        <!-- BEGIN content -->
+        <div class="out">
+            <div class="mega-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore animi fuga doloremque rem consectetur atque tenetur facere itaque sapiente.
+            </div>
+            <div class="modal is-open">
+                <div class="modal__container {% if modalModifier %}{{ modalModifier }}{% endif %}">
+                    <button class="modal__close" type="button">
+                        {{mixins.icon('close')}}
+                    </button>
+                    <h4 class="modal__title">
+                        {{modalTitle}}
+                    </h4>
+                    {% block content %}{% endblock %}
+                </div>
+            </div>
+        </div>
+        <!-- END content -->
+
+        <!-- BEGIN scripts -->
+        <script type="text/javascript" src="js/app.js"></script>
+        <!-- END scripts -->
+
+    </body>
+</html>

@@ -1,0 +1,11 @@
+{% import "partials/_mixins.html" as mixins %}
+
+{% macro productCheck(img) %}
+    <label class="product">
+        <input type="checkbox">
+        <span class="product__image" style="background-image: url(./img/{{img}});"></span>
+        <span class="product__check">
+            {{ mixins.icon('check') }}
+        </span>
+    </label>
+{% endmacro %}

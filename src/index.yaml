@@ -3,9 +3,17 @@ ProjectTitle: flowly
 PageList:
 - file: page.html
   ready: 50
-- file: modal-1.html
+- file: modal-01.html
   ready: 50
-- file: modal-2.html
+- file: modal-02.html
   ready: 50
-- file: modal-3.html
+- file: modal-03.html
+  ready: 50
+- file: modal-04.html
+  ready: 50
+- file: modal-11.html
+  ready: 50
+- file: modal-12.html
+  ready: 50
+- file: modal-21.html
   ready: 50

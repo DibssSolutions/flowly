@@ -1,3 +1,50 @@
 {% macro icon(i) %}
-<svg class="icon icon-{{i}}"><use xlink:href="img/sprite.svg#icon-{{i}}"></use></svg>
+    <svg class="icon icon-{{i}}">
+        <use xlink:href="img/sprite.svg#icon-{{i}}"></use>
+    </svg>
+{% endmacro %}
+
+{% macro newEl(props) %}
+    <button type="button" class="new-element">
+        <span class="new-element__image" style="background-image: url(./img/{{props.image}});">
+            <span class="new-element__plus">
+                {{ icon('plus') }}
+            </span>
+        </span>
+        <div class="new-element__text">
+            {{props.text}}
+        </div>
+    </button>
+{% endmacro %}
+
+{% macro checkCollection(props) %}
+    <label class="check-collection {% if props.modifier %}{{props.modifier}}{% endif %}" for="{{props.id}}">
+        <input type="checkbox" id="{{props.id}}">
+        <span class="check-collection__image" style="background-image: url(./img/{{props.image}});">
+            <span class="check-collection__check">
+                {{ icon('check') }}
+            </span>
+        </span>
+        <span class="check-collection__text">
+            {{props.text}}
+        </span>
+        {% if props.private %}
+            <span class="check-collection__private">
+                {{ icon('lock') }}
+            </span>
+        {% endif %}
+        {% if props.helperText %}
+            <div class="check-collection__helper">
+                {{props.helperText}}
+            </div>
+        {% endif %}
+        <span class="check-collection__bg"></span>
+    </label>
+{% endmacro %}
+
+{% macro toggler(text, radio) %}
+    <label class="toggler">
+        <input type="{{radio or 'checkbox'}}" name="checkbox">
+        <span class="toggler__text">{{ text or 'Видно только мне' }}</span>
+    </label>
 {% endmacro %}

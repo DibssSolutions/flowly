@@ -1,0 +1,50 @@
+--- title: modal-follow-card ---
+{% import "partials/_modal-follow-card.html" as modal %}
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+    <div class="mega-text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore animi fuga doloremque rem consectetur atque tenetur facere itaque sapiente.
+    </div>
+    <div class="modal is-open">
+        <div class="modal__container modal__container_800_600">
+            <button class="modal__close" type="button">
+                {{mixins.icon('close')}}
+            </button>
+            <div class="modal__left">
+                <div class="modal__blur" style="background-image: url(./img/girl_big.png)"></div>
+                <div class="modal__image-inner" style="background-image: url(./img/girl_small.jpg)"></div>
+            </div>
+            <div class="modal__right">
+                <h4 class="modal__title">
+                    Добавить в коллекцию
+                </h4>
+                <form action="/" id="card-form">
+                    <div class="form-control">
+                        <textarea name="" id="" cols="30" rows="2" class="input">Куртка выполнена из денима @sdklimov. Подкладка выполнена из искусственного меха и гладкого текстиля. Детали: воротник, застежка на пуговицы, четыре #кармана.</textarea>
+                    </div>
+                    <div class="form-control">
+                        <input type="text" class="input input_search" placeholder="Поиск">
+                        <button class="input-search-icon" type="button">{{ mixins.icon('search') }}</button>
+                    </div>
+                    <div class="form-control form-control_checks">
+                        {{mixins.newEl({image: "green-shoes.png", text: "Новая коллекция"})}}
+                        {{mixins.checkCollection({
+                        id: "check1",
+                        image: "collection-2.jpg",
+                        text: "Мои подборки на лето",
+                        private: true
+                    })}}
+                        {{mixins.checkCollection({
+                        id: "check2",
+                        image: "collection-1.jpg",
+                        text: "Подруге на ДР"
+                    })}}
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}

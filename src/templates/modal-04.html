@@ -1,0 +1,11 @@
+--- title: modal-follow-card ---
+{% import "partials/_modal-follow-card.html" as modal %}
+{% extends "layouts/_modal.html" %}
+{% set modalModifier = 'modal__container_right' %}
+{% set modalTitle = 'Зафловлить карточку' %}
+
+{% block content %}
+
+    {{modal.modal_4()}}
+
+{% endblock %}
