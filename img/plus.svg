@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+  <defs>
+    <style>
+      .\30 ee98dd5-a42d-4165-be6b-90051bf0f891 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <title>Ресурс 9</title>
+  <g id="974f9265-6e8e-4087-815c-b8e2dfd9214f" data-name="Слой 2">
+    <g id="dcf0368f-a1cf-4462-ab5e-48d9acfd7f74" data-name="Слой 1">
+      <g>
+        <line class="0ee98dd5-a42d-4165-be6b-90051bf0f891" x1="7.5" y1="1" x2="7.5" y2="14"/>
+        <line class="0ee98dd5-a42d-4165-be6b-90051bf0f891" x1="14" y1="7.5" x2="1" y2="7.5"/>
+      </g>
+    </g>
+  </g>
+</svg>

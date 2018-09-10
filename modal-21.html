@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title> Template </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css">
+  </head>
+
+  <body>
+    <!-- BEGIN content -->
+    <div class="out">
+      <div class="mega-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore animi fuga doloremque rem consectetur atque tenetur facere itaque sapiente. </div>
+      <div class="modal is-open">
+        <div class="modal__container modal__container_w400">
+          <button class="modal__close" type="button">
+            <svg class="icon icon-close">
+              <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+          <h4 class="modal__title"> Новая коллекция </h4>
+          <form action="/" id="card-form">
+            <div class="form-control">
+              <input type="text" class="input" placeholder="Название" />
+            </div>
+            <div class="form-control">
+              <input type="text" class="input" placeholder="Описание" />
+            </div>
+            <div class="form-control">
+              <select name='1' id="1" class="js-select" data-placeholder="Выберите категорию">
+                <option value=""></option>
+                <option value="1">Категория-1</option>
+                <option value="2">Категория-2</option>
+                <option value="3">Категория-3</option>
+                <option value="4">Категория-4</option>
+              </select>
+            </div>
+            <div class="form-control">
+              <input type="file">
+            </div>
+            <div class="form-control">
+              <label class="toggler">
+                <input type="checkbox" name="checkbox">
+                <span class="toggler__text">Видно только мне</span>
+              </label>
+            </div>
+            <div class="modal__buttons">
+              <button type="submit" form="card-form" class="btn btn_blue">Создать коллекцию</button>
+              <button type="button" class="btn btn_link">Отмена</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- END content -->
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- END scripts -->
+  </body>
+
+</html>
