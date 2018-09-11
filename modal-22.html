@@ -25,7 +25,7 @@
           <h4 class="modal__title"> Новая коллекция </h4>
           <form action="/" id="card-form">
             <div class="form-control">
-              <input type="text" class="input" placeholder="Название">
+              <input type="text" class="input" placeholder="Название" value="Кросовки с улиц Лондона">
             </div>
             <div class="form-control">
               <input type="text" class="input" placeholder="Описание" />
@@ -40,17 +40,28 @@
               </select>
             </div>
             <div class="form-control">
-              <label class="file" for="add-cover">
-                <span class="file__add">
-                  <button class="btn-circle btn-add " type="button">
-                    <svg class="icon icon-plus">
-                      <use xlink:href="img/sprite.svg#icon-plus"></use>
-                    </svg>
-                  </button>
-                </span>
+              <label class="file is-selected" for="add-cover">
+                <span class="file__text text-muted">Превью обложки коллекции</span>
+                <div class="file__preview">
+                  <span class="file__image" style="background-image: url(./img/green-shoes.png);">
+                    <span class="file__delete delete-btn">
+                      <button class="btn-circle btn-delete ">
+                        <svg class="icon icon-close">
+                          <use xlink:href="img/sprite.svg#icon-close"></use>
+                        </svg>
+                      </button>
+                    </span>
+                  </span>
+                  <span class="file__add">
+                    <button class="btn-circle btn-add " type="button">
+                      <svg class="icon icon-plus">
+                        <use xlink:href="img/sprite.svg#icon-plus"></use>
+                      </svg>
+                    </button>
+                    <span class="file__another-photo text-muted">Загрузить другое фото</span>
+                  </span>
+                </div>
                 <input type="file" id="add-cover">
-                <span class="file__text">Добавить обложку <span class="text-muted">(по желанию)</span>
-                </span>
               </label>
             </div>
             <div class="form-control">
