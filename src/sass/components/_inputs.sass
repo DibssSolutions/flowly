@@ -1,0 +1,102 @@
+.file
+    position: relative
+    border: 1px solid $extra-light-grey
+    border-radius: $radius
+    height: 70px
+    display: block
+    text-align: left
+    padding-left: 70px
+    &.is-selected
+        height: auto
+        padding: 15px 18px
+        +clr
+    input
+        position: absolute
+        top: 0
+        opacity: 0
+    &__add
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        left: 12px
+        pointer-events: none
+        .is-selected &
+            position: relative
+            top: auto
+            left: auto
+            transform: none
+
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+            flex-grow: 1
+    &__text
+        display: inline-block
+        vertical-align: middle
+        line-height: 70px
+        .is-selected &
+            display: block
+            line-height: 1
+            margin-bottom: 12px
+            font-size: 13px
+    &__preview
+        display: flex
+    &__image
+        display: block
+        position: relative
+        padding-bottom: 175px
+        width: 150px
+        +cover
+        border-radius: 8px
+        flex: 0 0 150px
+    &__delete
+        position: absolute
+        left: 10px
+        bottom: 10px
+    &__another-photo
+        display: block
+        margin-top: 16px
+        max-width: 100px
+        text-align: center
+
+.form-control
+    margin-bottom: 14px
+    position: relative
+    &_checks
+        text-align: left
+    &_toggler
+        margin-bottom: 40px
+
+.input
+    width: 100%
+    padding: 10px 14px 11px 14px
+    font-family: $helvCyr
+    font-weight: 500
+    font-size: 15px
+    border: 1px solid $extra-light-grey
+    border-radius: $radius
+    color: $black
+    text-align: left
+    &:placeholder
+        color: $grey
+        font-weight: 500
+    &.is-invalid
+        border-color: $red
+    &_search
+        padding-left: 40px
+
+.input-search-icon
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    left: 14px
+    font-size: 0
+    background-color: transparent
+    color: $grey
+    .icon
+        font-size: 16px
+        line-height: 1
+
+textarea 
+    resize: vertical

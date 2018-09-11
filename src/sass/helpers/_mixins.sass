@@ -284,3 +284,12 @@
 		font-size: $font-size + px
 	@if $letter-spacing != null
 		letter-spacing: ($letter-spacing / 1000) + em
+
+=invis
+  opacity: 0
+  visibility: hidden
+  transition: opacity $tr, visibility $tr
+
+=vis
+  opacity: 1
+  visibility: visible 

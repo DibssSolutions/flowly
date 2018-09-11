@@ -1,0 +1,30 @@
+{% import "partials/_modal-2.html" as modal %}
+--- title: modal-follow-card ---
+
+{% extends "layouts/_modal.html" %}
+
+{% set modalModifier = 'modal__container_w400' %}
+{% set modalTitle = 'Поделиться' %}
+
+{% block content %}
+    <div class="modal__share">
+        <button class="btn-social-rounded btn-vk" type="button">
+            {{mixins.icon('vk')}}
+        </button>
+        <button class="btn-social-rounded btn-fb" type="button">
+            {{mixins.icon('facebook')}}
+        </button>
+        <button class="btn-social-rounded btn-twitter" type="button">
+            {{mixins.icon('twitter')}}
+        </button>
+        <button class="btn-social-rounded btn-pinterest" type="button">
+            {{mixins.icon('pinterest')}}
+        </button>
+        <button class="btn-social-rounded btn-messanger" type="button">
+            {{mixins.icon('messanger')}}
+        </button>
+        <button class="btn-copy-ref" type="button">
+            Скопировать ссылку
+        </button>
+    </div>
+{% endblock %}

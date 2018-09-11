@@ -1,0 +1,19 @@
+{% import "partials/_modal-2.html" as modal %}
+--- title: modal-follow-card ---
+
+{% extends "layouts/_modal.html" %}
+
+{% set modalModifier = 'modal__container_w400 modal__container_pb-0' %}
+{% set modalTitle = 'Изменить коллекцию' %}
+
+{% block content %}
+    {{modal.modal_2(
+        {
+            inputFirstValue: "Кросовки с улиц Лондона", 
+            fileSelected: true, 
+            prevImg: "green-shoes.png", 
+            addMembers: true, 
+            inputActive: true
+        }
+    )}}
+{% endblock %}

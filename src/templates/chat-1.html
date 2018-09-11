@@ -1,0 +1,19 @@
+{% import "partials/_mixins.html" as mixins %}
+{% extends "layouts/_layout.html" %}
+{% block content %}
+    <div class="mega-text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore animi fuga doloremque rem consectetur atque tenetur facere itaque sapiente.
+    </div>
+    <div class="modal is-open">
+        <div class="modal__container chat">
+            <div class="chat__connections">
+                <h2>Messages</h2>
+                <div class="chat__find">
+                    <input type="text" class="input input_search" placeholder="Поиск">
+                    <button class="input-search-icon" type="button">{{ mixins.icon('search') }}</button>
+                </div>
+            </div>
+            <div class="chat__message"></div>
+        </div>
+    </div>
+{% endblock %}

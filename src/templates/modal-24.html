@@ -1,0 +1,90 @@
+{% import "partials/_modal-2.html" as modal %}
+{% import "partials/_mixins.html" as mixins %}
+{% extends "layouts/_modal.html" %}
+
+{% set modalModifier = 'modal__container_w400 modal__container_pb-0' %}
+{% set modalTitle = 'Новая коллекция' %}
+{% set subcriptions = [
+    {
+        image: "avatar.jpg",
+        mainText: "Ivan Klimov",
+        secondaryText: "@sdklimov",
+        button: [
+            {
+                action: "subscr",
+                text: "Подписаны"
+            }
+        ]
+    }, {
+        mainText: "Валера Певнев",
+        secondaryText: "@pevnev",
+        button: [
+            {
+                action: "subscr",
+                text: "Подписаться"
+            }
+        ]
+    }, {
+        mainText: "Mads Burcharth",
+        secondaryText: "@mads",
+        button: [
+            {
+                action: "subscr",
+                text: "Подписаться"
+            }
+        ]
+    }, {
+        mainText: "Judio",
+        secondaryText: "@judio",
+        button: [
+            {
+                action: "subscr",
+                text: "Подписаться"
+            }
+        ]
+    }, {
+        image: "avatar.jpg",
+        mainText: "Очень длинное имяяяяяяяяяяяяяяяяяяяя",
+        secondaryText: "@nu_sovsem_dlinnoe@@@@@@@@@@@@@@@@@@@",
+        button: [
+            {
+                action: "unsubscribe",
+                text: "Отписаться"
+            }
+        ]
+    }, {
+        mainText: "Валера Певнев",
+        secondaryText: "@pevnev",
+        button: [
+            {
+                action: "subscr",
+                text: "Подписаться"
+            }
+        ]
+    }, {
+        mainText: "Mads Burcharth",
+        secondaryText: "@mads",
+        button: [
+            {
+                action: "subscr",
+                text: "Подписаться"
+            }
+        ]
+    }, {
+        mainText: "Judio",
+        secondaryText: "@judio",
+        button: [
+            {
+                action: "subscr",
+                text: "Подписаться"
+            }
+        ]
+    }
+
+] %}
+
+{% block content %}
+    {% for item in subcriptions %}
+        {{mixins.info(item)}}
+    {% endfor %}
+{% endblock %}

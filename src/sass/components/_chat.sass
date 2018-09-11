@@ -1,0 +1,73 @@
+.info
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    margin-bottom: 24px
+    &__text
+        margin-left: 12px
+        text-align: left
+        max-width: 160px
+    &__main
+        display: block
+        font-weight: 500
+        +text-overflow
+    &__secondary
+        color: $grey
+        +text-overflow
+    &__button
+        margin-left: auto
+
+.avatar
+    height: 40px
+    width: 40px
+    border-radius: 50%
+    background-color: $light-bg
+    // background-position: 50% 50%
+    // background-repeat: no-repeat
+    // background-size: 110% 110%
+    +cover
+
+.card-small
+    padding: 15px
+    border-radius: $radius
+    border: 1px solid $extra-light-grey
+    .info
+        margin-bottom: 0
+
+.add-members
+    &__row
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        margin-bottom: 10px
+        width: 100%
+        justify-content: space-between
+    &__input
+        flex-grow: 1
+        margin-left: 12px
+        font-weight: 500
+        font-size: 15px
+        font-family: $helvCyr
+    &__next
+        +invis
+        .is-active & 
+            +vis
+            .btn-next
+                color: $blue
+                background-color: $light-blue
+
+.chat
+    width: 900px
+    padding: 0
+    &__connections
+        float: left
+        width: 380px
+        border: 1px solid $extra-light-grey
+        padding: 20px
+    &__message
+        float: left
+        width: 480px
+        padding: 20px
+    &__find
+        position: relative
+

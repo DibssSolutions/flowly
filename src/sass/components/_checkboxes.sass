@@ -4,6 +4,7 @@
     cursor: pointer
     display: block
     user-select: none
+    text-align: left
     input
         position: absolute
         top: 0
@@ -40,3 +41,143 @@
             left: 3px
             background-color: $white
             transition: transform .3s
+
+.new-element, 
+.check-collection
+	background-color: transparent
+	font-family: $helvCyr
+	margin-left: -9px
+	margin-right: -9px
+	padding: 9px
+	text-align: left
+	width: calc(100% + 18px)
+	border-radius: $radius
+	transition: background-color $tr
+	font-size: 0
+	&__image
+		border-radius: $radius
+		display: inline-block
+		vertical-align: middle
+		position: relative
+		width: 55px
+		padding-bottom: 55px
+		+cover
+	&__text
+		display: inline-block
+		vertical-align: middle
+		margin-left: 16px
+		font-size: 15px
+		font-weight: 500
+		color: $black
+		transition: color $tr
+
+.new-element
+	&:hover
+		background-color: $light-bg
+	&__plus
+		position: absolute
+		+vcenter
+		color: $white
+		.icon
+			font-size: 15px 
+
+.check-collection
+	display: block
+	position: relative
+	&:hover
+		.check-collection__bg
+			background-color: $light-bg
+	input
+		position: absolute
+		left: 0
+		top: -1px
+		opacity: 0
+		width: 16px
+		height: 16px
+		&:checked 
+			~ .check-collection__bg
+				background-color: $blue
+			~ .check-collection__image .check-collection__check
+				visibility: visible
+				opacity: 1
+			~ .check-collection__text
+				color: $white
+			~ .check-collection__private
+				background-color: $white
+				color: $blue
+	&__check
+		display: flex
+		justify-content: center
+		align-items: center
+		position: absolute
+		top: 10px
+		right: 10px
+		height: 35px
+		width: 35px
+		border-radius: 50%
+		background-color: #fff
+		font-size: 0
+		opacity: 0
+		visibility: hidden
+		transition: opacity $tr, visibiliti $tr
+		.icon
+			font-size: 15px 
+			color: $blue
+	// &__image
+	// 	&:before,
+	// 	&:after
+	// 		position: absolute
+	// 		+vcenter
+	// 		visibility: hidden
+	// 		opacity: 0
+	// 		transition: opacity $tr, visibility $tr
+	// 	&:after
+	// 		content: url('../img/check.svg')
+	// 		width: 11px
+	// 		height: 7px
+	// 	&:before
+	// 		content: ''
+	// 		width: 30px
+	// 		height: 30px
+	// 		border-radius: 50%
+	// 		background-color: $white
+	&__bg
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		z-index: -1
+		border-radius: $radius
+		transition: background-color $tr
+	&__private
+		position: absolute
+		top: 50%
+		right: 20px
+		transform: translateY(-50%)
+		background: $grey
+		border-radius: 50%
+		height: 20px
+		width: 20px
+		line-height: 20px
+		font-size: 0
+		color: $white
+		text-align: center
+		transition: background-color $tr, color $tr
+		.icon
+			font-size: 9px
+			vertical-align: middle
+	&__helper
+		font-size: 13px
+		color: $grey
+		margin-top: 16px
+		display: none
+
+.check-collection.is-repeated
+	input:checked 
+		~ .check-collection__bg
+			bottom: 32px
+		~ .check-collection__helper
+			display: block
+		~ .check-collection__private
+			top: calc(50% - 17px)

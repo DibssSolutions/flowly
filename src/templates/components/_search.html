@@ -10,7 +10,9 @@
         {% if props.btn_close %}
             <button class="modal-search__close" type="button">{{ mixins.icon('close') }}</button>
         {% else %}
-            <button class="modal-search__next {% if props.btn_next_active %}is-active{% endif %}" type="button">{{ mixins.icon('arrow-right') }}</button>
+            <spann class="modal-search__next {% if props.btn_next_active %}is-active{% endif %}">
+                {{mixins.nextBtn()}}
+            </span>
         {% endif %}
 
     </form>

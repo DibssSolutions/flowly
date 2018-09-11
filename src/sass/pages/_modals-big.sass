@@ -3,6 +3,7 @@
         height: 600px
         width: 800px
         +clr
+        padding: 0
 
 .modal
     &__left,
@@ -34,5 +35,41 @@
         position: relative
         z-index: 5
         background-blend-mode: screen
+    &__login-social
+        margin-bottom: 36px
+        .btn-social:not(:last-child)
+            margin-bottom: 20px
+    &__agreement
+        padding: 0 20px
+        font-family: $helv
+        color: $grey
+        a 
+            color: $black
+    &__share
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        justify-content: space-between
+        max-width: 310px
+        margin: 0 auto
+        > * 
+            margin-bottom: 24px
+    &__complaints
+        display: flex
+        align-items: center
+        flex-flow: column
+        justify-content: center
+.logo
+    height: 30px
+    width: 90px
+    display: inline-block
+    svg
+        // stroke-dashoffset: 20
+        // stroke-width: 1px
+        // fill: none
 
-    
+.motto
+    font-size: 20px
+    line-height: 1.25
+    margin: 40px auto
+

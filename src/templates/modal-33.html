@@ -1,0 +1,20 @@
+{% import "partials/_modal-2.html" as modal %}
+--- title: modal-follow-card ---
+
+{% extends "layouts/_modal.html" %}
+
+{% set modalModifier = 'modal__container_w400' %}
+{% set modalTitle = 'Отправить жалобу' %}
+
+{% block content %}
+    <div class="modal__complaints">
+        <button class="btn btn_middle">Нет такого товара</button>
+        <button class="btn btn_middle">Плохое качество изображения</button>
+        <button class="btn btn_middle btn_blue">Не показывать это больше</button>
+        <button class="btn btn_middle">Неверная цена</button>
+        <button class="btn btn_middle">Оскорбление</button>
+        <button class="btn btn_middle">Нарушение прав</button>
+        <button class="btn btn_middle">Спам</button>
+        <button class="btn btn_middle">Порнография</button>
+    </div>
+{% endblock %}
