@@ -1,0 +1,83 @@
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+    <div class="mega-text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore animi fuga doloremque rem consectetur atque tenetur facere itaque sapiente.
+    </div>
+    <div class="modal is-open">
+        <div class="modal__container modal__checkout">
+            <form action="" class="checkout">
+                <div class="form-control">
+                    <select name='1' id="1" class="js-select" data-placeholder="Мужская одежда">
+                        <option value=""></option>
+                        <option value="1">Категория-1</option>
+                        <option value="2">Категория-2</option>
+                        <option value="3">Категория-3</option>
+                        <option value="4">Категория-4</option>
+                    </select>
+                </div>
+                <div class="form-control">
+                    <select name='2' id="2" class="js-select" data-placeholder="Футболки">
+                        <option value=""></option>
+                        <option value="1">Категория-1</option>
+                        <option value="2">Категория-2</option>
+                        <option value="3">Категория-3</option>
+                        <option value="4">Категория-4</option>
+                    </select>
+                </div>
+                <div class="form-control">
+                    <select name='3' id="3" class="js-select" data-placeholder="Размер">
+                        <option value=""></option>
+                        <option value="1">Категория-1</option>
+                        <option value="2">Категория-2</option>
+                        <option value="3">Категория-3</option>
+                        <option value="4">Категория-4</option>
+                    </select>
+                </div>
+                <div class="form-control">
+                    <select name='4' id="4" class="js-select" data-placeholder="Цвет">
+                        <option value=""></option>
+                        <option value="1">Категория-1</option>
+                        <option value="2">Категория-2</option>
+                        <option value="3">Категория-3</option>
+                        <option value="4">Категория-4</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <div class="form-group__left">
+                        <input type="text" class="input" value="+7 985 ***-**-32" placeholder="+7 9** ***-**-**">
+                    </div>
+                    <div class="form-group__right">
+                        <button class="btn btn_grey btn_square">Изменить</button>
+                    </div>
+                    <div class="form-group__helper">
+                        На номер +7 985 ***-**-32 отправлен код подтверждения.
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-group__title">Код подтверждения из смс</div>
+                    <div class="form-group__left">
+                        <input type="text" class="input" value="498559" placeholder="******">
+                        <button class="btn btn_blue btn_square">Изменить</button>
+                    </div>
+                    <div class="form-group__right">
+                        <button class="btn btn_link btn_small-link">Отправить код еще раз</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-group__left">
+                        <input type="text" class="input is-valid" value="+7 985 ***-**-32" placeholder="+7 9** ***-**-**">
+                    </div>
+                    <div class="form-group__right">
+                        <button class="btn btn_grey btn_square">Изменить</button>
+                    </div>
+                    <div class="form-group__helper">
+                        Номер телефона +7 985 ***-**-32 подтвержден.
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

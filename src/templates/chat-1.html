@@ -1,5 +1,36 @@
 {% import "partials/_mixins.html" as mixins %}
 {% extends "layouts/_layout.html" %}
+{% set chats = [
+    {   
+        modifier: "user_chat",
+        status: 'is-online',
+        image: "avatar_1.jpg",
+        mainText: "Сергей Власов",
+        secondaryText: "Привет Василий! Скейтборд еще продавать не буду",
+        time: "только что"
+    }, {
+        modifier: "user_chat",
+        status: 'is-online',
+        image: "avatar_2.jpg",
+        mainText: "Николай Юдинских",
+        secondaryText: "Cпасибо!",
+        time: "7 мин назад"
+    }, {
+        modifier: "user_chat",
+        image: "avatar_3.jpg",
+        mainText: "Миша Новожилов",
+        secondaryText: "Это супер!",
+        time: "11:35"
+    }, {
+        modifier: "user_chat",
+        status: 'is-active',
+        image: "avatar_4.jpg",
+        mainText: "Alena Vladimorovna",
+        secondaryText: "Вот нужно подумать! Пока много разных вариантов рассматриваю.",
+        time: "вчера"
+    }
+] %}
+
 {% block content %}
     <div class="mega-text">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore animi fuga doloremque rem consectetur atque tenetur facere itaque sapiente.
@@ -9,11 +40,48 @@
             <div class="chat__connections">
                 <h2>Messages</h2>
                 <div class="chat__find">
-                    <input type="text" class="input input_search" placeholder="Поиск">
-                    <button class="input-search-icon" type="button">{{ mixins.icon('search') }}</button>
+                    
+                </div>
+                {% for chat in chats %}
+                    <div class="chat__connection">
+                        {{mixins.user(chat)}}
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="chat__messages">
+                <div class="chat__top">
+                    {{mixins.user({
+                        image: "avatar_4.jpg",
+                        mainText: "Alena Vladimorovna",
+                        secondaryText: "В сети 5 минут назад", 
+                        menuBtn: true
+                    })}}
+                </div>
+                <div class="chat__main">
+                    <div class="message-from">
+                        Привет! Как дела? Получается встретиться сегодня у вас?
+                    </div>
+                    <div class="message-to">
+                        <div class="message-to__avatar">
+                            <div class="avatar" style="background-image: url(./img/avatar_4.jpg)"></div>
+                        </div>
+                        <div class="message-to__message">
+                            Привет! Да постараюсь!
+                        </div>
+                    </div>
+                    <div class="message-to">
+                        <div class="message-to__message">
+                            Думаю получится подготовить товар)))
+                        </div>
+                    </div>
+                    <div class="image-from" style="background-image: url(./img/chat_img.png)"></div>
+                </div>
+                <div class="chat__new-message">
+                    {{mixins.addBtn({modifier: "btn-add_dark"})}}
+                    <input type="text" class="input chat__input" placeholder="Напишите сообщение">
+                    {{mixins.upBtn()}}
                 </div>
             </div>
-            <div class="chat__message"></div>
         </div>
     </div>
 {% endblock %}

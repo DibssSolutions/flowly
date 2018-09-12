@@ -55,28 +55,56 @@
     </button>
 {% endmacro %}
 
-{% macro addBtn(props) %}
-    <button class="btn-circle btn-add {% if props.modifier %}{{props.modifier}}{% endif %}" type="button">{{ icon('plus') }}</button>
-{% endmacro %}
-
 {% macro nextBtn(props) %}
     <button class="btn-circle btn-next {% if props.modifier %}{{props.modifier}}{% endif %}" type="button">{{ icon('arrow-right') }}</button>
 {% endmacro %}
 
-{% macro info(props) %}
-    <div class="info">
-        <div class="info__avatar">
+{% macro addBtn(props) %}
+    <button class="btn-circle btn-add {% if props.modifier %}{{props.modifier}}{% endif %}" type="{{props.type or 'button'}}">{{ icon('plus') }}</button>
+{% endmacro %}
 
+{% macro menuBtn(props) %}
+    <button class="btn-circle btn-menu" type="button">{{ icon('three-dots') }}</button>
+{% endmacro %}
+
+{% macro upBtn(props) %}
+    <button class="btn-circle btn-up" type="button">{{ icon('arrow-up') }}</button>
+{% endmacro %}
+
+{% macro user(props) %}
+    <div class="user {% if props.modifier %}{{props.modifier}}{% endif %} {% if props.status %}{{props.status}}{% endif %}">
+        <div class="user__avatar">
             <div class="avatar" {% if props.image %} style="background-image: url(./img/{{props.image}})" {% endif %}></div>
         </div>
-        <div class="info__text">
-            <div class="info__main">{{props.mainText}}</div>
-            <div class="info__secondary">{{props.secondaryText}}</div>
+        <div class="user__text">
+            <div class="user__main">{{props.mainText}}</div>
+            <div class="user__secondary">{{props.secondaryText}}</div>
         </div>
         {% if props.button %}
-            <div class="info__button">
+            <div class="user__button">
                 <button type="button" class="btn btn_small {% if props.button[0].action === 'subscr' %}btn_light{% else %}btn_blue{% endif %}">{{props.button[0].text}}</button>
             </div>
         {% endif %}
+        {% if props.menuBtn %}
+            <div class="user__button">
+                {{menuBtn()}}
+            </div>
+        {% endif %}
+        {% if props.modifier === 'user_chat' %}
+            <div class="user__activity">
+                <div class="user__time">
+                    {{props.time}}
+                </div>
+                {% if props.status === 'is-online' %}
+                    <div class="user__active"></div>
+                {% endif %}
+            </div>
+        {% endif %}
+
     </div>
+{% endmacro %}
+
+{% macro inputSearch() %}
+    <input type="text" class="input input_search" placeholder="Поиск">
+    <button class="input-search-icon" type="button">{{ icon('search') }}</button>
 {% endmacro %}

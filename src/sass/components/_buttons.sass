@@ -1,22 +1,33 @@
 .btn
     display: inline-block
-    font-family: $helvCyr
+    font-family: $helv
     font-weight: 500
+    font-size: 15px
     text-align: center
     background: none
+    user-select: none
     &_blue
         background-color: $blue
         color: $white
     &_light
         background-color: $light-button-bg
         color: $blue
+    &_grey
+        background-color: $light-bg
+        color: $black
     &_big
         width: 230px
         padding: 16px
         border-radius: 25px
-        font-size: 15px
+    &_square
+        border-radius: $radius
+        padding: 11px 14px 12px 14px
+        width: 177px
     &_link
         color: $grey
+    &_small-link
+        font-size: 13px
+        padding: 12px 14px 13px 14px
     &_small
         font-size: 14px
         padding: 10px 20px 9px
@@ -33,6 +44,7 @@
     border-radius: 50%
     font-size: 0
     text-align: center
+    vertical-align: middle
     .icon
         font-size: 16px
         vertical-align: middle
@@ -40,7 +52,6 @@
 .btn-delete
     background-color: $white
     color: $grey
-
 
 .btn-add
     background-color: $light-bg
@@ -50,17 +61,27 @@
         width: 40px
         background-color: $blue
         color: $white
+    &_dark
+        color: $white
+        background-color: #d8d8d8
 
-.btn-next
+.btn-next,
+.btn-up
     color: $blue
     background-color: $light-blue
     .is-active &
         color: $white
         background-color: $blue
 
+.btn-menu
+    color: $grey
+    background-color: $light-bg
+    .icon
+        font-size: 4px
+
 .btn-social
     width: 290px
-    font-family: $helvCyr
+    font-family: $helv
     font-size: 15px
     border-radius: 25px
     padding: 16px

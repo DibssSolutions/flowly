@@ -6,19 +6,25 @@
 	font-style: $style
 	font-weight: $weight
 	
-$helv: 'HelveticaNeue'
-$helvCyr: 'HelveticaNeueCyr'
+// $helv: 'HelveticaNeue'
+$helv: 'HelveticaNeueCyr'
 
-@font-face
-	+fontdefault(normal, 400, $helv)
-	+fontpath('HelveticaNeue', 'HelveticaNeue', HelveticaNeue)
-@font-face
-	+fontdefault(normal, 500, $helv)
-	+fontpath('HelveticaNeue-Medium', 'HelveticaNeue-Medium', HelveticaNeue-Medium)
+// @font-face
+// 	+fontdefault(normal, 400, $helv)
+// 	+fontpath('HelveticaNeue', 'HelveticaNeue', HelveticaNeue)
+// @font-face
+// 	+fontdefault(normal, 500, $helv)
+// 	+fontpath('HelveticaNeue-Medium', 'HelveticaNeue-Medium', HelveticaNeue-Medium)
+// @font-face
+// 	+fontdefault(normal, 700, $helv)
+// 	+fontpath('HelveticaNeue-Bold', 'HelveticaNeue-Bold', HelveticaNeue-Bold)
 @font-face
 	+fontdefault(normal, 700, $helv)
-	+fontpath('HelveticaNeue-Bold', 'HelveticaNeue-Bold', HelveticaNeue-Bold)
+	+fontpath('HelveticaNeueCyr-Bold', 'HelveticaNeueCyr-Bold', HelveticaNeueCyr-Bold)
 @font-face
-	+fontdefault(normal, 500, $helvCyr)
+	+fontdefault(normal, 500, $helv)
 	+fontpath('HelveticaNeueCyr-Medium', 'HelveticaNeueCyr-Medium', HelveticaNeueCyr-Medium)
+@font-face
+	+fontdefault(normal, 400, $helv)
+	+fontpath('HelveticaNeueCyr-Roman', 'HelveticaNeueCyr-Roman', HelveticaNeueCyr-Roman)
 	

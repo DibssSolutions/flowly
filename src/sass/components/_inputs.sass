@@ -59,10 +59,13 @@
         margin-top: 16px
         max-width: 100px
         text-align: center
+        font-size: 15px
 
 .form-control
     margin-bottom: 14px
     position: relative
+    box-sizing: border-box
+    font-size: 0
     &_checks
         text-align: left
     &_toggler
@@ -71,7 +74,7 @@
 .input
     width: 100%
     padding: 10px 14px 11px 14px
-    font-family: $helvCyr
+    font-family: $helv
     font-weight: 500
     font-size: 15px
     border: 1px solid $extra-light-grey
@@ -83,6 +86,8 @@
         font-weight: 500
     &.is-invalid
         border-color: $red
+    &.is-valid
+        border-color: $green
     &_search
         padding-left: 40px
 
@@ -99,4 +104,5 @@
         line-height: 1
 
 textarea 
-    resize: vertical
+    resize: none
+    box-sizing: border-box

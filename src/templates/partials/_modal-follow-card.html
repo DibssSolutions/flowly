@@ -33,16 +33,6 @@
         {{Product.productCheck('green-shoes.png')}}
         {{Product.productCheck('green-shoes.png')}}
         {{Product.productCheck('green-shoes.png')}}
-        {{Product.productCheck('green-shoes.png')}}
-        {{Product.productCheck('green-shoes.png')}}
-        {{Product.productCheck('green-shoes.png')}}
-        {{Product.productCheck('green-shoes.png')}}
-        {{Product.productCheck('green-shoes.png')}}
-        {{Product.productCheck('green-shoes.png')}}
-        {{Product.productCheck('green-shoes.png')}}
-        {{Product.productCheck('green-shoes.png')}}
-        {{Product.productCheck('green-shoes.png')}}
-        {{Product.productCheck('green-shoes.png')}}
     </div>
     <div class="modal__buttons-bottom">
         <button class="btn btn_blue btn_big">Далее</button>
@@ -54,47 +44,50 @@
     <div class="modal__text modal__text_bold modal__text_left">
         Проверьте информацию о товаре
     </div>
-    <form action="/" id="card-form">
-        <div class="form-control">
-            <input type="text" class="input" value="Очки солнцезащитные RB3557 9001A5" placeholder="Введите название"/>
+    <form action="/" id="card-form" class="card-form">
+        <div class="card-form__check">
+            <div class="form-control">
+                <input type="text" class="input" value="Очки солнцезащитные RB3557 9001A5" placeholder="Введите название"/>
+            </div>
+            <div class="form-control">
+                <input type="text" class="input is-invalid" placeholder="Укажите бренд"/>
+            </div>
+            <div class="form-control">
+                <textarea name="glasses" id="glasses" rows="2" style="height: 96px" class="input">Солнцезащитные очки премиум-бренда Ray-Ban®. Модель выполнена из высококачественного металла. Особенности: градиентные линзы.</textarea>
+            </div>
+            <div class="form-control">
+                <select name='1' id="1" class="js-select" data-placeholder="Выберите категорию">
+                    <option value=""></option>
+                    <option value="1">Категория-1</option>
+                    <option value="2">Категория-2</option>
+                    <option value="3">Категория-3</option>
+                    <option value="4">Категория-4</option>
+                </select>
+            </div>
         </div>
-        <div class="form-control">
-            <input type="text" class="input is-invalid" placeholder="Укажите бренд"/>
-        </div>
-        <div class="form-control">
-            <textarea name="" id="" cols="30" rows="2" class="input">Солнцезащитные очки премиум-бренда Ray-Ban®. Модель выполнена из высококачественного металла. Особенности: градиентные линзы.</textarea>
-        </div>
-        <div class="form-control">
-            <select name='1' id="1" class="js-select" data-placeholder="Выберите категорию">
-                <option value=""></option>
-                <option value="1">Категория-1</option>
-                <option value="2">Категория-2</option>
-                <option value="3">Категория-3</option>
-                <option value="4">Категория-4</option>
-            </select>
-        </div>
-        <div class="modal__text modal__text_bold modal__text_left">
-            Выберите коллекцию для добавления
-        </div>
-        <div class="form-control">
-            <input type="text" class="input input_search" placeholder="Поиск">
-            <button class="input-search-icon" type="button">{{ mixins.icon('search') }}</button>
-        </div>
-        <div class="form-control form-control_checks">
-            {{mixins.newEl({image: "green-shoes.png", text: "Новая коллекция"})}}
-            {{mixins.checkCollection({
+        <div class="card-form__selection">
+            <div class="modal__text modal__text_bold modal__text_left">
+                Выберите коллекцию для добавления
+            </div>
+            <div class="form-control">
+                <input type="text" class="input input_search" placeholder="Поиск">
+                <button class="input-search-icon" type="button">{{ mixins.icon('search') }}</button>
+            </div>
+            <div class="form-control form-control_checks">
+                {{mixins.newEl({image: "green-shoes.png", text: "Новая коллекция"})}}
+                {{mixins.checkCollection({
                 id: "check1",
                 image: "collection-2.jpg",
                 text: "Мои подборки на лето",
                 private: true
             })}}
-            {{mixins.checkCollection({
+                {{mixins.checkCollection({
                 id: "check2",
                 image: "collection-1.jpg",
                 text: "Подруге на ДР"
             })}}
+            </div>
         </div>
-
     </form>
     <div class="modal__buttons-bottom">
         <button type="submit" form="card-form" class="btn btn_blue btn_big">Зафоловить</button>

@@ -35,12 +35,21 @@
 			height: 100vh
 			padding: 20px
 			border-radius: 0
+			+sm 
+				width: 100%
+				max-width: inherit
+
 		&_w400	
 			width: 400px
+			+sm 
+				width: 100%
 		&_social
 			width: 410px
 			text-align: center
 			padding: 50px 40px
+			+sm 
+				width: 100%
+				padding: 40px 20px
 		&_pb-0
 			padding-bottom: 0 
 		&_chat
@@ -64,20 +73,35 @@
 	&__search
 		margin-bottom: 36px
 	&__text
+		padding: 0 5px
 		font-size: 15px
 		color: $black
 		&_bold
 			font-weight: 500
 		&_left
 			text-align: left
+			padding: 0
 	&__image
-		margin-top: 200px
+		// position: absolute
+		// top: 394px
+		// left: 0
+		// right: 0
+		display: inline-block
+		font-size: 0
+		vertical-align: middle
+		width: 100%
 		padding-bottom: 100%
 		background-repeat: no-repeat
+		background-position: 50% 50%
+		background-size: contain
+		// +md 
+		// 	top: 300px
+		// +sm 
+		// 	top: 100px
 	&__products
 		display: flex
 		flex-wrap: wrap
-		margin: 0 -8px
+		margin: 24px -8px 0
 		padding-bottom: 100px
 		position: relative
 		.product
@@ -98,6 +122,15 @@
 		padding-top: 20px
 		background-color: $white
 		z-index: 10
-
+	.card-form
+		margin-top: 24px
+		
 .text-muted
 	color: $grey
+
+.card-form
+	&__selection
+		margin-top: 40px
+	.modal__text
+		margin-bottom: 24px
+		

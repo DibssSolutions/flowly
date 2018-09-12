@@ -1,1 +1,19 @@
-<p>Hello from partials/_header.html</p>
+<header class="header">
+    <div class="header__container container-inner">
+        <div class="header__logo">
+            <a href="main.html" class="logo">
+                {% include "data/logo.html" %}
+            </a>
+        </div>
+        <div class="header__search">
+            <form action="/" class="main-search">
+                <input type="text" class="main-search__input" placeholder="Поиск">
+                <button class="main-search__icon" type="button">{{ mixins.icon('search') }}</button>
+            </form>
+        </div>
+        <div class="header__activities">
+            {{mixins.addBtn()}}
+            <button type="button" class="header__user btn-circle" style="background-image: url(./img/avatar.jpg)"></button>
+        </div>
+    </div>
+</header>
