@@ -1,5 +1,6 @@
-.product
+.preview
 	position: relative
+	display: block
 	input
 		position: absolute
 		left: 0
@@ -7,8 +8,11 @@
 		opacity: 0
 		width: 16px
 		height: 16px
-		&:checked ~ .product__check
-			opacity: 1
+		&:checked 
+			~ .preview__check
+				opacity: 1
+			~ .preview__main
+				+vis
 	&__image
 		display: block
 		padding-bottom: 100%
@@ -31,4 +35,38 @@
 		.icon
 			font-size: 15px 
 			color: $blue
-
+	&__delete
+		position: absolute
+		top: 10px
+		right: 10px
+	&__main
+		position: absolute
+		bottom: 10px
+		left: 50%
+		transform: translateX(-50%)
+		+invis
+		
+.product
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	&__image
+		flex: 0 0 55px
+		border-radius: $radius
+		width: 55px
+		padding-bottom: 55px
+		+cover
+	&__main
+		flex: 0 0 calc(100% - 55px)
+		padding-left: 16px
+	&__title,
+	&__price
+		color: $black
+		font-weight: 500
+	&__title
+		font-size: 13px
+	&__descr
+		font-size: 13px
+		color: $grey
+		margin-top: 14px
+		

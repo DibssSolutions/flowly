@@ -1,11 +1,37 @@
 {% import "partials/_mixins.html" as mixins %}
 
-{% macro productCheck(img) %}
-    <label class="product">
+{% macro previewCheck(img) %}
+    <label class="preview">
         <input type="checkbox">
-        <span class="product__image" style="background-image: url(./img/{{img}});"></span>
-        <span class="product__check">
+        <span class="preview__image" style="background-image: url(./img/{{img}});"></span>
+        <span class="preview__check">
             {{ mixins.icon('check') }}
         </span>
     </label>
+{% endmacro %}
+
+{% macro previewAdd(props) %}
+    <label class="preview">
+        <input type="radio" {% if props.main %} checked="checked" {% endif %} name="add_preview"/>
+        <span class="preview__image" style="background-image: url(./img/{{props.img}});"></span>
+        <span class="preview__main">
+            <button class="btn btn_check-main" type="button">Основное</button>
+        </span>
+        <span class="preview__delete">
+            {{ mixins.deleteBtn() }}
+        </span>
+    </label>
+{% endmacro %}
+
+{% macro product(props) %}
+    <section class="product">
+        <div class="product__image" style="background-image: url(./img/{{props.image}});"></div>
+        <div class="product__main">
+            <div class="product__title">{{props.title}}</div>
+            <div class="product__price">{{props.price}}</div>
+        </div>
+        {% if props.descr %}
+            <div class="product__descr">{{props.descr}}</div>
+        {% endif %}
+    </section>
 {% endmacro %}

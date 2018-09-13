@@ -1,0 +1,66 @@
+.modal
+	&__search
+		margin-bottom: 36px
+	&__text
+		padding: 0 5px
+		font-size: 15px
+		color: $black
+		&_bold
+			font-weight: 500
+		&_left
+			text-align: left
+			padding: 0
+	&__image
+		+vcenter
+		width: 100%
+		padding-bottom: 100%
+		background-repeat: no-repeat
+		background-position: 50% 50%
+		background-size: contain
+		+rh(750)
+			position: static
+			transform: none
+		+sm
+			+rh(950)
+				position: static
+				transform: none
+				margin-top: 50px
+	&__products
+		display: flex
+		flex-wrap: wrap
+		margin: 24px -8px 0
+		padding-bottom: 100px
+		position: relative
+		.preview
+			flex: 0 0 50%
+			width: 50%
+			padding: 0 8px
+			margin-bottom: 16px
+			&__check
+				right: 18px
+	&__buttons
+		margin-top: 40px
+	&__buttons-bottom
+		position: fixed
+		bottom: 0
+		right: 0
+		width: 400px
+		padding-bottom: 20px
+		padding-top: 20px
+		background-color: $white
+		z-index: 10
+		+r(401)  
+			width: 100%
+	.card-form
+		margin-top: 24px
+		
+.text-muted
+	color: $grey
+
+.card-form
+	padding-bottom: 100px
+	&__selection
+		margin-top: 40px
+	.modal__text
+		margin-bottom: 24px
+		

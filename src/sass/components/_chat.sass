@@ -14,20 +14,26 @@
         max-width: 160px
         font-weight: 500
         +text-overflow
+        +sm 
+            max-width: 120px
     &__secondary
         max-width: 160px
         font-family: $helv
         color: $grey
         +text-overflow
+        +sm 
+            max-width: 120px
         .user_chat &
             max-width: 260px
+            +sm 
+                max-width: 200px
         .is-online &
             color: $black
     &__button
         margin-left: auto
     &__time
         position: absolute
-        top: 0
+        top: 2px
         right: 0
         font-size: 13px
         color: $grey
@@ -62,9 +68,6 @@
     .user__secondary,
     .user__time
         color: $white
-
-
-
 
 .avatar
     display: block
@@ -107,50 +110,63 @@
                 background-color: $light-blue
 
 .chat
-    width: 900px
+    // width: 900px
+    min-height: 700px
     padding: 0
     position: relative
     +md 
-        width: 700px
+        max-width: 900px
+        width: auto
     +sm 
         width: 100%
-    &:after
-        content: ''
-        position: absolute
-        top: 0
-        bottom: 0
-        left: 399px
-        width: 1px
-        background-color: $extra-light-grey
-        +md 
-            left: 299px
-        +sm 
-            display: none
+        border-radius: 0
     &__connections
         float: left
         width: 400px
-        padding: 20px
+        padding: $paddingDT
         +md 
-            width: 300px
+            width: auto
         +sm 
             float: none
             width: 100%
+            padding: 10px
+            .is-active & 
+                display: none
     &__messages
         float: left
         width: 500px
-        padding: 20px
+        padding: $paddingDT
+        position: relative
+        &:after
+            content: ''
+            position: absolute
+            top: 0
+            bottom: 0
+            left: 0
+            width: 1px
+            background-color: $extra-light-grey
+            +sm 
+                display: none
         +md 
-            width: 400px
+            width: auto
         +sm 
             float: none
             width: 100%
             display: none
+            padding: $paddingMOB
+            .is-active & 
+                display: block
+    &__title
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 32px
     &__find
         position: relative
         margin-bottom: 40px
     &__top
         position: relative
-        padding-bottom: 20px
+        padding-bottom: $paddingDT
         &:after
             position: absolute
             content: ''
@@ -159,8 +175,21 @@
             bottom: 0
             height: 1px
             background-color: $extra-light-grey
+            +sm 
+                left: -10px
+                right: -10px
         .user
             margin-bottom: 0
+        +sm 
+            padding-bottom: $paddingMOB
+            .user__avatar, 
+            .user__text
+                display: none
+    &__prev
+        position: absolute
+        top: calc(50% - 5px)
+        transform: translateY(-50%)
+        left: 0
     &__main
         padding-top: 100px
         display: flex
@@ -175,21 +204,27 @@
         flex-grow: 1
         margin: 0 15px
 
-.message-from, 
-.image-from
-    margin-left: auto
+.message-to, 
+.image-to
+    // margin-left: auto
+    align-self: flex-end
+    margin-left: 52px
     border-radius: 17px 17px 5px 17px
-    + .message-to
+    + .message-from
         margin-top: 20px
 
-.message-from
+.message-to
     max-width: 330px
     padding: 10px
     text-align: left
     color: $white
     background-color: $blue
+    &_card
+        background-color: $chat-card-bg
+        color: $black
 
-.image-from
+
+.image-to
     width: 230px
     padding-bottom: 230px
     +cover
@@ -197,13 +232,15 @@
 
 
 
-.message-to
+.message-from
     position: relative
-    margin-right: auto
-    + .message-to
+    // margin-right: auto
+    align-self: flex-start
+    text-align: left
+    + .message-from
         margin-top: 8px
-    + .message-from,
-    + .image-from
+    + .message-to,
+    + .image-to
         margin-top: 20px
     &__avatar
         position: absolute

@@ -1,4 +1,6 @@
 {% import "partials/_mixins.html" as mixins %}
+{% import "components/_cards.html" as Card %}
+{% import "components/_product.html" as Product %}
 {% extends "layouts/_layout.html" %}
 {% set chats = [
     {   
@@ -36,7 +38,7 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore animi fuga doloremque rem consectetur atque tenetur facere itaque sapiente.
     </div>
     <div class="modal is-open">
-        <div class="modal__container chat is-active">
+        <div class="modal__container chat">
             <div class="chat__connections">
                 <div class="chat__title">
                     <h2>Messages</h2>
@@ -53,10 +55,6 @@
             </div>
             <div class="chat__messages">
                 <div class="chat__top">
-                    <span class="mob-block chat__prev">
-                        {{mixins.prevBtn()}}
-                    </span>
-                    
                     {{mixins.user({
                         image: "avatar_4.jpg",
                         mainText: "Alena Vladimorovna",
@@ -65,30 +63,29 @@
                     })}}
                 </div>
                 <div class="chat__main">
-                    <div class="message-to">
-                        Привет! Как дела? Получается встретиться сегодня у вас?
+                    <div class="message-to message-to_card">
+                        <p>Здравствуйте!</p>
+                        <p>Мне интересен этот товар.</p>
+                        {{Card.smallCard({
+                        image: 'collection-1.jpg',
+                        title: "Куртка джинсовая Wrangler", 
+                        price: "10 495 ₽",
+                        descr: "Куртка выполнена из денима @sdklimov. Подкладка выполнена из искусственного гладкого текстиля. Детали: отложной..."})}}
                     </div>
-                    <div class="message-from">
-                        <div class="message-from__avatar">
-                            <div class="avatar" style="background-image: url(./img/avatar_4.jpg)"></div>
+
+                    <div class="chat__new-message">
+                        {{mixins.addBtn({modifier: "btn-add_dark"})}}
+                        <div class="card-outline">
+
+                            {{Product.product({
+                                image: 'collection-1.jpg',
+                                title: "Куртка джинсовая Wrangler", 
+                                price: "10 495 ₽"
+                            })}}
                         </div>
-                        <div class="message-from__message">
-                            Привет! Да постараюсь!
-                        </div>
+                        {{mixins.upBtn()}}
                     </div>
-                    <div class="message-from">
-                        <div class="message-from__message">
-                            Думаю получится подготовить товар)))
-                        </div>
-                    </div>
-                    <div class="image-to" style="background-image: url(./img/chat_img.png)"></div>
-                </div>
-                <div class="chat__new-message">
-                    {{mixins.addBtn({modifier: "btn-add_dark"})}}
-                    <input type="text" class="input chat__input" placeholder="Напишите сообщение">
-                    {{mixins.upBtn()}}
                 </div>
             </div>
         </div>
-    </div>
-{% endblock %}
+    {% endblock %}

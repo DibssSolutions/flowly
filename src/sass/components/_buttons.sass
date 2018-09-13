@@ -23,6 +23,8 @@
         border-radius: $radius
         padding: 11px 14px 12px 14px
         width: 177px
+        +sm 
+            width: 100%
     &_link
         color: $grey
     &_small-link
@@ -32,10 +34,18 @@
         font-size: 14px
         padding: 10px 20px 9px
         border-radius: 18px
+        +sm 
+            padding: 10px 10px 9px
     &_middle
         border-radius: 20px
         font-size: 15px
         padding: 12px 20px 11px
+    &_check-main
+        padding: 9px 20px 9px
+        background: $white
+        border-radius: 18px
+
+// =========== CIRCLE ==============
 
 .btn-circle
     display: inline-block
@@ -53,9 +63,13 @@
     background-color: $white
     color: $grey
 
-.btn-add
+.btn-add, 
+.btn-prev,
+.btn-menu
     background-color: $light-bg
     color: $grey
+
+.btn-add
     &_blue
         height: 40px
         width: 40px
@@ -74,10 +88,10 @@
         background-color: $blue
 
 .btn-menu
-    color: $grey
-    background-color: $light-bg
     .icon
         font-size: 4px
+
+// =============== SOCIAL ===============
 
 .btn-social
     width: 290px
@@ -107,6 +121,8 @@
 .btn-google
     background-color: transparent
     border: 1px solid $extra-light-grey
+
+// ================ SOCIAL-CIRCLE ===================
 
 .btn-social-rounded
     height: 50px

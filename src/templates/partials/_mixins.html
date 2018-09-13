@@ -50,13 +50,17 @@
 {% endmacro %}
 
 {% macro deleteBtn(props) %}
-    <button class="btn-circle btn-delete {% if props.modifier %}{{props.modifier}}{% endif %}">
+    <button class="btn-circle btn-delete {% if props.modifier %}{{props.modifier}}{% endif %}" type="{{props.type or 'button'}}">
         {{ icon('close') }}
     </button>
 {% endmacro %}
 
 {% macro nextBtn(props) %}
     <button class="btn-circle btn-next {% if props.modifier %}{{props.modifier}}{% endif %}" type="button">{{ icon('arrow-right') }}</button>
+{% endmacro %}
+
+{% macro prevBtn(props) %}
+    <button class="btn-circle btn-prev {% if props.modifier %}{{props.modifier}}{% endif %}" type="button">{{ icon('arrow-left') }}</button>
 {% endmacro %}
 
 {% macro addBtn(props) %}
@@ -107,4 +111,42 @@
 {% macro inputSearch() %}
     <input type="text" class="input input_search" placeholder="Поиск">
     <button class="input-search-icon" type="button">{{ icon('search') }}</button>
+{% endmacro %}
+
+{% macro file(props) %}
+    {% if props.fileSelected %}
+        <label class="file is-selected" for="add-cover">
+            <span class="file__text text-muted">Превью обложки коллекции</span>
+            <div class="file__preview">
+                <span class="file__image" style="background-image: url(./img/{{props.prevImg}});">
+                    <span class="file__delete delete-btn">
+                        {{ deleteBtn() }}
+                    </span>
+                </span>
+                <span class="file__add">
+                    {{addBtn()}}
+                    <span class="file__another-photo text-muted">Загрузить другое фото</span>
+                </span>
+            </div>
+            <input type="file" id="add-cover">
+        </label>
+    {% elif props.productAdd %}
+        <label class="file file_dotted" for="add-cover">
+            <span class="file__add">
+                {{addBtn()}}
+                <span class="file__another-photo text-muted">Загрузить фото</span>
+            </span>
+            <input type="file" id="add-cover">
+        </label>
+    {% else %}
+        <label class="file" for="add-cover">
+            <span class="file__add">
+                {{addBtn()}}
+            </span>
+            <input type="file" id="add-cover">
+            <span class="file__text">Добавить обложку
+                <span class="text-muted">(по желанию)</span>
+            </span>
+        </label>
+    {% endif %}
 {% endmacro %}

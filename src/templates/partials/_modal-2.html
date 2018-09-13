@@ -17,34 +17,7 @@
             </select>
         </div>
         <div class="form-control">
-            {% if props.fileSelected %}
-                <label class="file is-selected" for="add-cover">
-                    <span class="file__text text-muted">Превью обложки коллекции</span>
-                    <div class="file__preview">
-                        <span class="file__image" style="background-image: url(./img/{{props.prevImg}});">
-                            <span class="file__delete delete-btn">
-                                {{ mixins.deleteBtn() }}
-                            </span>
-                        </span>
-                        <span class="file__add">
-                            {{mixins.addBtn()}}
-                            <span class="file__another-photo text-muted">Загрузить другое фото</span>
-                        </span>
-                    </div>
-
-                    <input type="file" id="add-cover">
-                </label>
-            {% else %}
-                <label class="file" for="add-cover">
-                    <span class="file__add">
-                        {{mixins.addBtn()}}
-                    </span>
-                    <input type="file" id="add-cover">
-                    <span class="file__text">Добавить обложку
-                        <span class="text-muted">(по желанию)</span>
-                    </span>
-                </label>
-            {% endif %}
+            {{mixins.file(props)}}
         </div>
         <div class="form-control">
             {{mixins.toggler()}}

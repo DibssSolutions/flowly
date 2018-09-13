@@ -65,7 +65,7 @@
       </header>
       <div class="mega-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore animi fuga doloremque rem consectetur atque tenetur facere itaque sapiente. </div>
       <div class="modal is-open">
-        <div class="modal__container chat is-active">
+        <div class="modal__container chat">
           <div class="chat__connections">
             <div class="chat__title">
               <h2>Messages</h2>
@@ -146,13 +146,6 @@
           </div>
           <div class="chat__messages">
             <div class="chat__top">
-              <span class="mob-block chat__prev">
-                <button class="btn-circle btn-prev " type="button">
-                  <svg class="icon icon-arrow-left">
-                    <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
-                  </svg>
-                </button>
-              </span>
               <div class="user  ">
                 <div class="user__avatar">
                   <div class="avatar" style="background-image: url(./img/avatar_4.jpg)"></div>
@@ -171,39 +164,49 @@
               </div>
             </div>
             <div class="chat__main">
-              <div class="message-to"> Привет! Как дела? Получается встретиться сегодня у вас? </div>
-              <div class="message-from">
-                <div class="message-from__avatar">
-                  <div class="avatar" style="background-image: url(./img/avatar_4.jpg)"></div>
+              <div class="message-to message-to_card">
+                <p>Здравствуйте!</p>
+                <p>Мне интересен этот товар.</p>
+                <div class="card-small">
+                  <section class="product">
+                    <div class="product__image" style="background-image: url(./img/collection-1.jpg);"></div>
+                    <div class="product__main">
+                      <div class="product__title">Куртка джинсовая Wrangler</div>
+                      <div class="product__price">10 495 ₽</div>
+                    </div>
+                    <div class="product__descr">Куртка выполнена из денима @sdklimov. Подкладка выполнена из искусственного гладкого текстиля. Детали: отложной...</div>
+                  </section>
                 </div>
-                <div class="message-from__message"> Привет! Да постараюсь! </div>
               </div>
-              <div class="message-from">
-                <div class="message-from__message"> Думаю получится подготовить товар))) </div>
+              <div class="chat__new-message">
+                <button class="btn-circle btn-add btn-add_dark" type="button">
+                  <svg class="icon icon-plus">
+                    <use xlink:href="img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+                <div class="card-outline">
+                  <section class="product">
+                    <div class="product__image" style="background-image: url(./img/collection-1.jpg);"></div>
+                    <div class="product__main">
+                      <div class="product__title">Куртка джинсовая Wrangler</div>
+                      <div class="product__price">10 495 ₽</div>
+                    </div>
+                  </section>
+                </div>
+                <button class="btn-circle btn-up" type="button">
+                  <svg class="icon icon-arrow-up">
+                    <use xlink:href="img/sprite.svg#icon-arrow-up"></use>
+                  </svg>
+                </button>
               </div>
-              <div class="image-to" style="background-image: url(./img/chat_img.png)"></div>
-            </div>
-            <div class="chat__new-message">
-              <button class="btn-circle btn-add btn-add_dark" type="button">
-                <svg class="icon icon-plus">
-                  <use xlink:href="img/sprite.svg#icon-plus"></use>
-                </svg>
-              </button>
-              <input type="text" class="input chat__input" placeholder="Напишите сообщение">
-              <button class="btn-circle btn-up" type="button">
-                <svg class="icon icon-arrow-up">
-                  <use xlink:href="img/sprite.svg#icon-arrow-up"></use>
-                </svg>
-              </button>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- END content -->
-    <!-- BEGIN scripts -->
-    <script type="text/javascript" src="js/app.js"></script>
-    <!-- END scripts -->
+      <!-- END content -->
+      <!-- BEGIN scripts -->
+      <script type="text/javascript" src="js/app.js"></script>
+      <!-- END scripts -->
   </body>
 
 </html>

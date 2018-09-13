@@ -1,0 +1,98 @@
+.modal
+	position: fixed
+	z-index: -1
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	opacity: 0
+	visibility: hidden
+	+vertical
+	// +gpu
+	transition: opacity 0.3s, visibility 0.3s, z-index 0.3s
+	background-color: rgba($black, .8) 
+	overflow-y: auto
+	// padding: 0 10px
+	&.is-open
+		opacity: 1
+		visibility: visible
+		z-index: 100
+	&__container
+		vertical-align: middle
+		display: inline-block
+		position: relative
+		z-index: 1
+		font-size: 15px
+		background-color: $white
+		border-radius: 12px
+		overflow-y: auto
+		&_right
+			position: absolute
+			top: 0
+			bottom: 0
+			right: 0
+			width: 400px
+			max-width: 400px
+			min-width: 320px
+			height: 100%
+			padding: $paddingDT
+			border-radius: 0
+			+r(401) 
+				padding: $paddingMOB
+				width: 100%
+				max-width: inherit
+		&_w400	
+			max-width: 400px
+			width: 400px
+			padding: $paddingDT
+			+sm 
+				width: 100%
+				padding: $paddingMOB
+		&_w600
+			max-width: 600px
+			width: 600px
+			padding: $paddingDT
+			+sm 
+				padding: $paddingMOB
+				width: auto
+		&_bottom-buttons
+			padding-bottom: 0
+		&_social
+			max-width: 410px
+			text-align: center
+			padding: 50px 40px
+			+sm 
+				padding: 40px 20px
+		&_chat
+			max-width: 900px
+			+sm 
+				border-radius: 0
+		&_checkout
+			padding: $paddingDT
+			max-width: 600px
+			border-radius: 0
+			+sm 
+				padding: $paddingMOB
+	&__close
+		position: absolute
+		top: 28px
+		right: 20px
+		background-color: transparent
+		font-size: 0
+		color: $grey
+		z-index: 10
+		.icon
+			font-size: 12px
+			fill: $grey
+		+sm 
+			right: 10px
+			top: 18px
+	&__title
+		font-size: 20px
+		color: $black
+		font-weight: 500
+		margin-bottom: 32px
+	&__buttons
+		display: flex
+		flex-flow: column
+		align-items: center
