@@ -9,12 +9,22 @@
     &_blue
         background-color: $blue
         color: $white
+        transition: background-color 0.4s
+        &:hover
+            background-color: $blueHovered
+        &:active
+            background-color: $blueClicked
     &_light
         background-color: $light-button-bg
         color: $blue
     &_grey
         background-color: $light-bg
         color: $black
+        transition: background-color 0.4s
+        &:hover
+            background-color: $light-bgHovered
+        &:active
+            background-color: $light-bgClicked
     &_big
         width: 230px
         padding: 16px
@@ -63,6 +73,12 @@
     background-color: $white
     color: $grey
 
+.btn-checked
+    background-color: $white
+    color: $blue
+    &_inverted
+        background-color: $blue
+        color: $white
 .btn-add, 
 .btn-prev,
 .btn-menu
@@ -91,6 +107,18 @@
     .icon
         font-size: 4px
 
+.btn-slider
+    height: 40px
+    width: 40px 
+    border-radius: 50%
+    font-size: 0
+    text-align: center
+    vertical-align: middle
+    background-color: $grey
+    color: $white
+    .icon 
+        font-size: 20px
+        vertical-align: middle
 // =============== SOCIAL ===============
 
 .btn-social
@@ -103,6 +131,8 @@
     align-items: center
     justify-content: center
     margin: 0 auto
+    +sm 
+        width: 250px
     .icon, 
     img 
         margin-right: 12px

@@ -1,0 +1,10 @@
+{% import "partials/_modal-5.html" as modal %}
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+    {{modal.introModal({
+        image: 'illustration_1.jpg', 
+        text: 'Сохраняйте карточки <br> товаров с любого магазина <br> в свои коллекции',
+        btnText: 'Далее'
+    })}}
+{% endblock %}

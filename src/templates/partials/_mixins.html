@@ -17,30 +17,7 @@
     </button>
 {% endmacro %}
 
-{% macro checkCollection(props) %}
-    <label class="check-collection {% if props.modifier %}{{props.modifier}}{% endif %}" for="{{props.id}}">
-        <input type="checkbox" id="{{props.id}}">
-        <span class="check-collection__image" style="background-image: url(./img/{{props.image}});">
-            <span class="check-collection__check">
-                {{ icon('check') }}
-            </span>
-        </span>
-        <span class="check-collection__text">
-            {{props.text}}
-        </span>
-        {% if props.private %}
-            <span class="check-collection__private">
-                {{ icon('lock') }}
-            </span>
-        {% endif %}
-        {% if props.helperText %}
-            <div class="check-collection__helper">
-                {{props.helperText}}
-            </div>
-        {% endif %}
-        <span class="check-collection__bg"></span>
-    </label>
-{% endmacro %}
+
 
 {% macro toggler(text, radio) %}
     <label class="toggler">
@@ -48,6 +25,8 @@
         <span class="toggler__text">{{ text or 'Видно только мне' }}</span>
     </label>
 {% endmacro %}
+
+
 
 {% macro deleteBtn(props) %}
     <button class="btn-circle btn-delete {% if props.modifier %}{{props.modifier}}{% endif %}" type="{{props.type or 'button'}}">
@@ -57,6 +36,10 @@
 
 {% macro nextBtn(props) %}
     <button class="btn-circle btn-next {% if props.modifier %}{{props.modifier}}{% endif %}" type="button">{{ icon('arrow-right') }}</button>
+{% endmacro %}
+
+{% macro checkBtn(props) %}
+    <button class="btn-circle btn-checked {% if props.modifier %}{{props.modifier}}{% endif %}" type="button">{{ icon('check') }}</button>
 {% endmacro %}
 
 {% macro prevBtn(props) %}
@@ -116,12 +99,13 @@
 {% macro file(props) %}
     {% if props.fileSelected %}
         <label class="file is-selected" for="add-cover">
-            <span class="file__text text-muted">Превью обложки коллекции</span>
+            <span class="file__title text-muted">Превью обложки коллекции</span>
             <div class="file__preview">
                 <span class="file__image" style="background-image: url(./img/{{props.prevImg}});">
                     <span class="file__delete delete-btn">
                         {{ deleteBtn() }}
                     </span>
+                    <span class="file__text">{{props.text | safe}}</span>
                 </span>
                 <span class="file__add">
                     {{addBtn()}}
@@ -149,4 +133,29 @@
             </span>
         </label>
     {% endif %}
+{% endmacro %}
+
+{% macro checkCollection(props) %}
+    <label class="check-collection {% if props.modifier %}{{props.modifier}}{% endif %}" for="{{props.id}}">
+        <input type="checkbox" id="{{props.id}}">
+        <span class="check-collection__image" style="background-image: url(./img/{{props.image}});">
+            <span class="check-collection__check">
+                {{ checkBtn() }}
+            </span>
+        </span>
+        <span class="check-collection__text">
+            {{props.text}}
+        </span>
+        {% if props.private %}
+            <span class="check-collection__private">
+                    <span class="private-icon">{{ icon('lock') }}</span>
+            </span>
+        {% endif %}
+        {% if props.helperText %}
+            <div class="check-collection__helper">
+                {{props.helperText}}
+            </div>
+        {% endif %}
+        <span class="check-collection__bg"></span>
+    </label>
 {% endmacro %}

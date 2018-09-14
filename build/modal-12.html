@@ -89,21 +89,40 @@
                   </svg>
                 </button>
               </div>
+              <div class="form-control add-collection-group">
+                <input type="text" class="input add-collection-group__input" placeholder="Название коллекции">
+                <span class="add-collection-group__buttons">
+                  <span class="private-icon">
+                    <svg class="icon icon-lock">
+                      <use xlink:href="img/sprite.svg#icon-lock"></use>
+                    </svg>
+                  </span>
+                  <button class="btn-circle btn-checked btn-checked_inverted" type="button">
+                    <svg class="icon icon-check">
+                      <use xlink:href="img/sprite.svg#icon-check"></use>
+                    </svg>
+                  </button>
+                </span>
+              </div>
               <div class="form-control form-control_checks">
                 <label class="check-collection is-repeated" for="check1">
                   <input type="checkbox" id="check1">
                   <span class="check-collection__image" style="background-image: url(./img/collection-2.jpg);">
                     <span class="check-collection__check">
-                      <svg class="icon icon-check">
-                        <use xlink:href="img/sprite.svg#icon-check"></use>
-                      </svg>
+                      <button class="btn-circle btn-checked " type="button">
+                        <svg class="icon icon-check">
+                          <use xlink:href="img/sprite.svg#icon-check"></use>
+                        </svg>
+                      </button>
                     </span>
                   </span>
                   <span class="check-collection__text"> Мои подборки на лето </span>
                   <span class="check-collection__private">
-                    <svg class="icon icon-lock">
-                      <use xlink:href="img/sprite.svg#icon-lock"></use>
-                    </svg>
+                    <span class="private-icon">
+                      <svg class="icon icon-lock">
+                        <use xlink:href="img/sprite.svg#icon-lock"></use>
+                      </svg>
+                    </span>
                   </span>
                   <div class="check-collection__helper"> Вы уже добавили это в свою коллекцию </div>
                   <span class="check-collection__bg"></span>
@@ -112,17 +131,15 @@
                   <input type="checkbox" id="check2">
                   <span class="check-collection__image" style="background-image: url(./img/collection-1.jpg);">
                     <span class="check-collection__check">
-                      <svg class="icon icon-check">
-                        <use xlink:href="img/sprite.svg#icon-check"></use>
-                      </svg>
+                      <button class="btn-circle btn-checked " type="button">
+                        <svg class="icon icon-check">
+                          <use xlink:href="img/sprite.svg#icon-check"></use>
+                        </svg>
+                      </button>
                     </span>
                   </span>
                   <span class="check-collection__text"> Подруге на ДР </span>
                   <span class="check-collection__bg"></span>
-                </label>
-                <label class="toggler">
-                  <input type="checkbox" name="checkbox">
-                  <span class="toggler__text">Видно только мне</span>
                 </label>
               </div>
             </form>

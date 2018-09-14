@@ -20,14 +20,21 @@
                 </h4>
                 <form action="/" id="card-form">
                     <div class="form-control">
-                        <textarea name="" id="" style="height: 120px"  class="input">Куртка выполнена из денима @sdklimov. Подкладка выполнена из искусственного меха и гладкого текстиля. Детали: воротник, застежка на пуговицы, четыре #кармана.</textarea>
+                        <textarea name="" id="" style="height: 120px" class="input">Куртка выполнена из денима @sdklimov. Подкладка выполнена из искусственного меха и гладкого текстиля. Детали: воротник, застежка на пуговицы, четыре #кармана.</textarea>
                     </div>
                     <div class="form-control">
                         <input type="text" class="input input_search" placeholder="Поиск">
                         <button class="input-search-icon" type="button">{{ mixins.icon('search') }}</button>
                     </div>
+                    <div class="form-control add-collection-group">
+                        <input type="text" class="input add-collection-group__input" placeholder="Название коллекции">
+                        <span class="add-collection-group__buttons">
+                            <span class="private-icon">{{ mixins.icon('lock') }}</span>
+                            {{mixins.checkBtn({modifier: 'btn-checked_inverted'})}}
+                        </span>
+                    </div>
                     <div class="form-control form-control_checks">
-                    {{mixins.checkCollection({
+                        {{mixins.checkCollection({
                         id: "check1",
                         image: "collection-2.jpg",
                         text: "Мои подборки на лето",
@@ -40,7 +47,6 @@
                         image: "collection-1.jpg",
                         text: "Подруге на ДР"
                     })}}
-                    {{mixins.toggler('Видно только мне')}}
                     </div>
                 </form>
             </div>

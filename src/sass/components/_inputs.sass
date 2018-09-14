@@ -5,9 +5,9 @@
     height: 70px
     display: block
     text-align: left
-    padding-left: 70px
-    +sm 
-        padding-left: 60px
+    padding-left: 60px
+    // +sm 
+    //     padding-left: 60px
     &_dotted
         display: flex
         align-items: center
@@ -19,7 +19,8 @@
         padding-left: 0
     &.is-selected
         height: auto
-        padding: 15px 18px
+        padding: 15px 
+        padding-right: 0
         +clr
         +sm 
             padding: $paddingMOB
@@ -44,7 +45,7 @@
             align-items: center
             flex-direction: column
             flex-grow: 1
-    &__text
+    &__title
         display: inline-block
         vertical-align: middle
         line-height: 70px
@@ -64,16 +65,24 @@
         +cover
         border-radius: 8px
         flex: 0 0 150px
+    &__text
+        font-size: 13px
+        font-weight: 700
+        color: $white
+        position: absolute
+        top: 12px
+        left: 10px
     &__delete
         position: absolute
         left: 10px
         bottom: 10px
     &__another-photo
         display: block
-        margin-top: 8px
+        margin-top: 12px
         max-width: 100px
         text-align: center
         font-size: 15px
+        line-height: 1.05
 
 .form-control
     margin-bottom: 14px
@@ -82,6 +91,7 @@
     font-size: 0
     &_checks
         text-align: left
+        margin-top: -4px
     &_toggler
         margin-bottom: 40px
 
@@ -137,3 +147,16 @@
 textarea 
     resize: none
     box-sizing: border-box
+
+.add-collection-group
+    position: relative
+    &__input
+        height: 55px
+    &__buttons
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        right: 15px
+        .btn-circle
+            margin-left: 10px
+    

@@ -35,6 +35,12 @@ PageList:
   ready: 50
 - file: modal-41.html
   ready: 50
+- file: modal-51.html
+  ready: 50
+- file: modal-52.html
+  ready: 50
+- file: modal-53.html
+  ready: 50
 - file: chat-1.html
   ready: 50
 - file: chat-2.html

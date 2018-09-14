@@ -1,0 +1,10 @@
+{% import "partials/_modal-5.html" as modal %}
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+    {{modal.introModal({
+        image: 'illustration_1.jpg', 
+        text: 'Создавайте совместные <br> коллекции, и делитесь <br> ими с друзьями',
+        btnText: 'Начать!'
+    })}}
+{% endblock %}

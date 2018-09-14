@@ -21,7 +21,7 @@
         font-size: 0
         text-align: center
         overflow: hidden
-        +sm
+        +md
             display: none
     &__blur
         position: absolute
@@ -31,7 +31,7 @@
         transition: filter 1s
     &__right
         padding: 20px
-        +sm 
+        +md
             width: 100%
     &__image-inner
         border-radius: 8px
@@ -68,8 +68,12 @@
         flex-flow: column
         justify-content: center
 
+
 .motto
     font-size: 20px
     line-height: 1.25
-    margin: 40px auto
+    margin: 30px auto 40px
+    +sm 
+        font-size: 15px
+        margin: 20px auto
 

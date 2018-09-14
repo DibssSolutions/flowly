@@ -1,2 +1,46 @@
+{% import "components/_cards.html" as Cards %}
 {% extends "layouts/_layout.html" %}
-{% block content %}{% endblock %}
+
+{% set imageCards = [
+    {
+        image: 'image-card_1.jpg', 
+        type: 'Коллекция',
+        title: 'Кросовки <br> с улиц Лондана', 
+        avatar: 'avatar_1.png', 
+        name: 'Punkrock_pixxie'
+    }, 
+    {
+        image: 'image-card_2.jpg', 
+        type: 'Коллекция',
+        title: 'Кросовки <br> с улиц Лондана', 
+        avatar: 'avatar_1.png', 
+        name: 'Punkrock_pixxie'
+    },
+    {
+        image: 'image-card_3.jpg', 
+        type: 'Коллекция',
+        title: 'Кросовки <br> с улиц Лондана', 
+        avatar: 'avatar_1.png', 
+        name: 'Punkrock_pixxie'
+    }
+] %}
+
+{% block content %}
+
+    <div class="slider js-slider">
+        <div class="slider__slide" style="background-image: url(./img/slider/slider_1.jpg);"></div>
+        <div class="slider__slide" style="background-image: url(./img/slider/slider_3.jpg);"></div>
+        <div class="slider__slide" style="background-image: url(./img/slider/slider_1.jpg);"></div>
+        <div class="slider__slide" style="background-image: url(./img/slider/slider_3.jpg);"></div>
+        <div class="slider__slide" style="background-image: url(./img/slider/slider_1.jpg);"></div>
+        <div class="slider__slide" style="background-image: url(./img/slider/slider_3.jpg);"></div>
+    </div>
+    <div class="container-inner">
+        <div class="cards-top">
+            {% for card in imageCards %}
+                {{Cards.imageCard(card)}}
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

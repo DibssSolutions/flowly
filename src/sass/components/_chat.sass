@@ -2,7 +2,7 @@
     display: flex
     flex-wrap: wrap
     align-items: center
-    margin-bottom: 24px
+    margin-bottom: 22px
     position: relative
     cursor: pointer
     &__text
@@ -14,18 +14,14 @@
         max-width: 160px
         font-weight: 500
         +text-overflow
-        +sm 
-            max-width: 120px
     &__secondary
         max-width: 160px
         font-family: $helv
         color: $grey
         +text-overflow
-        +sm 
-            max-width: 120px
         .user_chat &
             max-width: 260px
-            +sm 
+            +sm
                 max-width: 200px
         .is-online &
             color: $black
@@ -47,12 +43,13 @@
         background: $blue
         font-size: 15px
     &_chat
+        margin-bottom: 40px
         &:after
             content: ''
             position: absolute
-            top: -9px
+            top: -13px
             left: -9px
-            bottom: -9px
+            bottom: -13px
             right: -9px
             z-index: -1
             border-radius: $radius
@@ -110,8 +107,6 @@
                 background-color: $light-blue
 
 .chat
-    // width: 900px
-    min-height: 700px
     padding: 0
     position: relative
     +md 
@@ -123,20 +118,28 @@
     &__connections
         float: left
         width: 400px
-        padding: $paddingDT
+        padding: 18px $paddingDT 22px
         +md 
-            width: auto
+            width: 50%
         +sm 
             float: none
             width: 100%
             padding: 10px
             .is-active & 
                 display: none
+        h2 
+            font-size: 20px
+            font-weight: 500
+            line-height: 1.5
     &__messages
         float: left
         width: 500px
-        padding: $paddingDT
+        min-height: 670px
+        padding: 18px $paddingDT 22px
         position: relative
+        display: flex
+        flex-flow: column
+        justify-content: space-between
         &:after
             content: ''
             position: absolute
@@ -148,14 +151,14 @@
             +sm 
                 display: none
         +md 
-            width: auto
+            width: 50%
         +sm 
             float: none
             width: 100%
             display: none
             padding: $paddingMOB
             .is-active & 
-                display: block
+                display: flex
     &__title
         display: flex
         justify-content: space-between
@@ -191,16 +194,19 @@
         transform: translateY(-50%)
         left: 0
     &__main
-        padding-top: 100px
+        margin-top: auto
         display: flex
         flex-flow: column
     &__new-message
         display: flex
-        align-items: 
+        align-items: flex-end
         margin-top: 30px
     &__input
         width: auto
         height: 35px
+        flex-grow: 1
+        margin: 0 15px
+    &__input-card
         flex-grow: 1
         margin: 0 15px
 
@@ -215,13 +221,14 @@
 
 .message-to
     max-width: 330px
-    padding: 10px
+    padding: 7px 9px 
     text-align: left
     color: $white
     background-color: $blue
     &_card
         background-color: $chat-card-bg
         color: $black
+        padding-bottom: 8px
 
 
 .image-to
@@ -234,11 +241,10 @@
 
 .message-from
     position: relative
-    // margin-right: auto
     align-self: flex-start
     text-align: left
     + .message-from
-        margin-top: 8px
+        margin-top: 10px
     + .message-to,
     + .image-to
         margin-top: 20px
@@ -249,7 +255,7 @@
     &__message
         margin-left: 52px
         background-color: $light-bg
-        padding: 10px
+        padding: 8px 10px
         border-radius: 17px
         line-height: 1.25
     

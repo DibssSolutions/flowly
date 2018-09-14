@@ -1,0 +1,10 @@
+{% import "partials/_modal-5.html" as modal %}
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+    {{modal.introModal({
+        image: 'illustration_1.jpg', 
+        text: 'Легко создавайте <br> карточки своих товаров, <br> и продавайте их',
+        btnText: 'Далее'
+    })}}
+{% endblock %}

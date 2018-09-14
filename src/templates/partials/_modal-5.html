@@ -1,0 +1,15 @@
+{% macro introModal(props) %}
+<div class="modal is-open intro">
+    <div class="modal__container intro__container">
+        <div class="intro__image" style="background-image: url(./img/{{props.image}});"></div>
+        <div class="intro__main">
+            <div class="intro__text">
+                {{props.text | safe}}
+            </div>
+            <div class="intro__button">
+                <button class="btn btn_blue btn_big" type="button">{{props.btnText}}</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endmacro %}

@@ -1,9 +1,21 @@
 {% import "partials/_mixins.html" as mixins %}
 {% import "components/_product.html" as Product %}
 
-
 {% macro smallCard(props) %}
     <div class="card-small">
         {{Product.product(props)}}
+    </div>
+{% endmacro %}
+
+{% macro imageCard(props) %}
+    <div class="image-card" style="background-image: url(./img/cards/{{props.image}});">
+        <div class="image-card__type">{{props.type | safe}}</div>
+        <h4 class="image-card__title">{{props.title | safe}}</h4>
+        <div class="image-card__author">
+            <div class="image-card__avatar">
+                <div class="avatar" {% if props.avatar %} style="background-image: url(./img/{{props.avatar}})" {% endif %}></div>
+            </div>
+            <div class="image-card__name">{{props.name | safe}}</div>
+        </div>
     </div>
 {% endmacro %}
