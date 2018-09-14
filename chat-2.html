@@ -68,7 +68,7 @@
         <div class="modal__container chat">
           <div class="chat__connections">
             <div class="chat__title">
-              <h2>Messages</h2>
+              <h2>Сообщения</h2>
               <span class="mob-block">
                 <button class="btn-circle btn-add " type="button">
                   <svg class="icon icon-plus">
@@ -146,6 +146,13 @@
           </div>
           <div class="chat__messages">
             <div class="chat__top">
+              <span class="mob-block chat__prev">
+                <button class="btn-circle btn-prev " type="button">
+                  <svg class="icon icon-arrow-left">
+                    <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+                  </svg>
+                </button>
+              </span>
               <div class="user  ">
                 <div class="user__avatar">
                   <div class="avatar" style="background-image: url(./img/avatar_4.jpg)"></div>
@@ -184,14 +191,20 @@
                     <use xlink:href="img/sprite.svg#icon-plus"></use>
                   </svg>
                 </button>
-                <div class="card-outline">
-                  <section class="product">
-                    <div class="product__image" style="background-image: url(./img/collection-1.jpg);"></div>
-                    <div class="product__main">
-                      <div class="product__title">Куртка джинсовая Wrangler</div>
-                      <div class="product__price">10 495 ₽</div>
-                    </div>
-                  </section>
+                <div class="card-outline chat__input-card">
+                  <div class="card-outline__header">
+                    <p>Здравствуйте!</p>
+                    <p>Мне интересен этот товар.</p>
+                  </div>
+                  <div class="card-outline__body">
+                    <section class="product">
+                      <div class="product__image" style="background-image: url(./img/collection-1.jpg);"></div>
+                      <div class="product__main">
+                        <div class="product__title">Куртка джинсовая Wrangler</div>
+                        <div class="product__price">10 495 ₽</div>
+                      </div>
+                    </section>
+                  </div>
                 </div>
                 <button class="btn-circle btn-up" type="button">
                   <svg class="icon icon-arrow-up">
