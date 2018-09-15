@@ -25,6 +25,105 @@
     }
 ] %}
 
+{% set productCards = [
+    {
+        image: 'card_img_1.jpg', 
+        brand: 'Wrangler',
+        product: 'Куртка джинсовая', 
+        price: '10495'
+    }, 
+    {
+        image: 'card_img_2.jpg', 
+        brand: 'Mango Man ',
+        product: 'Рубашка - DAHM', 
+        price: '2 900'
+    },
+    {
+        image: 'card_img_3.jpg', 
+        brand: 'Champion',
+        product: 'Свитшот Crewneck Sweatshirt', 
+        price: '4 857 '
+    }, 
+    {
+        image: 'card_img_4.jpg', 
+        brand: 'Mango Man ',
+        product: 'Рубашка - DAHM', 
+        price: '2 900'
+    },
+    {
+        image: 'card_img_5.jpg', 
+        brand: 'Mango Man ',
+        product: 'Рубашка - DAHM', 
+        price: '2 900'
+    },
+    {
+        image: 'card_img_6.jpg', 
+        brand: 'Mango Man ',
+        product: 'Рубашка - DAHM', 
+        price: '2 900'
+    },
+    {
+        image: 'card_img_7.jpg', 
+        brand: 'Mango Man ',
+        product: 'Рубашка - DAHM', 
+        price: '2 900'
+    },
+    {
+        image: 'card_img_8.jpg', 
+        brand: 'Mango Man ',
+        product: 'Рубашка - DAHM', 
+        price: '2 900'
+    }, 
+    {
+        image: 'card_img_1.jpg', 
+        brand: 'Wrangler',
+        product: 'Куртка джинсовая', 
+        price: '10495'
+    }, 
+    {
+        image: 'card_img_2.jpg', 
+        brand: 'Mango Man ',
+        product: 'Рубашка - DAHM', 
+        price: '2 900'
+    },
+    {
+        image: 'card_img_3.jpg', 
+        brand: 'Champion',
+        product: 'Свитшот Crewneck Sweatshirt', 
+        price: '4 857 '
+    }, 
+    {
+        image: 'card_img_4.jpg', 
+        brand: 'Mango Man ',
+        product: 'Рубашка - DAHM', 
+        price: '2 900'
+    },
+    {
+        image: 'card_img_5.jpg', 
+        brand: 'Mango Man ',
+        product: 'Рубашка - DAHM', 
+        price: '2 900'
+    },
+    {
+        image: 'card_img_6.jpg', 
+        brand: 'Mango Man ',
+        product: 'Рубашка - DAHM', 
+        price: '2 900'
+    },
+    {
+        image: 'card_img_7.jpg', 
+        brand: 'Mango Man ',
+        product: 'Рубашка - DAHM', 
+        price: '2 900'
+    },
+    {
+        image: 'card_img_8.jpg', 
+        brand: 'Mango Man ',
+        product: 'Рубашка - DAHM', 
+        price: '2 900'
+    }
+] %}
+
 {% block content %}
 
     <div class="slider js-slider">
@@ -35,12 +134,23 @@
         <div class="slider__slide" style="background-image: url(./img/slider/slider_1.jpg);"></div>
         <div class="slider__slide" style="background-image: url(./img/slider/slider_3.jpg);"></div>
     </div>
+
     <div class="container-inner">
         <div class="cards-top">
             {% for card in imageCards %}
                 {{Cards.imageCard(card)}}
             {% endfor %}
         </div>
+        <div class="cards-bottom grid">
+            {% for item in productCards %}
+                {{Cards.productCard(item)}}
+            {% endfor %}
+        </div>
     </div>
+    <div>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam adipisci rem eius deserunt nobis voluptate, consectetur alias harum voluptas pariatur vitae minima nesciunt sequi distinctio non incidunt tempore, numquam iusto?
+    </div>
+    <div class="back-top">
 
+    </div>
 {% endblock %}

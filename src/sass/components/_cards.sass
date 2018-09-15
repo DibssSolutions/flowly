@@ -16,8 +16,36 @@
 
 .image-card
     width: 300px
-    padding-bottom: 350px
+    height: 350px
+    padding: 20px
     +cover
-    display: inline-block
     margin: 15px
     border-radius: 15px
+    position: relative
+    color: $white
+    display: flex
+    flex-flow: column
+    justify-content: space-between
+    &__title
+        font-size: 25px
+        font-weight: 500
+        line-height: 1.2
+    &__author
+        font-size: 0
+    &__avatar
+        display: inline-block
+        vertical-align: middle
+    &__name
+        display: inline-block
+        vertical-align: middle
+        margin-left: 10px
+        font-size: 15px
+        font-weight: 500
+
+.card
+    width: 220px
+    // padding-bottom: 28px
+    &__image
+        max-width: 100%
+        display: block
+        border-radius: 8px
