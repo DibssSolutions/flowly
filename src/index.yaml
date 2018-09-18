@@ -3,6 +3,10 @@ ProjectTitle: flowly
 PageList:
 - file: main.html
   ready: 50
+- file: page-2-1.html
+  ready: 50
+- file: page-2-2.html
+  ready: 50
 - file: modal-01.html
   ready: 50
 - file: modal-02.html

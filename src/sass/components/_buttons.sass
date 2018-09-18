@@ -35,11 +35,6 @@
         width: 177px
         +sm 
             width: 100%
-    &_link
-        color: $grey
-    &_small-link
-        font-size: 13px
-        padding: 12px 14px 13px 14px
     &_small
         font-size: 14px
         padding: 10px 20px 9px
@@ -50,10 +45,34 @@
         border-radius: 20px
         font-size: 15px
         padding: 12px 20px 11px
+    &_link
+        color: $grey
+    &_small-link
+        font-size: 13px
+        padding: 12px 14px 13px 14px
     &_check-main
         padding: 9px 20px 9px
         background: $white
         border-radius: 18px
+    &_upper
+        text-transform: uppercase
+
+.btn-watch
+    color: $white
+    background-color: $mainGrey
+    text-transform: uppercase
+    .icon 
+        font-size: 12px
+        margin-left: 3px
+
+.main-link
+    font-weight: 700
+    color: #aaaaaa
+    padding: 9px 20px 9px
+    border-radius: 18px
+    &.is-active
+        background-color: #e5e5e5
+        color: $black
 
 // =========== CIRCLE ==============
 
@@ -65,6 +84,9 @@
     font-size: 0
     text-align: center
     vertical-align: middle
+    &_big
+        height: 40px
+        width: 40px
     .icon
         font-size: 16px
         vertical-align: middle
@@ -72,6 +94,14 @@
 .btn-delete
     background-color: $white
     color: $grey
+    &_dark
+        background-color: $light-bg
+ 
+.btn-to-top
+    background-color: rgba($black, 0.3)
+    color: $white
+    .icon
+        font-size: 8px
 
 .btn-checked
     background-color: $white
@@ -114,8 +144,11 @@
     font-size: 0
     text-align: center
     vertical-align: middle
-    background-color: $grey
+    background-color: rgba($black, 0.3)
     color: $white
+    z-index: 100
+    &:hover
+        background-color: rgba($black, 0.7)
     .icon 
         font-size: 20px
         vertical-align: middle

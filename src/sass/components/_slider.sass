@@ -5,19 +5,38 @@
         padding-bottom: 350px
         background-color: $green
         +cover
-        border-radius: 8px
-
-
-.slick-slide
-    margin: 0 12px
+        border-radius: $radiusBig
+    .slick-slide
+        margin: 0 12px
+    .btn-slider
+        &_prev
+            left: calc(50% - 480px)
+        &_next
+            right: calc(50% - 480px)
 
 .slick-arrow
     position: absolute
     top: 50%
     transform: translateY(-50%)
-.btn-slider
-    z-index: 100
-    &_prev
-        left: calc(50% - 480px)
-    &_next
-        right: calc(50% - 480px)
+
+
+.slider-single
+    width: 540px !important
+    overflow: hidden
+    &__slide
+        // width: 600px !important
+        padding-bottom: 630px
+        +cover
+        border-radius: $radiusBig
+    .btn-single-slider
+        &_prev
+            left: 20px
+            transition: visibility 0.1s
+            &.is-hidden
+                visibility: hidden
+        &_next
+            right: 20px
+            transition: visibility 0.1s
+            &.is-hidden
+                visibility: hidden
+               

@@ -18,7 +18,9 @@
 
     <!-- BEGIN content -->
     <div class="out">
-      {% include "partials/_header.html" %}
+      {% if not withoutHeader %}
+        {% include "partials/_header.html" %}
+      {% endif %}
       {% block content %}{% endblock %}
     </div>
     <!-- END content -->

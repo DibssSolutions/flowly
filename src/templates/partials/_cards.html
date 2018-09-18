@@ -1,0 +1,56 @@
+{% import "components/_cards.html" as Cards %}
+
+{% set productCards = [
+    {
+        image: 'card_img_1.jpg', 
+        brand: 'Wrangler',
+        product: 'Куртка джинсовая', 
+        price: '10495'
+    }, 
+    {
+        image: 'card_img_2.jpg', 
+        brand: 'Mango Man ',
+        product: 'Рубашка - DAHM', 
+        price: '2 900'
+    },
+    {
+        image: 'card_img_3.jpg', 
+        brand: 'Champion',
+        product: 'Свитшот Crewneck Sweatshirt', 
+        price: '4 857 '
+    }, 
+    {
+        image: 'card_img_4.jpg', 
+        brand: 'Mango Man ',
+        product: 'Рубашка - DAHM', 
+        price: '2 900'
+    },
+    {
+        image: 'card_img_5.jpg', 
+        brand: 'Mango Man ',
+        product: 'Рубашка - DAHM', 
+        price: '2 900'
+    },
+    {
+        image: 'card_img_6.jpg', 
+        brand: 'Mango Man ',
+        product: 'Рубашка - DAHM', 
+        price: '2 900'
+    },
+    {
+        image: 'card_img_7.jpg', 
+        brand: 'Mango Man ',
+        product: 'Рубашка - DAHM', 
+        price: '2 900'
+    },
+    {
+        image: 'card_img_8.jpg', 
+        brand: 'Mango Man ',
+        product: 'Рубашка - DAHM', 
+        price: '2 900'
+    }
+] %}
+
+{% for item in productCards %}
+    {{Cards.productCard(item)}}
+{% endfor %}

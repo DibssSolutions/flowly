@@ -51,7 +51,7 @@
 {% endmacro %}
 
 {% macro menuBtn(props) %}
-    <button class="btn-circle btn-menu" type="button">{{ icon('three-dots') }}</button>
+    <button class="btn-circle btn-menu {% if props.modifier %}{{props.modifier}}{% endif %}" type="button">{{ icon('three-dots') }}</button>
 {% endmacro %}
 
 {% macro upBtn(props) %}
