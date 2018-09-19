@@ -1,0 +1,30 @@
+.collection
+    position: relative
+    width: 300px
+    &__images
+        display: flex
+        flex-direction: column
+        flex-wrap: wrap
+        // width: 300px
+        max-height: 200px
+        margin-bottom: 8px
+    &__image
+        +cover
+        border-radius: $radiusBig
+        background-color: $light-bg
+        &_main
+            width: 195px
+            padding-bottom: 200px
+            margin-right: 5px
+        &_secondary
+            padding-bottom: 97px
+            width: 100px
+            &:last-of-type
+                margin-top: 6px
+    &__title
+        font-weight: 500
+    &__private
+        position: absolute
+        bottom: 0
+        right: 0
+            

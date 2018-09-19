@@ -1,5 +1,10 @@
 .product-page
-    margin-top: 40px
+    margin-bottom: 70px
+    &__main
+        position: relative
+        margin-top: 40px
+        margin-bottom: 70px
+        +clr
     &__slider
         float: left
         width: 540px
@@ -17,11 +22,26 @@
         font-weight: 700
         font-size: 20px
     &__info
-        font-size: 13px
-        color: $grey
-        line-height: 1.23
         margin-bottom: 24px
         margin-top: 12px
-        &_bold
-            font-weight: 600
+    &__buttons
+        margin-top: 24px
+        font-size: 0
+        & > *
+            margin-right: 10px
+    &__followers
+        margin-top: 24px
+        margin-bottom: 24px
+    &__cards-title
+        font-size: 20px
+        font-weight: 500
+        line-height: 1.5
+        margin-bottom: 30px
+    &__cards
+        margin: 0 auto
+        text-align: center
             
+.views-details
+    color: $grey
+    font-size: 13px
+    line-height: 1.23

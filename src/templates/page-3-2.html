@@ -1,0 +1,48 @@
+{% import "partials/_company.html" as Company %}
+{% import "components/_cards.html" as Cards %}
+{% import "components/_collection.html" as Collection %}
+
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+    <div class="company-page">
+        {{Company.companyTop({activeSecond: true, followed: true})}}
+        <div class="company-page__container container-inner">
+            <div class="company-page__row">
+                <div class="company-page__col">
+                    <div class="card card_add card_full-width">
+                        <div class="card__image">
+                            {{mixins.addBtn({modifier: 'btn-circle_big btn-add_blue'})}}
+                        </div>
+                        <div class="card__descr">
+                            Добавить товар
+                        </div>
+                    </div>
+                    {{Collection.collection({
+                                title: 'Хочу на день рождения', 
+                                private: true
+                    })}}
+                </div>
+                <div class="company-page__col">
+                    {{Collection.collection({
+                                imageMain: "card_img_1.jpg",
+                                imagesSecondary: ["card_img_3.jpg", "card_img_5.jpg"], title: 'Хочу на день рождения'
+                    })}}
+                </div>
+                <div class="company-page__col">
+                    {{Cards.imageCard({
+                            image: 'image-card_1.jpg', 
+                            title: 'Кросовки <br> с улиц Лондана', 
+                            withoutAvatars: true
+                    })}}
+                </div>
+            </div>
+            <div class="company-page__private-collection">
+                {{Collection.collection({
+                        imageMain: "card_img_1.jpg",
+                        imagesSecondary: ["card_img_3.jpg",     "card_img_5.jpg"], title: 'Хочу на день рождения'
+                })}}
+            </div>
+        </div>
+    </div>
+{% endblock %}

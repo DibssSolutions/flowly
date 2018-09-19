@@ -6,8 +6,8 @@ $(document).ready(function() {
   var msnry = new Masonry(elem, {
     // options
     itemSelector: '.card',
-    columnWidth: 220,
-    gutter: 24,
+    columnWidth: '.card',
+    gutter: '.gutter-sizer',
     horizontalOrder: true
   });
 });

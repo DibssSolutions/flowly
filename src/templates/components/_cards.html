@@ -13,25 +13,28 @@
             <div class="image-card__type">{{props.type | safe}}</div>
             <h4 class="image-card__title">{{props.title | safe}}</h4>
         </div>
-        <div class="image-card__author">
-            <div class="image-card__avatar">
-                <div class="avatar" {% if props.avatar %} style="background-image: url(./img/{{props.avatar}})" {% endif %}></div>
+        {% if not props.withoutAvatars %}
+            <div class="image-card__author">
+                <div class="image-card__avatar">
+                    <div class="avatar" {% if props.avatar %} style="background-image: url(./img/{{props.avatar}})" {% endif %}></div>
+                </div>
+                <div class="image-card__name">{{props.name | safe}}</div>
             </div>
-            <div class="image-card__name">{{props.name | safe}}</div>
-        </div>
+        {% endif %}
     </div>
 {% endmacro %}
 
 {% macro productCard(props) %}
     <div class="card">
-        <img class="card__image" src="img/cards/{{props.image}}" alt='prod' />
+        <img class="card__image" src="img/cards/{{props.image}}" alt='prod'/>
         <div class="card__descr">
             <span class="card__brand">{{props.brand | safe}}</span>
             /
             <span class="card__product">{{props.product | safe}}</span>
         </div>
         <div class="card__price">
-            {{props.price | safe}} Р
+            {{props.price | safe}}
+            Р
         </div>
     </div>
 {% endmacro %}

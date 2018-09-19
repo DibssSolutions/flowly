@@ -17,16 +17,12 @@
     </button>
 {% endmacro %}
 
-
-
 {% macro toggler(text, radio) %}
     <label class="toggler">
         <input type="{{radio or 'checkbox'}}" name="checkbox">
         <span class="toggler__text">{{ text or 'Видно только мне' }}</span>
     </label>
 {% endmacro %}
-
-
 
 {% macro deleteBtn(props) %}
     <button class="btn-circle btn-delete {% if props.modifier %}{{props.modifier}}{% endif %}" type="{{props.type or 'button'}}">
@@ -64,8 +60,8 @@
             <div class="avatar" {% if props.image %} style="background-image: url(./img/{{props.image}})" {% endif %}></div>
         </div>
         <div class="user__text">
-            <div class="user__main">{{props.mainText}}</div>
-            <div class="user__secondary">{{props.secondaryText}}</div>
+            <div class="user__main">{{props.mainText | safe}}</div>
+            <div class="user__secondary">{{props.secondaryText | safe}}</div>
         </div>
         {% if props.button %}
             <div class="user__button">
@@ -105,7 +101,7 @@
                     <span class="file__delete delete-btn">
                         {{ deleteBtn() }}
                     </span>
-                    <span class="file__text">{{props.text | safe}}</span>
+                    <span class="file__preview-text">{{props.text | safe}}</span>
                 </span>
                 <span class="file__add">
                     {{addBtn()}}

@@ -1,0 +1,74 @@
+{% import "partials/_mixins.html" as mixins %}
+{% macro companyTop(args) %}
+
+    <div class="company-page__container container-narrow">
+        <div class="company-page__top">
+            <div class="company-page__logo">
+                <a class="logo">
+                    <img src="img/asos_logo.png" alt="logo">
+                </a>
+            </div>
+            <section class="company-page__descr">
+                <h1 class="company-page__title">
+                    <span>ASOS Russia</span>
+                    {% if not args.followed %}
+                        <span class="is-follow follow-mark">
+                            {{mixins.icon('check')}}
+                        </span>
+                    {% endif %}
+
+                </h1>
+                <div class="company-page__location text-muted">
+                    {{mixins.icon('map')}}
+                    Россия, Москва
+                </div>
+                <div class="company-page__buttons">
+
+                    {% if args.followed %}
+                        <button class="btn btn_small btn_blue" type="button">
+                            Редактировать
+                        </button>
+                    {% else %}
+                        <button class="btn btn_small btn_blue" type="button">
+                            Подписаться
+                        </button>
+                        <button class="btn btn_small btn_light" type="button">
+                            Сообщение
+                        </button>
+                    {% endif %}
+                    {{mixins.menuBtn()}}
+                    <button class="btn-circle btn-share" type="button">
+                        {{mixins.icon('share')}}
+                    </button>
+                </div>
+                <p>Добро пожаловать на официальную страницу ASOS Russia, где вы откроете для себя мир моды онлайн.</p>
+                <a href="https://www.instagram.com/asos_ru" class="company-page__cite-link text-blue">
+                    www.instagram.com/asos_ru
+                </a>
+                <div class="instagram-info">
+                    <span class="instagram-info__nickname">
+                        @asos_ru
+                    </span>
+                    <span class="instagram-info__followers">
+                        19 подписчиков
+                    </span>
+                    <span class="instagram-info__following">
+                        0 подписок
+                    </span>
+                </div>
+                <ul class="links links_company">
+                    <li>
+                        <a href="#" class="company-link {% if args.activeFirst %}is-active{% endif %}">Товары</a>
+                    </li>
+                    <li>
+                        <a href="#" class="company-link {% if args.activeSecond %}is-active{% endif %}">Коллекции</a>
+                    </li>
+                    <li>
+                        <a href="#" class="company-link">Сохранено</a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+{% endmacro %}

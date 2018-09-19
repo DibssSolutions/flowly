@@ -1,0 +1,16 @@
+{% macro list(num) %}
+    <ul class="profile-list">
+        <li class="profile-list__item">
+            <a href="profile-page-1.html" class="profile-list__link {% if num === 1 %}is-active{% endif %}">Профиль</a>
+        </li>
+        <li class="profile-list__item">
+            <a href="profile-page-2.html" class="profile-list__link {% if num === 2 %}is-active{% endif %}">Основная информация</a>
+        </li>
+        <li class="profile-list__item">
+            <a href="profile-page-3.html" class="profile-list__link {% if num === 3 %}is-active{% endif %}">Социальные сети</a>
+        </li>
+        <li class="profile-list__item">
+            <a href="profile-page-4.html" class="profile-list__link {% if num === 4 %}is-active{% endif %}">Уведомления</a>
+        </li>
+    </ul>
+{% endmacro %}

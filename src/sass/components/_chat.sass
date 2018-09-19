@@ -14,6 +14,8 @@
         max-width: 160px
         font-weight: 500
         +text-overflow
+        .user_collection &
+            max-width: initial
     &__secondary
         max-width: 160px
         font-family: $helv
@@ -25,6 +27,11 @@
                 max-width: 200px
         .is-online &
             color: $black
+        .user_collection &
+            color: $black
+            max-width: initial
+        .icon
+            font-size: 12px
     &__button
         margin-left: auto
     &__time
@@ -76,8 +83,19 @@
     background-repeat: no-repeat
     background-size: 110% 110%
     &_small
-        height: 30px
-        width: 30px
+        height: 34px
+        width: 34px
+        border: 2px solid $white
+
+.followers
+    display: flex
+    align-items: center
+    &__avatar:not(:first-child) 
+        margin-left: -10px
+    &__number
+        margin-left: 10px
+        font-weight: 500
+        color: $grey
 
 .card-small
     padding: 15px
@@ -237,9 +255,6 @@
     width: 230px
     padding-bottom: 230px
     +cover
-
-
-
 
 .message-from
     position: relative

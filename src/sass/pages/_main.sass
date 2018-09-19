@@ -1,18 +1,32 @@
 .cards-top
     margin: 0 -15px
     display: flex
-
+    .image-card
+        margin: 15px
 .cards-bottom
     margin: 0 auto
     // padding-bottom: 1200px
     // .card   
     //     margin: 0 12px 24px
 
-.main-links
+.links
     display: flex
     align-items: center
-    justify-content: center
     margin: 30px auto 40px
+    &_main
+        justify-content: center
+    &_company
+        justify-content: flex-start
+        margin-left: -18px
+
+.main-link
+    font-weight: 700
+    color: #aaaaaa
+    padding: 9px 20px 9px
+    border-radius: 18px
+    &.is-active
+        background-color: #e5e5e5
+        color: $black
 
 .to-top
     position: fixed
@@ -39,3 +53,4 @@
         margin-right: 10px
         &_grey
             color: $mainGrey
+

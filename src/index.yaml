@@ -7,6 +7,18 @@ PageList:
   ready: 50
 - file: page-2-2.html
   ready: 50
+- file: page-3-1.html
+  ready: 50
+- file: page-3-2.html
+  ready: 50
+- file: profile-page-1.html
+  ready: 50
+- file: profile-page-2.html
+  ready: 50
+- file: profile-page-3.html
+  ready: 50
+- file: profile-page-4.html
+  ready: 50
 - file: modal-01.html
   ready: 50
 - file: modal-02.html

@@ -19,7 +19,7 @@
     height: 350px
     padding: 20px
     +cover
-    margin: 15px
+    // margin: 15px
     border-radius: 15px
     position: relative
     color: $white
@@ -42,10 +42,40 @@
         font-size: 15px
         font-weight: 500
 
+.grid
+    margin: 0 auto
+    display: inline-block
+    width: 960px
+    +sm 
+        width: 300px
+
 .card
-    width: 220px
-    // padding-bottom: 28px
+    width: 222px
+    margin-bottom: 28px
+    &_full-width
+        width: 100%
+    &_add
+        .card__image
+            height: 200px
+            background-color: $light-bg
+            position: relative
+        .btn-add
+            +vcenter
+    +sm 
+        width: 144px
+        margin-bottom: 20px
     &__image
         max-width: 100%
         display: block
         border-radius: $radiusBig
+        margin-bottom: 8px
+    &__descr
+        font-size: 13px
+        line-height: 1
+        color: $grey
+        font-weight: 500
+
+.gutter-sizer
+    width: 24px
+    +sm 
+        width: 10px

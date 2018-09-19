@@ -6,6 +6,7 @@
     text-align: center
     background: none
     user-select: none
+    vertical-align: middle
     &_blue
         background-color: $blue
         color: $white
@@ -56,31 +57,33 @@
         border-radius: 18px
     &_upper
         text-transform: uppercase
+    &_text
+        font-size: 15px
+        vertical-align: top
+        margin-left: 10px
+    &_collection-add
+        font-size: 0
+        .icon
+            font-size: 17px
 
 .btn-watch
     color: $white
     background-color: $mainGrey
-    text-transform: uppercase
     .icon 
         font-size: 12px
         margin-left: 3px
 
-.main-link
-    font-weight: 700
-    color: #aaaaaa
-    padding: 9px 20px 9px
-    border-radius: 18px
-    &.is-active
-        background-color: #e5e5e5
-        color: $black
+.btn-wright
+    background-color: $green
+    color: $white
+
+
 
 // =========== CIRCLE ==============
 
 .btn-circle
     display: inline-block
-    height: 36px
-    width: 36px
-    border-radius: 50%
+    +circle(36)
     font-size: 0
     text-align: center
     vertical-align: middle
@@ -111,7 +114,8 @@
         color: $white
 .btn-add, 
 .btn-prev,
-.btn-menu
+.btn-menu,
+.btn-share
     background-color: $light-bg
     color: $grey
 
@@ -137,10 +141,12 @@
     .icon
         font-size: 4px
 
+.btn-share
+    .icon
+        font-size: 16px
+
 .btn-slider
-    height: 40px
-    width: 40px 
-    border-radius: 50%
+    +circle(40)
     font-size: 0
     text-align: center
     vertical-align: middle
