@@ -63,68 +63,74 @@
           </div>
         </div>
       </header>
-      <div class="slider js-slider">
-        <div class="slider__slide" style="background-image: url(./img/slider_1/slider_1.jpg);"></div>
-        <div class="slider__slide" style="background-image: url(./img/slider_1/slider_3.jpg);"></div>
-        <div class="slider__slide" style="background-image: url(./img/slider_1/slider_1.jpg);"></div>
-        <div class="slider__slide" style="background-image: url(./img/slider_1/slider_3.jpg);"></div>
-        <div class="slider__slide" style="background-image: url(./img/slider_1/slider_1.jpg);"></div>
-        <div class="slider__slide" style="background-image: url(./img/slider_1/slider_3.jpg);"></div>
-      </div>
-      <div class="container-inner">
-        <ul class="links links_main">
-          <li><a href="#" class="main-link">Моя лента</a></li>
-          <li><a href="#" class="main-link is-active">Трендовое</a></li>
-          <li><a href="#" class="main-link">Новое</a></li>
-          <li><a href="#" class="main-link">Популярное</a></li>
-        </ul>
-        <div class="cards-top">
-          <div class="image-card" style="background-image: url(./img/cards/image-card_1.jpg);">
-            <div class="image-card__top">
-              <div class="image-card__type">Коллекция</div>
-              <h4 class="image-card__title">Кросовки <br> с улиц Лондана</h4>
+      <div class="company-page">
+        <div class="company-page__container container-narrow">
+          <div class="company-page__top">
+            <div class="company-page__logo">
+              <a class="logo">
+                <img src="img/asos_logo.png" alt="logo">
+              </a>
             </div>
-            <div class="image-card__author">
-              <div class="image-card__avatar">
-                <div class="avatar" style="background-image: url(./img/avatar_1.png)"></div>
+            <section class="company-page__descr">
+              <h1 class="company-page__title">
+                <span>ASOS Russia</span>
+                <span class="is-follow follow-mark">
+                  <svg class="icon icon-check">
+                    <use xlink:href="img/sprite.svg#icon-check"></use>
+                  </svg>
+                </span>
+              </h1>
+              <div class="company-page__location text-muted">
+                <svg class="icon icon-map">
+                  <use xlink:href="img/sprite.svg#icon-map"></use>
+                </svg> Россия, Москва </div>
+              <div class="company-page__buttons">
+                <button class="btn btn_small btn_blue" type="button"> Подписаться </button>
+                <button class="btn btn_small btn_light" type="button"> Сообщение </button>
+                <button class="btn-circle btn-menu " type="button">
+                  <svg class="icon icon-three-dots">
+                    <use xlink:href="img/sprite.svg#icon-three-dots"></use>
+                  </svg>
+                </button>
+                <button class="btn-circle btn-share" type="button">
+                  <svg class="icon icon-share">
+                    <use xlink:href="img/sprite.svg#icon-share"></use>
+                  </svg>
+                </button>
               </div>
-              <div class="image-card__name">Punkrock_pixxie</div>
-            </div>
-          </div>
-          <div class="image-card" style="background-image: url(./img/cards/image-card_2.jpg);">
-            <div class="image-card__top">
-              <div class="image-card__type">Коллекция</div>
-              <h4 class="image-card__title">Кросовки <br> с улиц Лондана</h4>
-            </div>
-            <div class="image-card__author">
-              <div class="image-card__avatar">
-                <div class="avatar" style="background-image: url(./img/avatar_1.png)"></div>
+              <p>Добро пожаловать на официальную страницу ASOS Russia, где вы откроете для себя мир моды онлайн.</p>
+              <a href="https://www.instagram.com/asos_ru" class="company-page__cite-link text-blue"> www.instagram.com/asos_ru </a>
+              <div class="instagram-info">
+                <span class="instagram-info__nickname"> @asos_ru </span>
+                <span class="instagram-info__followers"> 19 подписчиков </span>
+                <span class="instagram-info__following"> 0 подписок </span>
               </div>
-              <div class="image-card__name">Punkrock_pixxie</div>
-            </div>
-          </div>
-          <div class="image-card" style="background-image: url(./img/cards/image-card_3.jpg);">
-            <div class="image-card__top">
-              <div class="image-card__type">Коллекция</div>
-              <h4 class="image-card__title">Кросовки <br> с улиц Лондана</h4>
-            </div>
-            <div class="image-card__author">
-              <div class="image-card__avatar">
-                <div class="avatar" style="background-image: url(./img/avatar_1.png)"></div>
-              </div>
-              <div class="image-card__name">Punkrock_pixxie</div>
-            </div>
+              <ul class="links links_company">
+                <li>
+                  <a href="#" class="company-link ">Товары</a>
+                </li>
+                <li>
+                  <a href="#" class="company-link ">Коллекции</a>
+                </li>
+                <li>
+                  <a href="#" class="company-link">Сохранено</a>
+                </li>
+              </ul>
+            </section>
           </div>
         </div>
-        <div class="cards-bottom">
+        <div class="company-page__container container-inner">
           <div class="grid">
             <div class="gutter-sizer"></div>
-            <div class="card">
-              <img class="card__image" src="img/cards/card_img_1.jpg" alt='prod' />
-              <div class="card__descr">
-                <span class="card__brand">Wrangler</span> / <span class="card__product">Куртка джинсовая</span>
+            <div class="card card_add">
+              <div class="card__image">
+                <button class="btn-circle btn-add btn-circle_big btn-add_blue" type="button">
+                  <svg class="icon icon-plus">
+                    <use xlink:href="img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
               </div>
-              <div class="card__price"> 10495 Р </div>
+              <div class="card__descr"> Добавить товар </div>
             </div>
             <div class="card">
               <img class="card__image" src="img/cards/card_img_2.jpg" alt='prod' />
@@ -177,18 +183,6 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="to-top">
-        <button class="btn-circle btn-circle_big btn-to-top" type="button">
-          <svg class="icon icon-chevron-up">
-            <use xlink:href="img/sprite.svg#icon-chevron-up"></use>
-          </svg>
-        </button>
-      </div>
-      <div class="cookies">
-        <p> На этом сайте используются файлы cookie, чтобы вы могли получить лучший опыт на нашем сайте. </p>
-        <button class="cookies__btn" type="button">Продолжить</button>
-        <button class="cookies__btn cookies__btn_grey" type="button">Подробнее</button>
       </div>
     </div>
     <!-- END content -->
