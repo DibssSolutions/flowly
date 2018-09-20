@@ -20,6 +20,8 @@
         vertical-align: middle
         line-height: 40px
         font-size: 15px
+        .is-disabled &
+            color: $grey
         &:before,
         &:after
             position: absolute
@@ -42,116 +44,120 @@
             background-color: $white
             transition: transform .3s
 
+.toggler.is-disabled
+    input:checked ~ .toggler__text
+        color: $grey
+
 .new-element, 
 .check-collection
-	background-color: transparent
-	font-family: $helv
-	margin-left: -8px
-	margin-right: -8px
-	margin-bottom: 2px
-	padding: 8px
-	text-align: left
-	width: calc(100% + 16px)
-	border-radius: $radius
-	transition: background-color $tr
-	font-size: 0
-	&__image
-		border-radius: $radius
-		display: inline-block
-		vertical-align: middle
-		position: relative
-		width: 55px
-		padding-bottom: 55px
-		+cover
-	&__text
-		display: inline-block
-		vertical-align: middle
-		margin-left: 16px
-		font-size: 15px
-		font-weight: 500
-		color: $black
-		transition: color $tr
+    background-color: transparent
+    font-family: $helv
+    margin-left: -8px
+    margin-right: -8px
+    margin-bottom: 2px
+    padding: 8px
+    text-align: left
+    width: calc(100% + 16px)
+    border-radius: $radius
+    transition: background-color $tr
+    font-size: 0
+    &__image
+        border-radius: $radius
+        display: inline-block
+        vertical-align: middle
+        position: relative
+        width: 55px
+        padding-bottom: 55px
+        +cover
+    &__text
+        display: inline-block
+        vertical-align: middle
+        margin-left: 16px
+        font-size: 15px
+        font-weight: 500
+        color: $black
+        transition: color $tr
 
 .new-element
-	&:hover
-		background-color: $light-bg
-	&__plus
-		position: absolute
-		+vcenter
-		color: $white
-		.icon
-			font-size: 15px 
+    &:hover
+        background-color: $light-bg
+    &__plus
+        position: absolute
+        +vcenter
+        color: $white
+        .icon
+            font-size: 15px 
 
 .check-collection
-	display: block
-	position: relative
-	&:hover
-		.check-collection__bg
-			background-color: $light-bg
-	input
-		position: absolute
-		left: 0
-		top: -1px
-		opacity: 0
-		width: 16px
-		height: 16px
-		&:checked 
-			~ .check-collection__bg
-				background-color: $blue
-			~ .check-collection__image .check-collection__check .btn-checked
-				+vis
-			~ .check-collection__text
-				color: $white
-			~ .check-collection__private .private-icon
-				background-color: $white
-				color: $blue
-	&__check
-		+vcenter
-		.btn-checked
-			+invis
-	&__bg
-		position: absolute
-		top: 0
-		left: 0
-		bottom: 0
-		right: 0
-		z-index: -1
-		border-radius: $radius
-		transition: background-color $tr
-	&__private
-		position: absolute
-		top: 50%
-		right: 20px
-		transform: translateY(-50%)
-		
-	&__helper
-		font-size: 13px
-		color: $grey
-		margin-top: 16px
-		display: none
+    display: block
+    position: relative
+    &:hover
+        .check-collection__bg
+            background-color: $light-bg
+    input
+        position: absolute
+        left: 0
+        top: -1px
+        opacity: 0
+        width: 16px
+        height: 16px
+        &:checked 
+            ~ .check-collection__bg
+                background-color: $blue
+            ~ .check-collection__image .check-collection__check .btn-checked
+                +vis
+            ~ .check-collection__text
+                color: $white
+            ~ .check-collection__private .private-icon
+                background-color: $white
+                color: $blue
+    &__check
+        +vcenter
+        .btn-checked
+            +invis
+    &__bg
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        z-index: -1
+        border-radius: $radius
+        transition: background-color $tr
+    &__private
+        position: absolute
+        top: 50%
+        right: 20px
+        transform: translateY(-50%)
+        
+    &__helper
+        font-size: 13px
+        color: $grey
+        margin-top: 16px
+        display: none
 
 .check-collection.is-repeated
-	input:checked 
-		~ .check-collection__bg
-			bottom: 32px
-		~ .check-collection__helper
-			display: block
-		~ .check-collection__private
-			top: calc(50% - 17px)
+    input:checked 
+        ~ .check-collection__bg
+            bottom: 32px
+        ~ .check-collection__helper
+            display: block
+        ~ .check-collection__private
+            top: calc(50% - 17px)
 
 .private-icon
-	display: inline-block
-	background: $grey
-	border-radius: 50%
-	height: 20px
-	width: 20px
-	line-height: 20px
-	font-size: 0
-	color: $white
-	text-align: center
-	transition: background-color $tr, color $tr
-	&_light
-		color: $extra-light-grey
-	.icon
-		font-size: 9px
-		vertical-align: middle
+    display: inline-block
+    background: $grey
+    border-radius: 50%
+    height: 20px
+    width: 20px
+    line-height: 20px
+    font-size: 0
+    color: $white
+    text-align: center
+    transition: background-color $tr, color $tr
+    &_light
+        color: $extra-light-grey
+    .icon
+        font-size: 9px
+        vertical-align: middle

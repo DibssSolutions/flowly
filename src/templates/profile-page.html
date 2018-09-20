@@ -1,0 +1,157 @@
+--- 
+title: Profile Page 
+---
+{% import "partials/_mixins.html" as mixins %}
+{% import "components/_profile-list.html" as profileList %}
+{% extends "layouts/_layout.html" %}
+{% block content %}
+
+    <div class="profile">
+        <div class="profile__container container-inner">
+            <div class="profile__sidebar">
+                {{profileList.list(1)}}
+            </div>
+            <div class="profile__main">
+                <form action="/" class="profile-form">
+                    <h2 class="profile-form__title">
+                        Профиль
+                    </h2>
+                    <fieldset>
+                        <div class="profile-form__group profile-form__group_photo">
+                            <label for="" class="profile-form__label">
+                                Фотография
+                            </label>
+                            <span class="profile-form__photo" style="background-image: url(./img/asos_logo.png"></span>
+                            <button class="btn btn_small btn_blue" type="button">
+                                Изменить
+                            </button>
+                            <button class="btn btn_small btn_light-grey" type="button">
+                                Удалить
+                            </button>
+                        </div>
+                        <div class="profile-form__group">
+                            <label for="web-adress" class="profile-form__label">Адрес страницы</label>
+                            <input type="text" class="input" value="Sdklimov" name="web-adress" id="web-adress"/>
+                            <div class="input-helper-text">
+                                https://goflowly.com/sdklimov
+                            </div>
+                        </div>
+                        <div class="profile-form__group">
+                            <label for="phone" class="profile-form__label">Номер телефона</label>
+                            <input type="text" class="input" name="phone" id="phone"/>
+                            <div class="input-helper-text">
+                                Ваш номер телефона нигде не будет отображаться. Он нужен для верификации вашего профиля и размещении товаров.
+                            </div>
+                        </div>
+                        <div class="profile-form__group">
+                            <label for="email" class="profile-form__label">Электронная почта</label>
+                            <input type="text" class="input" value="sdklimov@gmail.com" name="email" id="email"/>
+                            <div class="input-helper-text">
+                                Электронная почта никогда не будет отображаться.
+                            </div>
+                        </div>
+                        <div class="profile-form__group">
+                            <div class="profile-form__label">Приватный профиль</div>
+                            {{mixins.toggler('Сделать профиль приватным', null, null, true)}}
+                            <div class="input-helper-text">
+                                Это скроет ваш профиль от поисковых систем, таких как Google. При включении ваш профиль будет по-прежнему отображаться в результатах поиска Flowly.
+                            </div>
+                        </div>
+                    </fieldset>
+                    <h2 class="profile-form__title">
+                        Основная информация
+                    </h2>
+                    <fieldset>
+
+                        <div class="profile-form__group">
+                            <label for="name" class="profile-form__label">Имя</label>
+                            <input type="text" class="input" value="Ivan Klimov" name="name" id="name"/>
+                        </div>
+                        <div class="profile-form__group">
+                            <label for="cite" class="profile-form__label">Веб-сайт</label>
+                            <input type="text" class="input" name="cite" id="cite"/>
+                            <div class="input-helper-text">
+                                instagram.com/goflowly
+                            </div>
+                        </div>
+                        <div class="profile-form__group">
+                            <label for="about" class="profile-form__label">О себе</label>
+                            <textarea name="about" style="height: 100px" id="about" class="input"></textarea>
+                            <div class="input-helper-text">
+                                Используйте #хештеги и @гиперсылки
+                            </div>
+                        </div>
+                        <div class="profile-form__group">
+                            <label for="locationt" class="profile-form__label">Местоположение</label>
+                            <input type="text" class="input" name="location" id="location" value="Россия, Москва"/>
+                        </div>
+                    </fieldset>
+                    <h2 class="profile-form__title">
+                        Социальные сети
+                    </h2>
+                    <fieldset>
+                        <div class="social-action">
+                            <span class="social-action__icon profile-icon profile-icon_fb">
+                                {{mixins.icon('facebook')}}
+                            </span>
+                            <span class="social-action__title">
+                                Ivan Klimov
+                            </span>
+                            <button class="social-action__button btn btn_small btn_light-grey" type="button">
+                                Отсоединить
+                            </button>
+                        </div>
+                        <div class="social-action">
+                            <span class="social-action__icon profile-icon profile-icon_vk">
+                                {{mixins.icon('vk')}}
+                            </span>
+                            <span class="social-action__title">
+                                Вконтакте
+                            </span>
+                            <button class="social-action__button btn btn_small btn_light-grey" type="button">
+                                Привязать
+                            </button>
+                        </div>
+                    </fieldset>
+                    <h2 class="profile-form__title">
+                        Уведомления по электронной почте
+                    </h2>
+                    <fieldset class="profile-form__notifications">
+                        <div class="profile-form__group">
+                            {{mixins.toggler('Написали вам сообщение', null, true, null)}}
+                            <div class="input-helper-text">
+                                Получайте уведомдение, когда вашу находку кто-то себе сохранил.
+                            </div>
+                        </div>
+                        <div class="profile-form__group">
+                            {{mixins.toggler('Сохранили вашу находку', null, true, null)}}
+                            <div class="input-helper-text">
+                                Получайте уведомдение, когда вашу находку кто-то себе сохранил.
+                            </div>
+                        </div>
+                        <div class="profile-form__group">
+                            {{mixins.toggler('Изменения в коллекции', null, true, null)}}
+                            <div class="input-helper-text">
+                                Получайте уведомдение, когда участники в вашей коллекции внесли изменения.
+                            </div>
+                        </div>
+                        <div class="profile-form__group">
+                            {{mixins.toggler('Подписались на вас', null, true, null)}}
+                            <div class="input-helper-text">
+                                Получайте уведомдение, когда на вас подписались
+                            </div>
+                        </div>
+                        <div class="profile-form__group">
+                            {{mixins.toggler('Новости и обновления')}}
+                            <div class="input-helper-text">
+                                Получать уведомления, когда Flowly объявляет что-то новое, или обновляет сайт.
+                            </div>
+                        </div>
+                    </fieldset>
+                    <button type="submit" class="btn btn_link">Удалить профиль</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

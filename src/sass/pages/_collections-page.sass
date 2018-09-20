@@ -1,0 +1,120 @@
+.collections-page
+    &__main
+        +flex-beetween
+        margin-bottom: 50px
+    &__authors
+        position: relative
+        +flex-center
+        .avatar_small
+            border: 2px solid $white
+            &:not(:first-of-type)
+                margin-left: -8px
+        .dropdown
+            top: calc(100% + 10px)
+            left: -20px
+            padding: 20px
+    &__names
+        margin-left: 10px
+    &__button
+        font-size: 0
+        background: none
+        margin-left: 11px
+        & > * 
+            +icenter
+        span 
+            font-size: 15px
+            font-weight: 500
+            margin-right: 4px
+        .icon
+            font-size: 12px
+            color: $black
+            
+    &__actions
+        font-size: 0
+        & > *
+            margin-left: 9px 
+    
+.dropdown
+    position: absolute
+    background-color: $white
+    z-index: 100
+    border-radius: $radiusBig
+    box-shadow: $shadow
+    overflow: hidden
+    +invis
+    &.is-open 
+        +vis
+    &_menu
+        width: 212px
+    &_user
+        top: calc(100% + 15px)
+        right: -20px
+    &_action
+        top: calc(100% + 15px)
+        right: 24px
+    &__title
+        font-size: 15px
+        font-weight: 500
+    &__header,
+    &__footer
+        position: relative
+        &:after
+            content: ''
+            position: absolute
+            left: 0
+            right: 0
+            height: 1px
+            background-color: $light-bg
+    &__header
+        padding: 8px 20px
+        color: $white
+        background-color: $blue
+        &:after
+            bottom: 0
+    &__body
+        padding: 8px 20px
+    &__footer
+        padding: 8px 20px 8px
+        &:after
+            top: 0
+    &__button
+        font-size: 15px
+        color: $black
+        font-weight: 500
+        background: none
+        line-height: 2
+
+.dropdown.is-some-state
+
+
+.list
+    // padding: 8px 0
+    &__item
+        position: relative
+        &:after
+            content: ''
+            position: absolute
+            left: -10px
+            right: -10px
+            top: 0
+            bottom: 0
+            border-radius: $radius
+            background-color: #f2f2f2
+            z-index: -1
+            +invis
+        &:hover
+            &:after
+                +vis
+    &__link
+        font-size: 15px
+        font-weight: 500
+        color: $black
+        line-height: 2
+    &__messages-mark
+        display: block
+        position: absolute
+        right: 0
+        top: 50%
+        transform: translateY(-50%)
+        +circle(10)
+        background-color: $blue

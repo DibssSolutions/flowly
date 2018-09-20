@@ -26,6 +26,9 @@
             background-color: $light-bgHovered
         &:active
             background-color: $light-bgClicked
+    &_light-grey
+        background-color: $light-bg
+        color: $grey
     &_big
         width: 230px
         padding: 16px
@@ -55,6 +58,7 @@
         padding: 9px 20px 9px
         background: $white
         border-radius: 18px
+        line-height: 35px
     &_upper
         text-transform: uppercase
     &_text
@@ -84,15 +88,19 @@
 .btn-circle
     display: inline-block
     +circle(36)
+    line-height: 36px
     font-size: 0
     text-align: center
     vertical-align: middle
     &_big
-        height: 40px
-        width: 40px
+        +circle(40)
+        line-height: 40px
     .icon
         font-size: 16px
         vertical-align: middle
+        display: inline-block
+        line-height: 1
+        
         
 .btn-delete
     background-color: $white
@@ -194,9 +202,7 @@
 // ================ SOCIAL-CIRCLE ===================
 
 .btn-social-rounded
-    height: 50px
-    width: 50px
-    border-radius: 50%
+    +circle(50)
     color: $white
     font-size: 0
     display: inline-block

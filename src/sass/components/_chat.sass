@@ -1,6 +1,5 @@
 .user
     display: flex
-    flex-wrap: wrap
     align-items: center
     margin-bottom: 22px
     position: relative
@@ -8,6 +7,7 @@
     &__text
         margin-left: 12px
         text-align: left
+        padding-right: 24px
     &__main
         font-family: $helv
         display: block
@@ -49,6 +49,12 @@
         border-radius: 50%
         background: $blue
         font-size: 15px
+    &_dropdown
+        &:not(:last-child)
+            margin-bottom: 15px
+        &:last-child
+            margin-bottom: 0
+        
     &_chat
         margin-bottom: 40px
         &:after
@@ -64,6 +70,7 @@
         &:hover
             &:after
                 background-color: $light-bg
+    
                 
 .user_chat.is-active
     &:after
@@ -85,13 +92,16 @@
     &_small
         height: 34px
         width: 34px
-        border: 2px solid $white
+        
+
 
 .followers
     display: flex
     align-items: center
-    &__avatar:not(:first-child) 
-        margin-left: -10px
+    &__avatar
+        border: 2px solid $white
+        &:not(:first-child) 
+            margin-left: -10px
     &__number
         margin-left: 10px
         font-weight: 500
@@ -106,12 +116,10 @@
 
 .add-members
     &__row
-        display: flex
-        flex-wrap: wrap
-        align-items: center
+        +flex-beetween
+        flex-wrap: nowrap
         margin-bottom: 10px
         width: 100%
-        justify-content: space-between
     &__input
         flex-grow: 1
         margin-left: 12px

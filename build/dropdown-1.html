@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Profile Page</title>
+    <title>Template</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
@@ -60,29 +60,34 @@
               </svg>
             </button>
             <button type="button" class="header__user btn-circle" style="background-image: url(./img/avatar.jpg)"></button>
+            <div class="dropdown dropdown_user dropdown_menu is-open">
+              <div class="dropdown__header">
+                <h5 class="dropdown__title">Ivan Klimov</h5>
+                <a href="#" class="text-small">Смотреть профиль</a>
+              </div>
+              <div class="dropdown__body">
+                <ul class="list">
+                  <li class="list__item">
+                    <a href="#" class="list__link">Сообщения</a>
+                    <span class="list__messages-mark"></span>
+                  </li>
+                  <li class="list__item">
+                    <a href="#" class="list__link">Настройки</a>
+                  </li>
+                  <li class="list__item">
+                    <a href="#" class="list__link">О Flowly</a>
+                  </li>
+                  <li class="list__item">
+                    <a href="#" class="list__link">Помощь</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="dropdown__footer">
+                <button class="dropdown__button">Выйти</button>
+              </div>
+            </div>
           </div>
-        </div>
       </header>
-      <div class="profile">
-        <div class="profile__container container-inner">
-          <div class="profile__sidebar">
-            <ul class="profile-list">
-              <li class="profile-list__item">
-                <a href="profile-page-1.html" class="profile-list__link ">Профиль</a>
-              </li>
-              <li class="profile-list__item">
-                <a href="profile-page-2.html" class="profile-list__link ">Основная информация</a>
-              </li>
-              <li class="profile-list__item">
-                <a href="profile-page-3.html" class="profile-list__link is-active">Социальные сети</a>
-              </li>
-              <li class="profile-list__item">
-                <a href="profile-page-4.html" class="profile-list__link ">Уведомления</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->

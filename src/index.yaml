@@ -11,13 +11,11 @@ PageList:
   ready: 50
 - file: page-3-2.html
   ready: 50
-- file: profile-page-1.html
+- file: page-4-1.html
   ready: 50
-- file: profile-page-2.html
+- file: page-4-2.html
   ready: 50
-- file: profile-page-3.html
-  ready: 50
-- file: profile-page-4.html
+- file: profile-page.html
   ready: 50
 - file: modal-01.html
   ready: 50
@@ -62,4 +60,14 @@ PageList:
 - file: chat-2.html
   ready: 50
 - file: checkout.html
+  ready: 50
+- file: dropdown-1.html
+  ready: 50
+- file: dropdown-2.html
+  ready: 50
+- file: dropdown-3.html
+  ready: 50
+- file: dropdown-4.html
+  ready: 50
+- file: dropdown-5.html
   ready: 50

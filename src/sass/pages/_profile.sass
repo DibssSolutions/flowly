@@ -3,10 +3,72 @@
         float: left
         width: 246px
     &__main
-        float: 
-        width: calc(100% - 246px)
+        float: left
+        width: 468px
 
 .profile-list
     &__link
         &.is-active
             color: $green
+
+.profile-form
+    margin-bottom: 60px
+    &__title 
+        margin-bottom: 30px
+        font-size: 20px
+        font-weight: 500
+        line-height: 1.5
+    &__group
+        margin-bottom: 40px
+        &_photo
+            display: flex
+            align-items: center
+            flex-wrap: wrap
+            button
+                margin-right: 10px
+            label
+                width: 100%
+    &__label
+        display: block
+        font-size: 15px
+        line-height: 2
+        color: $grey
+    &__photo
+        display: block
+        margin-right: 20px
+        +circle(100)
+        +cover
+    .social-action
+        margin-bottom: 12px
+    &__notifications
+        .input-helper-text
+            max-width: 320px
+
+.social-action
+    display: flex
+    align-items: center
+    padding: 15px
+    border: 1px solid $grey
+    border-radius: $radius
+    &__title
+        margin-left: 15px
+        font-weight: 500
+    &__button
+        margin-left: auto
+
+.profile-icon
+    +circle(40)
+    color: $white
+    font-size: 0
+    display: inline-block
+    vertical-align: middle
+    text-align: center
+    align-items: flex-start
+    &_vk
+        background-color: $vk
+        .icon
+            font-size: 10px
+    &_fb
+        background-color: $fb
+        .icon
+            font-size: 15px

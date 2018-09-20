@@ -1,0 +1,62 @@
+{% import "partials/_mixins.html" as mixins %}
+{% macro block(args) %}
+    <div class="collections-page__main">
+        <div class="collections-page__authors">
+            {% if args.single %}
+                <div class="avatar" style="background-image: url(./img/avatar.jpg)"></div>
+                <div class="collections-page__names">
+                    Punkrock Pixxie
+                </div>
+                <span class="follow-mark">
+                    {{mixins.icon('check')}}
+                </span>
+            {% else %}
+                <div class="avatar avatar_small" style="background-image: url(./img/avatar.jpg)"></div>
+                <div class="avatar avatar_small"></div>
+                <button class="collections-page__button">
+                    <span>Несколько авторов</span>
+                    {{mixins.icon('chevron-down')}}
+                </button>
+            {% endif %}
+            {% if args.dropdown %}
+                <div class="dropdown is-open">
+                        {% set subcriptions = [
+                            {
+                                modifier: "user_dropdown",
+                                image: "avatar.jpg",
+                                mainText: "Ivan Klimov",
+                                secondaryText: "@sdklimov",
+                                button: [
+                                    {
+                                        action: "subscr",
+                                        text: "Подписаться"
+                                    }
+                                ]
+                            }, {
+                                modifier: "user_dropdown",
+                                mainText: "Валера Певнев",
+                                secondaryText: "@pevnev",
+                                button: [
+                                    {
+                                        action: "subscr",
+                                        text: "Подписаться"
+                                    }
+                                ]
+                            }] %}
+                            {% for item in subcriptions %}
+                            {{mixins.user(item)}}
+                        {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+        <div class="collections-page__actions">
+            <button class="btn btn_small btn_blue" type="button">
+                {{args.btnText}}
+            </button>
+            {{mixins.menuBtn()}}
+            <button class="btn-circle btn-share" type="button">
+                {{mixins.icon('share')}}
+            </button>
+        </div>
+    </div>
+{% endmacro %}

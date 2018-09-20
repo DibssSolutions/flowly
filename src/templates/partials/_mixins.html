@@ -17,9 +17,9 @@
     </button>
 {% endmacro %}
 
-{% macro toggler(text, radio) %}
-    <label class="toggler">
-        <input type="{{radio or 'checkbox'}}" name="checkbox">
+{% macro toggler(text, radio, checked, disabled) %}
+    <label class="toggler{% if disabled %} is-disabled{% endif %}">
+        <input type="{{radio or 'checkbox'}}" name="checkbox" {% if checked %}checked='true'{% endif %}>
         <span class="toggler__text">{{ text or 'Видно только мне' }}</span>
     </label>
 {% endmacro %}
@@ -55,7 +55,7 @@
 {% endmacro %}
 
 {% macro user(props) %}
-    <div class="user {% if props.modifier %}{{props.modifier}}{% endif %} {% if props.status %}{{props.status}}{% endif %}">
+    <div class="user{% if props.modifier %} {{props.modifier}}{% endif %}{% if props.status %} {{props.status}}{% endif %}">
         <div class="user__avatar">
             <div class="avatar" {% if props.image %} style="background-image: url(./img/{{props.image}})" {% endif %}></div>
         </div>
@@ -144,7 +144,7 @@
         </span>
         {% if props.private %}
             <span class="check-collection__private">
-                    <span class="private-icon">{{ icon('lock') }}</span>
+                <span class="private-icon">{{ icon('lock') }}</span>
             </span>
         {% endif %}
         {% if props.helperText %}

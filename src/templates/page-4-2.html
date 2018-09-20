@@ -1,0 +1,14 @@
+{% import "partials/_company.html" as Company %}
+{% import "partials/_collection-page.html" as CollectionPageTop %}
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+    <div class="collections-page">
+        <div class="collections-page__container container-inner">
+            {{CollectionPageTop.block({btnText: 'Подписаться на всех', dropdown: true})}}
+            <div class="collections-page__cards">
+                {% include "partials/_cards.html" %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

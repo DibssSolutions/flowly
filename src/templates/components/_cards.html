@@ -16,7 +16,7 @@
         {% if not props.withoutAvatars %}
             <div class="image-card__author">
                 <div class="image-card__avatar">
-                    <div class="avatar" {% if props.avatar %} style="background-image: url(./img/{{props.avatar}})" {% endif %}></div>
+                    <div class="avatar avatar_small" {% if props.avatar %} style="background-image: url(./img/{{props.avatar}})" {% endif %}></div>
                 </div>
                 <div class="image-card__name">{{props.name | safe}}</div>
             </div>
@@ -34,7 +34,8 @@
         </div>
         <div class="card__price">
             {{props.price | safe}}
-            Р
+            ₽
         </div>
     </div>
 {% endmacro %}
+

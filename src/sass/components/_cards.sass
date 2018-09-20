@@ -17,15 +17,18 @@
 .image-card
     width: 300px
     height: 350px
-    padding: 20px
+    padding: 25px 20px 20px
     +cover
-    // margin: 15px
-    border-radius: 15px
+    border-radius: $radiusBig
     position: relative
     color: $white
     display: flex
     flex-flow: column
     justify-content: space-between
+    &__type
+        font-size: 15px
+        font-weight: 500
+        margin-bottom: 4px
     &__title
         font-size: 25px
         font-weight: 500
@@ -41,13 +44,6 @@
         margin-left: 10px
         font-size: 15px
         font-weight: 500
-
-.grid
-    margin: 0 auto
-    display: inline-block
-    width: 960px
-    +sm 
-        width: 300px
 
 .card
     width: 222px
@@ -74,8 +70,19 @@
         line-height: 1
         color: $grey
         font-weight: 500
+    &__price
+        font-weight: 500
 
 .gutter-sizer
     width: 24px
     +sm 
         width: 10px
+
+.grid
+    margin: 0 auto
+    display: inline-block
+    width: 960px
+    +sm 
+        width: 300px
+
+
