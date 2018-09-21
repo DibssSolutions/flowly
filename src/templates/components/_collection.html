@@ -1,6 +1,6 @@
 {% import "partials/_mixins.html" as mixins %}
 {% macro collection(props) %}
-    <section class="collection">
+    <a href="#" class="collection">
         <div class="collection__images">
             <div class="collection__image collection__image_main" style="background-image: url(./img/cards/{{props.imageMain}});"></div>
             <div class="collection__image collection__image_secondary" style="background-image: url(./img/cards/{{props.imagesSecondary[0]}});"></div>
@@ -12,5 +12,5 @@
                 <span class="private-icon">{{ mixins.icon('lock') }}</span>
             </div>
         {% endif %}
-    </section>
+    </a>
 {% endmacro %}

@@ -15,33 +15,41 @@
                             {{mixins.addBtn({modifier: 'btn-circle_big btn-add_blue'})}}
                         </div>
                         <div class="card__descr">
-                            Добавить товар
+                            Создать коллекцию
                         </div>
                     </div>
                     {{Collection.collection({
-                                title: 'Хочу на день рождения', 
-                                private: true
+                                title: 'На зиму'
                     })}}
                 </div>
                 <div class="company-page__col">
                     {{Collection.collection({
                                 imageMain: "card_img_1.jpg",
-                                imagesSecondary: ["card_img_3.jpg", "card_img_5.jpg"], title: 'Хочу на день рождения'
+                                imagesSecondary: ["card_img_3.jpg", "card_img_5.jpg"], 
+                                title: 'Хочу на день рождения'
+                                
                     })}}
                 </div>
-                <div class="company-page__col">
+                <div class="company-page__col tablet-hide">
                     {{Cards.imageCard({
                             image: 'image-card_1.jpg', 
                             title: 'Кросовки <br> с улиц Лондана', 
+                            titleModifier: "image-card__title_single",
                             withoutAvatars: true
                     })}}
                 </div>
             </div>
             <div class="company-page__private-collection">
-                {{Collection.collection({
+                <h3>Приватные коллекции</h3>
+                <div class="company-page__row">
+                    <div class="company-page__col">
+                        {{Collection.collection({
                         imageMain: "card_img_1.jpg",
-                        imagesSecondary: ["card_img_3.jpg",     "card_img_5.jpg"], title: 'Хочу на день рождения'
+                        imagesSecondary: ["card_img_3.jpg",     "card_img_5.jpg"],title: 'Хочу на день рождения',
+                        private: true
                 })}}
+                    </div>
+                </div>
             </div>
         </div>
     </div>

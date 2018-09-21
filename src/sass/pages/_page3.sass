@@ -1,19 +1,22 @@
-.company-link
-    font-weight: 700
-    color: #aaaaaa
-    padding: 11px 18px 12px
-    border-radius: 20px
-    &.is-active
-        background-color: #e5e5e5
-        color: $black
-
 .company-page
     &__top
         display: flex
+        margin-top: 8px
+        +sm 
+            flex-flow: column
     &__logo
         flex: 0 0 120px
+        +sm 
+
+    &__location
+        margin-bottom: 18px
+        .icon
+            margin-right: 3px
+            font-size: 12px
     &__descr
         padding-left: 40px
+        +sm 
+            padding-left: 0
     &__title
         font-size: 0
         margin-bottom: 2px
@@ -22,21 +25,47 @@
             vertical-align: middle
             font-size: 25px
             font-weight: 700
-    &__location
-        margin-bottom: 24px
-        .icon
-            font-size: 12px
+    &__cite-link
+        display: block
+        margin-top: 4px
+        margin-bottom: 8px
     &__buttons
-        margin-bottom: 24px
+        margin-bottom: 26px
         font-size: 0
         & > * 
             margin-right: 9px
     &__row 
         display: flex
-        justify-content: space-between
+        justify-content: center
+        margin: 0 -15px
+        justify-content: flex-start
+        +md
+            padding-left: 43px
+        +sm 
+            flex-flow: column
+            align-items: center
     &__col
         flex: 0 0 300px
         width: 300px
+        margin: 0 15px
+        .card,
+        .collection
+            margin-bottom: 40px 
+
+    &__private-collection
+        margin-bottom: 100px
+        margin-top: 33px
+        h3
+            margin-bottom: 34px
+            font-size: 20px
+            font-weight: 700
+            line-height: 1.25
+            +md 
+                padding-left: 43px
+            +sm 
+                text-align: center
+            
+
 
 
 
@@ -60,7 +89,7 @@
     &__nickname,
     &__followers
         position: relative
-        margin-right: 20px
+        margin-right: 17px
         &:after
             content: '.'
             position: absolute

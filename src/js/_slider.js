@@ -14,7 +14,6 @@ $(document).ready(function() {
 
     $('.js-slider').slick({
       slidesToShow: 1,
-      // adaptiveHeight: true,
       centerMode: true,
       arrows: true,
       autoplay: true,
@@ -23,16 +22,16 @@ $(document).ready(function() {
       variableWidth: true,
       prevArrow: `<button class="btn-slider btn-slider_prev" type="button">${prev}</button>`,
       nextArrow: `<button class="btn-slider btn-slider_next" type="button">${next}</button>`,
-      cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)'
-      //   responsive: [
-      //     {
-      //       breakpoint: 768,
-      //       settings: {
-      //         slidesToShow: 1,
-      //         slidesToScroll: 1
-      //       }
-      //     }
-      //   ]
+      // cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            centerMode: false,
+            arrows: false
+          }
+        }
+      ]
     });
   }
 
@@ -47,15 +46,21 @@ $(document).ready(function() {
     prevArrow: `<button class="btn-slider btn-single-slider_prev is-hidden" type="button">${prev}</button>`,
     nextArrow: `<button class="btn-slider btn-single-slider_next" type="button">${next}</button>`,
     cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
-    fade: true
-    // onbeforeChange: function(event, slick, currentSlide, nextSlide) {
-    //   nextSlide === slick.$slides.length - 1
-    //     ? $('.btn-single-slider_next').addClass('is-hidden')
-    //     : $('.btn-single-slider_next').removeClass('is-hidden');
-    //   nextSlide === 0
-    //     ? $('.btn-single-slider_prev').addClass('is-hidden')
-    //     : $('.btn-single-slider_prev').removeClass('is-hidden');
-    // }
+    fade: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          variableWidth: true,
+          slidesToShow: 1,
+          arrows: false,
+          fade: false,
+          infinite: true,
+          centerMode: false
+
+        }
+      }
+    ]
   });
 
   $(singleSlider).on('beforeChange', function(

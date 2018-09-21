@@ -15,6 +15,7 @@
         padding: 15px
 
 .image-card
+    display: block
     width: 300px
     height: 350px
     padding: 25px 20px 20px
@@ -33,6 +34,9 @@
         font-size: 25px
         font-weight: 500
         line-height: 1.2
+        letter-spacing: 0.02em
+        &_single
+            margin-top: -7px
     &__author
         font-size: 0
     &__avatar
@@ -46,8 +50,10 @@
         font-weight: 500
 
 .card
+    display: block
     width: 222px
     margin-bottom: 28px
+    text-align: left
     &_full-width
         width: 100%
     &_add
@@ -58,31 +64,58 @@
         .btn-add
             +vcenter
     +sm 
-        width: 144px
         margin-bottom: 20px
+    +xs
+        width: 145px
     &__image
         max-width: 100%
         display: block
         border-radius: $radiusBig
         margin-bottom: 8px
     &__descr
+        position: relative
         font-size: 13px
         line-height: 1
         color: $grey
         font-weight: 500
+        margin-bottom: 2px
+        // max-width: 212px
+    &__product_special
+        color: $black
     &__price
         font-weight: 500
+    &__special
+        position: absolute
+        right: 0
+        top: 0
+        .icon
+            color: $blue
+            font-size: 16px
+    .rouble
+        font-weight: 500
+        font-size: 14px
+
+// ===== MASONRY =====
+
+.cards-wrapper
+    text-align: center
 
 .gutter-sizer
     width: 24px
-    +sm 
+    +sm
+        width: 20px
+    +xs
         width: 10px
 
 .grid
     margin: 0 auto
     display: inline-block
     width: 960px
+    +md
+        width: 714px
     +sm 
+        width: 464px
+    +xs
         width: 300px
 
 

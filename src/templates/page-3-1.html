@@ -50,10 +50,11 @@
 
 {% block content %}
     <div class="company-page">
-        {{Company.companyTop({activeFirst: trueF})}}
+        {{Company.companyTop({activeFirst: true})}}
         <div class="company-page__container container-inner">
-            <div class="grid">
-                <div class="gutter-sizer"></div>
+            <div class="cards-wrapper">
+                <div class="grid">
+                    <div class="gutter-sizer"></div>
                     <div class="card card_add">
                         <div class="card__image">
                             {{mixins.addBtn({modifier: 'btn-circle_big btn-add_blue'})}}
@@ -62,9 +63,10 @@
                             Добавить товар
                         </div>
                     </div>
-                {% for item in productCards %}
-                    {{Cards.productCard(item)}}
-                {% endfor %}
+                    {% for item in productCards %}
+                        {{Cards.productCard(item)}}
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>

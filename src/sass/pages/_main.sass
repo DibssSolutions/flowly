@@ -3,23 +3,21 @@
     display: flex
     .image-card
         margin: 15px
-.cards-bottom
-    margin: 0 auto
-    // padding-bottom: 1200px
-    // .card   
-    //     margin: 0 12px 24px
 
 .links
     display: flex
     align-items: center
-    margin: 30px auto 
+    flex-wrap: wrap
+    justify-content: center
     &_main
         justify-content: center
+        margin: 30px auto 
     &_company
         justify-content: flex-start
-        margin-left: -18px
+        margin: 34px auto 38px -20px
 
 .main-link
+    display: block
     font-weight: 700
     color: #aaaaaa
     padding: 9px 20px 9px
@@ -28,23 +26,45 @@
         background-color: #e5e5e5
         color: $black
 
+.company-link
+    display: block
+    line-height: 1.2
+    font-weight: 700
+    color: #aaaaaa
+    padding: 11px 20px 
+    border-radius: 20px
+    &.is-active
+        background-color: #e5e5e5
+        color: $black
+
 .to-top
     position: fixed
     bottom: 20px
-    right: 20px
+    right: calc(50% - 530px)
+    +md
+        right: 27px
+    +sm 
+        display: none
 
 .cookies
     font-size: 13px
     line-height: 1.1
     color: $black
     position: fixed
-    left: 20px
+    left: calc(50% - 530px)
     bottom: 20px
     width: 380px
-    padding: 20px
+    padding: 20px 20px 14px
     background-color: $white
     border-radius: $radiusBig
     box-shadow: $shadow
+    +md
+        left: 27px
+    +sm 
+        left: 10px
+        width: calc(100% - 20px)
+    p 
+        margin-bottom: 4px
     &__btn
         font-size: 13px
         font-weight: 500

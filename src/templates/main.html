@@ -25,24 +25,43 @@
     }
 ] %}
 
-
 {% block content %}
 
     <div class="slider js-slider">
-        <div class="slider__slide" style="background-image: url(./img/slider_1/slider_1.jpg);"></div>
-        <div class="slider__slide" style="background-image: url(./img/slider_1/slider_3.jpg);"></div>
-        <div class="slider__slide" style="background-image: url(./img/slider_1/slider_1.jpg);"></div>
-        <div class="slider__slide" style="background-image: url(./img/slider_1/slider_3.jpg);"></div>
-        <div class="slider__slide" style="background-image: url(./img/slider_1/slider_1.jpg);"></div>
-        <div class="slider__slide" style="background-image: url(./img/slider_1/slider_3.jpg);"></div>
+        <div>
+            <div class="slider__slide" style="background-image: url(./img/slider_1/slider_1.jpg);"></div>
+        </div>
+        <div>
+            <div class="slider__slide" style="background-image: url(./img/slider_1/slider_3.jpg);"></div>
+        </div>
+        <div>
+            <div class="slider__slide" style="background-image: url(./img/slider_1/slider_1.jpg);"></div>
+        </div>
+        <div>
+            <div class="slider__slide" style="background-image: url(./img/slider_1/slider_3.jpg);"></div>
+        </div>
+        <div>
+            <div class="slider__slide" style="background-image: url(./img/slider_1/slider_1.jpg);"></div>
+        </div>
+        <div>
+            <div class="slider__slide" style="background-image: url(./img/slider_1/slider_3.jpg);"></div>
+        </div>
     </div>
 
     <div class="container-inner">
         <ul class="links links_main">
-            <li><a href="#" class="main-link">Моя лента</a></li>
-            <li><a href="#" class="main-link is-active">Трендовое</a></li>
-            <li><a href="#" class="main-link">Новое</a></li>
-            <li><a href="#" class="main-link">Популярное</a></li>
+            <li>
+                <a href="#" class="main-link">Моя лента</a>
+            </li>
+            <li>
+                <a href="#" class="main-link is-active">Трендовое</a>
+            </li>
+            <li>
+                <a href="#" class="main-link">Новое</a>
+            </li>
+            <li>
+                <a href="#" class="main-link">Популярное</a>
+            </li>
         </ul>
         <div class="cards-top">
             {% for card in imageCards %}
@@ -61,6 +80,6 @@
             На этом сайте используются файлы cookie, чтобы вы могли получить лучший опыт на нашем сайте.
         </p>
         <button class="cookies__btn" type="button">Продолжить</button>
-        <button class="cookies__btn cookies__btn_grey" type="button">Подробнее</button>
+        <a href='#' class="cookies__btn cookies__btn_grey" type="button">Подробнее</a>
     </div>
 {% endblock %}

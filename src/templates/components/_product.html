@@ -15,7 +15,7 @@
         <input type="radio" {% if props.main %} checked="checked" {% endif %} name="add_preview"/>
         <span class="preview__image" style="background-image: url(./img/{{props.img}});"></span>
         <span class="preview__main">
-            <button class="btn btn_check-main" type="button">Основное</button>
+            <button class="btn btn_small btn_white" type="button">Основное</button>
         </span>
         <span class="preview__delete">
             {{ mixins.deleteBtn() }}

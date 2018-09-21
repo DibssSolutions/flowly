@@ -13,106 +13,111 @@
                 <button class="main-search__icon" type="button">{{ mixins.icon('search') }}</button>
             </form>
         </div>
-        <div class="header__activities">
-            {% if differentHeader %}
-            <button type="button" class="btn btn_small btn_blue">Войти</button>
-            {{mixins.menuBtn()}}
-            {% else %}
-            {{mixins.addBtn()}}
+        {% if differentHeader %}
+            <div class="header__action">
+                <button type="button" class="btn btn_small btn_blue">Войти</button>
+            </div>
+            <div class="header__user">
+                {{mixins.menuBtn()}}
+            </div>
+        {% else %}
+            <div class="header__action">
+                {{mixins.addBtn()}}
+            </div>
             <button type="button" class="header__user btn-circle" style="background-image: url(./img/avatar.jpg)"></button>
-            {% endif %}
-            {% if dd_1 %}
-                <div class="dropdown dropdown_user dropdown_menu is-open">
-                    <div class="dropdown__header">
-                        <h5 class="dropdown__title">Ivan Klimov</h5>
-                        <a href="#" class="text-small">Смотреть профиль</a>
-                    </div>
-                    <div class="dropdown__body">
-                        <ul class="list">
-                            <li class="list__item">
-                                <a href="#" class="list__link">Сообщения</a>
-                                <span class="list__messages-mark"></span>
-                            </li>
-                            <li class="list__item">
-                                <a href="#" class="list__link">Настройки</a>
-                            </li>
-                            <li class="list__item">
-                                <a href="#" class="list__link">О Flowly</a>
-                            </li>
-                            <li class="list__item">
-                                <a href="#" class="list__link">Помощь</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="dropdown__footer">
-                        <button class="dropdown__button">Выйти</button>
-                    </div>
+        {% endif %}
+        {% if dd_1 %}
+            <div class="dropdown dropdown_user dropdown_menu is-open">
+                <div class="dropdown__header">
+                    <h5 class="dropdown__title">Ivan Klimov</h5>
+                    <a href="#" class="text-small">Смотреть профиль</a>
                 </div>
-            {% endif %}
-            {% if dd_2 %}
-                <div class="dropdown dropdown_user dropdown_menu is-open is-some-state">
-                    <div class="dropdown__header">
-                        <h5 class="dropdown__title">Ivan Klimov</h5>
-                        <a href="#" class="text-small">Смотреть профиль</a>
-                    </div>
-                    <div class="dropdown__body">
-                        <ul class="list">
-                            <li class="list__item">
-                                <a href="#" class="list__link">Сообщения</a>
-                                <span class="list__messages-mark"></span>
-                            </li>
-                            <li class="list__item">
-                                <a href="#" class="list__link">Настройки</a>
-                            </li>
-                            <li class="list__item">
-                                <a href="#" class="list__link">О Flowly</a>
-                            </li>
-                            <li class="list__item">
-                                <a href="#" class="list__link">Помощь</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="dropdown__footer">
-                        <button class="dropdown__button">Выйти</button>
-                    </div>
+                <div class="dropdown__body">
+                    <ul class="list">
+                        <li class="list__item">
+                            <a href="#" class="list__link">Сообщения</a>
+                            <span class="list__messages-mark"></span>
+                        </li>
+                        <li class="list__item">
+                            <a href="#" class="list__link">Настройки</a>
+                        </li>
+                        <li class="list__item">
+                            <a href="#" class="list__link">О Flowly</a>
+                        </li>
+                        <li class="list__item">
+                            <a href="#" class="list__link">Помощь</a>
+                        </li>
+                    </ul>
                 </div>
-            {% endif %}
-            {% if dd_3 %}
-                <div class="dropdown dropdown_user dropdown_menu is-open">
-                    <div class="dropdown__body">
-                        <ul class="list">
-                            <li class="list__item">
-                                <a href="#" class="list__link">English</a>
-                            </li>
-                            <li class="list__item">
-                                <a href="#" class="list__link">О Flowly</a>
-                            </li>
-                            <li class="list__item">
-                                <a href="#" class="list__link">Помощь</a>
-                            </li>
-                            <li class="list__item">
-                                <a href="#" class="list__link">Реклама</a>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="dropdown__footer">
+                    <button class="dropdown__button">Выйти</button>
                 </div>
-            {% endif %}
-            {% if dd_4 %}
-                <div class="dropdown dropdown_action dropdown_menu is-open">
-                    <div class="dropdown__body">
-                        <ul class="list">
-                            <li class="list__item">
-                                <a href="#" class="list__link">Добавить товар</a>
-                            </li>
-                            <li class="list__item">
-                                <a href="#" class="list__link">Сохранить с сайта</a>
-                            </li>
-                            <li class="list__item">
-                                <a href="#" class="list__link">Создать коллекцию</a>
-                            </li>
-                        </ul>
-                    </div>
+            </div>
+        {% endif %}
+        {% if dd_2 %}
+            <div class="dropdown dropdown_user dropdown_menu is-open is-some-state">
+                <div class="dropdown__header">
+                    <h5 class="dropdown__title">Ivan Klimov</h5>
+                    <a href="#" class="text-small">Смотреть профиль</a>
                 </div>
-            {% endif %}
-        </div>
-    </header>
+                <div class="dropdown__body">
+                    <ul class="list">
+                        <li class="list__item">
+                            <a href="#" class="list__link">Сообщения</a>
+                            <span class="list__messages-mark"></span>
+                        </li>
+                        <li class="list__item">
+                            <a href="#" class="list__link">Настройки</a>
+                        </li>
+                        <li class="list__item">
+                            <a href="#" class="list__link">О Flowly</a>
+                        </li>
+                        <li class="list__item">
+                            <a href="#" class="list__link">Помощь</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dropdown__footer">
+                    <button class="dropdown__button">Выйти</button>
+                </div>
+            </div>
+        {% endif %}
+        {% if dd_3 %}
+            <div class="dropdown dropdown_user dropdown_menu is-open">
+                <div class="dropdown__body">
+                    <ul class="list">
+                        <li class="list__item">
+                            <a href="#" class="list__link">English</a>
+                        </li>
+                        <li class="list__item">
+                            <a href="#" class="list__link">О Flowly</a>
+                        </li>
+                        <li class="list__item">
+                            <a href="#" class="list__link">Помощь</a>
+                        </li>
+                        <li class="list__item">
+                            <a href="#" class="list__link">Реклама</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        {% endif %}
+        {% if dd_4 %}
+            <div class="dropdown dropdown_action dropdown_menu is-open">
+                <div class="dropdown__body">
+                    <ul class="list">
+                        <li class="list__item">
+                            <a href="#" class="list__link">Добавить товар</a>
+                        </li>
+                        <li class="list__item">
+                            <a href="#" class="list__link">Сохранить с сайта</a>
+                        </li>
+                        <li class="list__item">
+                            <a href="#" class="list__link">Создать коллекцию</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</header>

@@ -1,13 +1,22 @@
 .slider
+    +sm 
+        margin-left: 10px
     +invis
     &__slide
         width: 700px !important
         padding-bottom: 350px
-        background-color: $green
+        background-color: $light-bg
         +cover
         border-radius: $radiusBig
+        +md 
+            width: 653px !important
+            padding-bottom: 326px
+        +sm 
+            width: 285px !important
     .slick-slide
         margin: 0 12px
+        +sm 
+            margin: 0 5px
     .btn-slider
         &_prev
             left: calc(50% - 480px)
@@ -21,13 +30,21 @@
 
 
 .slider-single
-    width: 540px !important
     overflow: hidden
+    +sm 
+        overflow: visible
     &__slide
-        // width: 600px !important
         padding-bottom: 630px
         +cover
         border-radius: $radiusBig
+        +md 
+            padding-bottom: 374px   
+        +sm 
+            width: 270px
+            padding-bottom: 310px
+    .slick-slide
+        +sm
+            margin: 0 6px
     .btn-single-slider
         &_prev
             left: 20px

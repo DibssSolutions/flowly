@@ -1,11 +1,11 @@
 .collection
+    display: block
     position: relative
     width: 300px
     &__images
         display: flex
         flex-direction: column
         flex-wrap: wrap
-        // width: 300px
         max-height: 200px
         margin-bottom: 8px
     &__image
@@ -23,8 +23,12 @@
                 margin-top: 6px
     &__title
         font-weight: 500
+        line-height: 1.1
+        letter-spacing: 0.02em
+        margin-top: 4px
     &__private
+        font-size: 0
         position: absolute
-        bottom: 0
+        bottom: -2px
         right: 0
             

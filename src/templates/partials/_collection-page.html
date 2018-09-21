@@ -1,25 +1,26 @@
 {% import "partials/_mixins.html" as mixins %}
 {% macro block(args) %}
     <div class="collections-page__main">
-        <div class="collections-page__authors">
-            {% if args.single %}
-                <div class="avatar" style="background-image: url(./img/avatar.jpg)"></div>
-                <div class="collections-page__names">
-                    Punkrock Pixxie
-                </div>
-                <span class="follow-mark">
-                    {{mixins.icon('check')}}
-                </span>
-            {% else %}
-                <div class="avatar avatar_small" style="background-image: url(./img/avatar.jpg)"></div>
-                <div class="avatar avatar_small"></div>
-                <button class="collections-page__button">
-                    <span>Несколько авторов</span>
-                    {{mixins.icon('chevron-down')}}
-                </button>
-            {% endif %}
-            {% if args.dropdown %}
-                <div class="dropdown is-open">
+        <div class="collections-page__left">
+            <div class="collections-page__authors">
+                {% if args.single %}
+                    <div class="avatar " style="background-image: url(./img/avatar.jpg)"></div>
+                    <div class="collections-page__names">
+                        Punkrock Pixxie
+                    </div>
+                    <span class="follow-mark">
+                        {{mixins.icon('check')}}
+                    </span>
+                {% else %}
+                    <div class="avatar" style="background-image: url(./img/avatar.jpg)"></div>
+                    <div class="avatar"></div>
+                    <button class="collections-page__button">
+                        <span>Несколько авторов</span>
+                        {{mixins.icon('chevron-down')}}
+                    </button>
+                {% endif %}
+                {% if args.dropdown %}
+                    <div class="dropdown is-open">
                         {% set subcriptions = [
                             {
                                 modifier: "user_dropdown",
@@ -42,21 +43,29 @@
                                         text: "Подписаться"
                                     }
                                 ]
-                            }] %}
-                            {% for item in subcriptions %}
+                            }
+                        ] %}
+                        {% for item in subcriptions %}
                             {{mixins.user(item)}}
                         {% endfor %}
-                </div>
-            {% endif %}
+                    </div>
+                {% endif %}
+            </div>
+            <h2 class="collections-page__title">
+                Хочу на день рождения
+                <br> на 31 год
+            </h2>
         </div>
         <div class="collections-page__actions">
             <button class="btn btn_small btn_blue" type="button">
                 {{args.btnText}}
             </button>
-            {{mixins.menuBtn()}}
             <button class="btn-circle btn-share" type="button">
                 {{mixins.icon('share')}}
             </button>
+            {{mixins.menuBtn()}}
         </div>
     </div>
+
+</div>
 {% endmacro %}

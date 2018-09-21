@@ -5,66 +5,28 @@
 .container-inner
 	position: relative
 	margin: 0 auto
-	padding: 0 20px
-	max-width: 1000px
+	padding: 0 27px
+	max-width: 1014px
 	+clr
+	+sm 
+		padding: 0 10px
 
 .container-narrow
-	max-width: 640px
+	max-width: 654px
 	margin: 0 auto
-	padding: 0 20px
-	
-.row
-	margin: 0 -8px
-	display: flex
-	flex-wrap: wrap
-	box-sizing: border-box
-	&:before,
-	&:after
-		box-sizing: border-box
+	padding: 0 27px
+	+md 
+		max-width: 1014px
+		padding: 0 70px
+	+sm 
+		padding: 0 10px
+.tablet-hide
+	+md 
+		display: none
 
-.col
-	padding: 0 8px
-	box-sizing: border-box
-	&:before,
-	&:after
-		box-sizing: border-box
-	&-25
-		flex: 0 0 25%
-	&-33
-		flex: 0 0 33.3%
-		width: 33.3%
-	&-42
-		flex: 0 0 42%
-	&-50
-		flex: 0 0 50%
-	&-58
-		flex: 0 0 58%
-	&-66
-		flex: 0 0 66.7%
-		width: 66.7%
-	&-75
-		flex: 0 0 75%
-	&-100
-		flex: 0 0 100%
-
-	
-
-	&-md-50
-		+md
-			flex: 0 0 50%
-	&-md-100
-		+md
-			flex: 0 0 100%
-		
-	&-sm-100
-		+sm
-			flex: 0 0 100%
-		
-.mob-block
-	display: none 
-	+sm
-		display: block 
+.mod-hide
+	+sm 
+		display: none
 
 
 

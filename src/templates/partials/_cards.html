@@ -3,25 +3,25 @@
 {% set productCards = [
     {
         image: 'card_img_1.jpg', 
-        brand: 'Wrangler',
-        product: 'Куртка джинсовая', 
-        price: '10495'
+        product: 'Куртка джинсовая Wrangler', 
+        price: '10 495',
+        special: true
     }, 
     {
         image: 'card_img_2.jpg', 
-        brand: 'Mango Man ',
+        brand: 'Champion',
         product: 'Свитшот Crewneck Sweatshirt', 
         price: '2 900'
     },
     {
         image: 'card_img_3.jpg', 
-        brand: 'Champion',
+        brand: 'Mango Man',
         product: 'Рубашка - DAHM', 
-        price: '4 857 '
+        price: '2 900 '
     }, 
     {
         image: 'card_img_4.jpg', 
-        brand: 'Mango Man ',
+        brand: 'Mango Man',
         product: 'Рубашка - DAHM', 
         price: '2 900'
     },
@@ -50,10 +50,11 @@
         price: '2 900'
     }
 ] %}
-
-<div class="grid">
-    <div class="gutter-sizer"></div>
-    {% for item in productCards %}
-        {{Cards.productCard(item)}}
-    {% endfor %}
+<div class="cards-wrapper">
+    <div class="grid">
+        <div class="gutter-sizer"></div>
+        {% for item in productCards %}
+            {{Cards.productCard(item)}}
+        {% endfor %}
+    </div>
 </div>

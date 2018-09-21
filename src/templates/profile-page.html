@@ -76,7 +76,7 @@ title: Profile Page
                         </div>
                         <div class="profile-form__group">
                             <label for="about" class="profile-form__label">О себе</label>
-                            <textarea name="about" style="height: 100px" id="about" class="input"></textarea>
+                            <textarea name="about" style="height: 80px" id="about" class="input"></textarea>
                             <div class="input-helper-text">
                                 Используйте #хештеги и @гиперсылки
                             </div>
@@ -89,7 +89,7 @@ title: Profile Page
                     <h2 class="profile-form__title">
                         Социальные сети
                     </h2>
-                    <fieldset>
+                    <fieldset class="profile-form__social">
                         <div class="social-action">
                             <span class="social-action__icon profile-icon profile-icon_fb">
                                 {{mixins.icon('facebook')}}
@@ -117,31 +117,31 @@ title: Profile Page
                         Уведомления по электронной почте
                     </h2>
                     <fieldset class="profile-form__notifications">
-                        <div class="profile-form__group">
+                        <div class="profile-form__group profile-form__group_toggler">
                             {{mixins.toggler('Написали вам сообщение', null, true, null)}}
                             <div class="input-helper-text">
                                 Получайте уведомдение, когда вашу находку кто-то себе сохранил.
                             </div>
                         </div>
-                        <div class="profile-form__group">
+                        <div class="profile-form__group profile-form__group_toggler">
                             {{mixins.toggler('Сохранили вашу находку', null, true, null)}}
                             <div class="input-helper-text">
                                 Получайте уведомдение, когда вашу находку кто-то себе сохранил.
                             </div>
                         </div>
-                        <div class="profile-form__group">
+                        <div class="profile-form__group profile-form__group_toggler">
                             {{mixins.toggler('Изменения в коллекции', null, true, null)}}
                             <div class="input-helper-text">
                                 Получайте уведомдение, когда участники в вашей коллекции внесли изменения.
                             </div>
                         </div>
-                        <div class="profile-form__group">
+                        <div class="profile-form__group profile-form__group_toggler">
                             {{mixins.toggler('Подписались на вас', null, true, null)}}
                             <div class="input-helper-text">
                                 Получайте уведомдение, когда на вас подписались
                             </div>
                         </div>
-                        <div class="profile-form__group">
+                        <div class="profile-form__group profile-form__group_toggler">
                             {{mixins.toggler('Новости и обновления')}}
                             <div class="input-helper-text">
                                 Получать уведомления, когда Flowly объявляет что-то новое, или обновляет сайт.
