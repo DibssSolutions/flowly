@@ -53,14 +53,15 @@
               </button>
             </form>
           </div>
-          <div class="header__activities">
+          <div class="header__action">
             <button class="btn-circle btn-add " type="button">
               <svg class="icon icon-plus">
                 <use xlink:href="img/sprite.svg#icon-plus"></use>
               </svg>
             </button>
-            <button type="button" class="header__user btn-circle" style="background-image: url(./img/avatar.jpg)"></button>
           </div>
+          <button type="button" class="header__user btn-circle" style="background-image: url(./img/avatar.jpg)"></button>
+        </div>
       </header>
       <div class="profile">
         <div class="profile__container container-inner">
@@ -127,7 +128,7 @@
                 </div>
                 <div class="profile-form__group">
                   <label for="about" class="profile-form__label">О себе</label>
-                  <textarea name="about" style="height: 100px" id="about" class="input"></textarea>
+                  <textarea name="about" style="height: 80px" id="about" class="input"></textarea>
                   <div class="input-helper-text"> Используйте #хештеги и @гиперсылки </div>
                 </div>
                 <div class="profile-form__group">
@@ -136,7 +137,7 @@
                 </div>
               </fieldset>
               <h2 class="profile-form__title"> Социальные сети </h2>
-              <fieldset>
+              <fieldset class="profile-form__social">
                 <div class="social-action">
                   <span class="social-action__icon profile-icon profile-icon_fb">
                     <svg class="icon icon-facebook">
@@ -158,35 +159,35 @@
               </fieldset>
               <h2 class="profile-form__title"> Уведомления по электронной почте </h2>
               <fieldset class="profile-form__notifications">
-                <div class="profile-form__group">
+                <div class="profile-form__group profile-form__group_toggler">
                   <label class="toggler">
                     <input type="checkbox" name="checkbox" checked='true'>
                     <span class="toggler__text">Написали вам сообщение</span>
                   </label>
                   <div class="input-helper-text"> Получайте уведомдение, когда вашу находку кто-то себе сохранил. </div>
                 </div>
-                <div class="profile-form__group">
+                <div class="profile-form__group profile-form__group_toggler">
                   <label class="toggler">
                     <input type="checkbox" name="checkbox" checked='true'>
                     <span class="toggler__text">Сохранили вашу находку</span>
                   </label>
                   <div class="input-helper-text"> Получайте уведомдение, когда вашу находку кто-то себе сохранил. </div>
                 </div>
-                <div class="profile-form__group">
+                <div class="profile-form__group profile-form__group_toggler">
                   <label class="toggler">
                     <input type="checkbox" name="checkbox" checked='true'>
                     <span class="toggler__text">Изменения в коллекции</span>
                   </label>
                   <div class="input-helper-text"> Получайте уведомдение, когда участники в вашей коллекции внесли изменения. </div>
                 </div>
-                <div class="profile-form__group">
+                <div class="profile-form__group profile-form__group_toggler">
                   <label class="toggler">
                     <input type="checkbox" name="checkbox" checked='true'>
                     <span class="toggler__text">Подписались на вас</span>
                   </label>
                   <div class="input-helper-text"> Получайте уведомдение, когда на вас подписались </div>
                 </div>
-                <div class="profile-form__group">
+                <div class="profile-form__group profile-form__group_toggler">
                   <label class="toggler">
                     <input type="checkbox" name="checkbox">
                     <span class="toggler__text">Новости и обновления</span>

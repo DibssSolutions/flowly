@@ -53,131 +53,151 @@
               </button>
             </form>
           </div>
-          <div class="header__activities">
+          <div class="header__action">
             <button class="btn-circle btn-add " type="button">
               <svg class="icon icon-plus">
                 <use xlink:href="img/sprite.svg#icon-plus"></use>
               </svg>
             </button>
-            <button type="button" class="header__user btn-circle" style="background-image: url(./img/avatar.jpg)"></button>
           </div>
+          <button type="button" class="header__user btn-circle" style="background-image: url(./img/avatar.jpg)"></button>
+        </div>
       </header>
       <div class="collections-page">
         <div class="collections-page__container container-inner">
           <div class="collections-page__main">
-            <div class="collections-page__authors">
-              <div class="avatar avatar_small" style="background-image: url(./img/avatar.jpg)"></div>
-              <div class="avatar avatar_small"></div>
-              <button class="collections-page__button">
-                <span>Несколько авторов</span>
-                <svg class="icon icon-chevron-down">
-                  <use xlink:href="img/sprite.svg#icon-chevron-down"></use>
-                </svg>
-              </button>
-              <div class="dropdown is-open">
-                <div class="user user_dropdown">
-                  <div class="user__avatar">
-                    <div class="avatar" style="background-image: url(./img/avatar.jpg)"></div>
+            <div class="collections-page__left">
+              <div class="collections-page__authors">
+                <div class="avatar" style="background-image: url(./img/avatar.jpg)"></div>
+                <div class="avatar"></div>
+                <button class="collections-page__button">
+                  <span>Несколько авторов</span>
+                  <svg class="icon icon-chevron-down">
+                    <use xlink:href="img/sprite.svg#icon-chevron-down"></use>
+                  </svg>
+                </button>
+                <div class="dropdown is-open">
+                  <div class="user user_dropdown">
+                    <div class="user__avatar">
+                      <div class="avatar" style="background-image: url(./img/avatar.jpg)"></div>
+                    </div>
+                    <div class="user__text">
+                      <div class="user__main">Ivan Klimov</div>
+                      <div class="user__secondary">@sdklimov</div>
+                    </div>
+                    <div class="user__button">
+                      <button type="button" class="btn btn_small btn_light">Подписаться</button>
+                    </div>
                   </div>
-                  <div class="user__text">
-                    <div class="user__main">Ivan Klimov</div>
-                    <div class="user__secondary">@sdklimov</div>
-                  </div>
-                  <div class="user__button">
-                    <button type="button" class="btn btn_small btn_light">Подписаться</button>
-                  </div>
-                </div>
-                <div class="user user_dropdown">
-                  <div class="user__avatar">
-                    <div class="avatar"></div>
-                  </div>
-                  <div class="user__text">
-                    <div class="user__main">Валера Певнев</div>
-                    <div class="user__secondary">@pevnev</div>
-                  </div>
-                  <div class="user__button">
-                    <button type="button" class="btn btn_small btn_light">Подписаться</button>
+                  <div class="user user_dropdown">
+                    <div class="user__avatar">
+                      <div class="avatar"></div>
+                    </div>
+                    <div class="user__text">
+                      <div class="user__main">Валера Певнев</div>
+                      <div class="user__secondary">@pevnev</div>
+                    </div>
+                    <div class="user__button">
+                      <button type="button" class="btn btn_small btn_light">Подписаться</button>
+                    </div>
                   </div>
                 </div>
               </div>
+              <h2 class="collections-page__title"> Хочу на день рождения <br> на 31 год </h2>
             </div>
             <div class="collections-page__actions">
               <button class="btn btn_small btn_blue" type="button"> Подписаться на всех </button>
-              <button class="btn-circle btn-menu " type="button">
-                <svg class="icon icon-three-dots">
-                  <use xlink:href="img/sprite.svg#icon-three-dots"></use>
-                </svg>
-              </button>
               <button class="btn-circle btn-share" type="button">
                 <svg class="icon icon-share">
                   <use xlink:href="img/sprite.svg#icon-share"></use>
                 </svg>
               </button>
+              <button class="btn-circle btn-menu " type="button">
+                <svg class="icon icon-three-dots">
+                  <use xlink:href="img/sprite.svg#icon-three-dots"></use>
+                </svg>
+              </button>
             </div>
           </div>
-          <div class="collections-page__cards">
+        </div>
+        <div class="collections-page__cards">
+          <div class="cards-wrapper">
             <div class="grid">
               <div class="gutter-sizer"></div>
-              <div class="card">
+              <a href="#" class="card">
                 <img class="card__image" src="img/cards/card_img_1.jpg" alt='prod' />
                 <div class="card__descr">
-                  <span class="card__brand">Wrangler</span> / <span class="card__product">Куртка джинсовая</span>
+                  <span class="card__product_special">Куртка джинсовая Wrangler</span>
+                  <span class="card__special">
+                    <svg class="icon icon-special">
+                      <use xlink:href="img/sprite.svg#icon-special"></use>
+                    </svg>
+                  </span>
                 </div>
-                <div class="card__price"> 10495 ₽ </div>
-              </div>
-              <div class="card">
+                <div class="card__price"> 10 495 <span class="rouble">Ь</span>
+                </div>
+              </a>
+              <a href="#" class="card">
                 <img class="card__image" src="img/cards/card_img_2.jpg" alt='prod' />
                 <div class="card__descr">
-                  <span class="card__brand">Mango Man </span> / <span class="card__product">Свитшот Crewneck Sweatshirt</span>
+                  <span class="card__brand">Champion</span> / <span class="card__product">Свитшот Crewneck Sweatshirt</span>
                 </div>
-                <div class="card__price"> 2 900 ₽ </div>
-              </div>
-              <div class="card">
+                <div class="card__price"> 2 900 <span class="rouble">Ь</span>
+                </div>
+              </a>
+              <a href="#" class="card">
                 <img class="card__image" src="img/cards/card_img_3.jpg" alt='prod' />
                 <div class="card__descr">
-                  <span class="card__brand">Champion</span> / <span class="card__product">Рубашка - DAHM</span>
+                  <span class="card__brand">Mango Man</span> / <span class="card__product">Рубашка - DAHM</span>
                 </div>
-                <div class="card__price"> 4 857 ₽ </div>
-              </div>
-              <div class="card">
+                <div class="card__price"> 2 900 <span class="rouble">Ь</span>
+                </div>
+              </a>
+              <a href="#" class="card">
                 <img class="card__image" src="img/cards/card_img_4.jpg" alt='prod' />
                 <div class="card__descr">
-                  <span class="card__brand">Mango Man </span> / <span class="card__product">Рубашка - DAHM</span>
+                  <span class="card__brand">Mango Man</span> / <span class="card__product">Рубашка - DAHM</span>
                 </div>
-                <div class="card__price"> 2 900 ₽ </div>
-              </div>
-              <div class="card">
+                <div class="card__price"> 2 900 <span class="rouble">Ь</span>
+                </div>
+              </a>
+              <a href="#" class="card">
                 <img class="card__image" src="img/cards/card_img_5.jpg" alt='prod' />
                 <div class="card__descr">
                   <span class="card__brand">Mango Man </span> / <span class="card__product">Рубашка - DAHM</span>
                 </div>
-                <div class="card__price"> 2 900 ₽ </div>
-              </div>
-              <div class="card">
+                <div class="card__price"> 2 900 <span class="rouble">Ь</span>
+                </div>
+              </a>
+              <a href="#" class="card">
                 <img class="card__image" src="img/cards/card_img_6.jpg" alt='prod' />
                 <div class="card__descr">
                   <span class="card__brand">Mango Man </span> / <span class="card__product">Рубашка - DAHM</span>
                 </div>
-                <div class="card__price"> 2 900 ₽ </div>
-              </div>
-              <div class="card">
+                <div class="card__price"> 2 900 <span class="rouble">Ь</span>
+                </div>
+              </a>
+              <a href="#" class="card">
                 <img class="card__image" src="img/cards/card_img_7.jpg" alt='prod' />
                 <div class="card__descr">
                   <span class="card__brand">Mango Man </span> / <span class="card__product">Рубашка - DAHM</span>
                 </div>
-                <div class="card__price"> 2 900 ₽ </div>
-              </div>
-              <div class="card">
+                <div class="card__price"> 2 900 <span class="rouble">Ь</span>
+                </div>
+              </a>
+              <a href="#" class="card">
                 <img class="card__image" src="img/cards/card_img_8.jpg" alt='prod' />
                 <div class="card__descr">
                   <span class="card__brand">Mango Man </span> / <span class="card__product">Рубашка - DAHM</span>
                 </div>
-                <div class="card__price"> 2 900 ₽ </div>
-              </div>
+                <div class="card__price"> 2 900 <span class="rouble">Ь</span>
+                </div>
+              </a>
             </div>
           </div>
         </div>
       </div>
+    </div>
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->

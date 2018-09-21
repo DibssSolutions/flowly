@@ -53,14 +53,15 @@
               </button>
             </form>
           </div>
-          <div class="header__activities">
+          <div class="header__action">
             <button class="btn-circle btn-add " type="button">
               <svg class="icon icon-plus">
                 <use xlink:href="img/sprite.svg#icon-plus"></use>
               </svg>
             </button>
-            <button type="button" class="header__user btn-circle" style="background-image: url(./img/avatar.jpg)"></button>
           </div>
+          <button type="button" class="header__user btn-circle" style="background-image: url(./img/avatar.jpg)"></button>
+        </div>
       </header>
       <div class="company-page">
         <div class="company-page__container container-narrow">
@@ -80,14 +81,14 @@
                 </svg> Россия, Москва </div>
               <div class="company-page__buttons">
                 <button class="btn btn_small btn_blue" type="button"> Редактировать </button>
-                <button class="btn-circle btn-menu " type="button">
-                  <svg class="icon icon-three-dots">
-                    <use xlink:href="img/sprite.svg#icon-three-dots"></use>
-                  </svg>
-                </button>
                 <button class="btn-circle btn-share" type="button">
                   <svg class="icon icon-share">
                     <use xlink:href="img/sprite.svg#icon-share"></use>
+                  </svg>
+                </button>
+                <button class="btn-circle btn-menu " type="button">
+                  <svg class="icon icon-three-dots">
+                    <use xlink:href="img/sprite.svg#icon-three-dots"></use>
                   </svg>
                 </button>
               </div>
@@ -123,52 +124,57 @@
                     </svg>
                   </button>
                 </div>
-                <div class="card__descr"> Добавить товар </div>
+                <div class="card__descr"> Создать коллекцию </div>
               </div>
-              <section class="collection">
+              <a href="#" class="collection">
                 <div class="collection__images">
                   <div class="collection__image collection__image_main" style="background-image: url(./img/cards/);"></div>
                   <div class="collection__image collection__image_secondary" style="background-image: url(./img/cards/);"></div>
                   <div class="collection__image collection__image_secondary" style="background-image: url(./img/cards/);"></div>
                 </div>
-                <div class="collection__title">Хочу на день рождения</div>
-                <div class="collection__private">
-                  <span class="private-icon">
-                    <svg class="icon icon-lock">
-                      <use xlink:href="img/sprite.svg#icon-lock"></use>
-                    </svg>
-                  </span>
-                </div>
-              </section>
+                <div class="collection__title">На зиму</div>
+              </a>
             </div>
             <div class="company-page__col">
-              <section class="collection">
+              <a href="#" class="collection">
                 <div class="collection__images">
                   <div class="collection__image collection__image_main" style="background-image: url(./img/cards/card_img_1.jpg);"></div>
                   <div class="collection__image collection__image_secondary" style="background-image: url(./img/cards/card_img_3.jpg);"></div>
                   <div class="collection__image collection__image_secondary" style="background-image: url(./img/cards/card_img_5.jpg);"></div>
                 </div>
                 <div class="collection__title">Хочу на день рождения</div>
-              </section>
+              </a>
             </div>
-            <div class="company-page__col">
-              <div class="image-card" style="background-image: url(./img/cards/image-card_1.jpg);">
+            <div class="company-page__col tablet-hide">
+              <a href="#" class="image-card" style="background-image: url(./img/cards/image-card_1.jpg);">
                 <div class="image-card__top">
                   <div class="image-card__type"></div>
-                  <h4 class="image-card__title">Кросовки <br> с улиц Лондана</h4>
+                  <h4 class="image-card__title image-card__title_single">Кросовки <br> с улиц Лондана</h4>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
           <div class="company-page__private-collection">
-            <section class="collection">
-              <div class="collection__images">
-                <div class="collection__image collection__image_main" style="background-image: url(./img/cards/card_img_1.jpg);"></div>
-                <div class="collection__image collection__image_secondary" style="background-image: url(./img/cards/card_img_3.jpg);"></div>
-                <div class="collection__image collection__image_secondary" style="background-image: url(./img/cards/card_img_5.jpg);"></div>
+            <h3>Приватные коллекции</h3>
+            <div class="company-page__row">
+              <div class="company-page__col">
+                <a href="#" class="collection">
+                  <div class="collection__images">
+                    <div class="collection__image collection__image_main" style="background-image: url(./img/cards/card_img_1.jpg);"></div>
+                    <div class="collection__image collection__image_secondary" style="background-image: url(./img/cards/card_img_3.jpg);"></div>
+                    <div class="collection__image collection__image_secondary" style="background-image: url(./img/cards/card_img_5.jpg);"></div>
+                  </div>
+                  <div class="collection__title">Хочу на день рождения</div>
+                  <div class="collection__private">
+                    <span class="private-icon">
+                      <svg class="icon icon-lock">
+                        <use xlink:href="img/sprite.svg#icon-lock"></use>
+                      </svg>
+                    </span>
+                  </div>
+                </a>
               </div>
-              <div class="collection__title">Хочу на день рождения</div>
-            </section>
+            </div>
           </div>
         </div>
       </div>
