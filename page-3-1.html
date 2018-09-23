@@ -67,12 +67,26 @@
         <div class="company-page__container container-narrow">
           <div class="company-page__top">
             <div class="company-page__logo">
-              <a class="logo">
+              <a href="#">
                 <img src="img/asos_logo.png" alt="logo">
               </a>
+              <div class="mob-block">
+                <h1 class="company-page__title">
+                  <span>ASOS Russia</span>
+                  <span class="is-follow follow-mark">
+                    <svg class="icon icon-check">
+                      <use xlink:href="img/sprite.svg#icon-check"></use>
+                    </svg>
+                  </span>
+                </h1>
+                <div class="company-page__location text-muted">
+                  <svg class="icon icon-map">
+                    <use xlink:href="img/sprite.svg#icon-map"></use>
+                  </svg> Россия, Москва </div>
+              </div>
             </div>
             <section class="company-page__descr">
-              <h1 class="company-page__title">
+              <h1 class="company-page__title mob-hide">
                 <span>ASOS Russia</span>
                 <span class="is-follow follow-mark">
                   <svg class="icon icon-check">
@@ -80,13 +94,18 @@
                   </svg>
                 </span>
               </h1>
-              <div class="company-page__location text-muted">
+              <div class="company-page__location text-muted mob-hide">
                 <svg class="icon icon-map">
                   <use xlink:href="img/sprite.svg#icon-map"></use>
                 </svg> Россия, Москва </div>
               <div class="company-page__buttons">
                 <button class="btn btn_small btn_blue" type="button"> Подписаться </button>
-                <button class="btn btn_small btn_light" type="button"> Сообщение </button>
+                <button class="btn btn_small btn_light mob-hide" type="button"> Сообщение </button>
+                <button class="btn-circle btn_light mob-block" type="button">
+                  <svg class="icon icon-messanger">
+                    <use xlink:href="img/sprite.svg#icon-messanger"></use>
+                  </svg>
+                </button>
                 <button class="btn-circle btn-share" type="button">
                   <svg class="icon icon-share">
                     <use xlink:href="img/sprite.svg#icon-share"></use>
@@ -123,17 +142,17 @@
           <div class="cards-wrapper">
             <div class="grid">
               <div class="gutter-sizer"></div>
-              <div class="card card_add">
-                <div class="card__image">
+              <div class="add-collection js-masonry">
+                <div class="add-collection__bg">
                   <button class="btn-circle btn-add btn-circle_big btn-add_blue" type="button">
                     <svg class="icon icon-plus">
                       <use xlink:href="img/sprite.svg#icon-plus"></use>
                     </svg>
                   </button>
                 </div>
-                <div class="card__descr"> Добавить товар </div>
+                <div class="add-collection__descr"> Добавить товар </div>
               </div>
-              <a href="#" class="card">
+              <a href="#" class="card js-masonry">
                 <img class="card__image" src="img/cards/card_img_2.jpg" alt='prod' />
                 <div class="card__descr">
                   <span class="card__brand">Mango Man </span> / <span class="card__product">Рубашка - DAHM</span>
@@ -141,7 +160,7 @@
                 <div class="card__price"> 2 900 <span class="rouble">Ь</span>
                 </div>
               </a>
-              <a href="#" class="card">
+              <a href="#" class="card js-masonry">
                 <img class="card__image" src="img/cards/card_img_3.jpg" alt='prod' />
                 <div class="card__descr">
                   <span class="card__brand">Champion</span> / <span class="card__product">Свитшот Crewneck Sweatshirt</span>
@@ -149,7 +168,7 @@
                 <div class="card__price"> 4 857 <span class="rouble">Ь</span>
                 </div>
               </a>
-              <a href="#" class="card">
+              <a href="#" class="card js-masonry">
                 <img class="card__image" src="img/cards/card_img_4.jpg" alt='prod' />
                 <div class="card__descr">
                   <span class="card__brand">Mango Man </span> / <span class="card__product">Рубашка - DAHM</span>
@@ -157,7 +176,7 @@
                 <div class="card__price"> 2 900 <span class="rouble">Ь</span>
                 </div>
               </a>
-              <a href="#" class="card">
+              <a href="#" class="card js-masonry">
                 <img class="card__image" src="img/cards/card_img_5.jpg" alt='prod' />
                 <div class="card__descr">
                   <span class="card__brand">Mango Man </span> / <span class="card__product">Рубашка - DAHM</span>
@@ -165,7 +184,7 @@
                 <div class="card__price"> 2 900 <span class="rouble">Ь</span>
                 </div>
               </a>
-              <a href="#" class="card">
+              <a href="#" class="card js-masonry">
                 <img class="card__image" src="img/cards/card_img_6.jpg" alt='prod' />
                 <div class="card__descr">
                   <span class="card__brand">Mango Man </span> / <span class="card__product">Рубашка - DAHM</span>
@@ -173,7 +192,7 @@
                 <div class="card__price"> 2 900 <span class="rouble">Ь</span>
                 </div>
               </a>
-              <a href="#" class="card">
+              <a href="#" class="card js-masonry">
                 <img class="card__image" src="img/cards/card_img_7.jpg" alt='prod' />
                 <div class="card__descr">
                   <span class="card__brand">Mango Man </span> / <span class="card__product">Рубашка - DAHM</span>
@@ -181,7 +200,7 @@
                 <div class="card__price"> 2 900 <span class="rouble">Ь</span>
                 </div>
               </a>
-              <a href="#" class="card">
+              <a href="#" class="card js-masonry">
                 <img class="card__image" src="img/cards/card_img_8.jpg" alt='prod' />
                 <div class="card__descr">
                   <span class="card__brand">Mango Man </span> / <span class="card__product">Рубашка - DAHM</span>
