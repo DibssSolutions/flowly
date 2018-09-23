@@ -6,8 +6,14 @@
             flex-flow: column
     &__logo
         flex: 0 0 120px
-        +sm 
-
+        +sm
+            display: flex
+            align-items: center
+            margin-bottom: 20px
+        a 
+            display: inline-block
+        .mob-block
+            margin-left: 20px
     &__location
         margin-bottom: 18px
         .icon
@@ -44,6 +50,7 @@
         +sm 
             flex-flow: column
             align-items: center
+            padding-left: 0
     &__col
         flex: 0 0 300px
         width: 300px
@@ -64,12 +71,37 @@
                 padding-left: 43px
             +sm 
                 text-align: center
-            
 
-
-
-
-
+.add-collection
+    display: block
+    width: 222px
+    margin-bottom: 28px
+    text-align: left
+    +xs
+        width: 145px
+    &_full-width
+        width: 100%
+        +xs
+            width: 100%
+    &__bg
+        height: 200px
+        width: 100%
+        background-color: $light-bg
+        position: relative
+        border-radius: $radiusBig
+        margin-bottom: 8px
+        +xs
+            height: 145px
+            .add-collection_full-width &
+                height: 200px
+    .btn-add
+        +vcenter
+    &__descr
+        font-size: 13px
+        line-height: 1
+        color: $grey
+        font-weight: 500
+        margin-bottom: 2px
 
 .follow-mark
     display: inline-block
@@ -86,6 +118,8 @@
 
 .instagram-info
     color: $grey
+    display: flex
+    flex-wrap: wrap
     &__nickname,
     &__followers
         position: relative
@@ -95,4 +129,9 @@
             position: absolute
             bottom: 1px
             right: -10px
+    &__nickname 
+        +xs
+            width: 100%
+            &:after
+                display: none
             

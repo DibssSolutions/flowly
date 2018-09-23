@@ -1,0 +1,52 @@
+--- title: Search Page ---
+{% import "partials/_mixins.html" as mixins %}
+{% extends "layouts/_layout.html" %}
+
+{% macro card() %}
+    <div class="people__card">
+        <div class="card-outline">
+            <div class="card-outline__body">
+                {{mixins.user({
+                    image: 'avatar.jpg',
+                    mainText: 'Asos Russia',
+                    secondaryText: '@asos.ru'
+                })}}
+                <p class="text-small">
+                    Добро пожаловать на официальную страницу Asos Russia, где вы откроете для себя мир моды онлайн.
+                </p>
+                <button class="btn btn_blue btn_middle">
+                    Подписаться
+                </button>
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+
+{% block content %}
+
+    <ul class="links links_search">
+        <li>
+            <a href="#" class="main-link">Товары</a>
+        </li>
+        <li>
+            <a href="#" class="main-link">Коллекции</a>
+        </li>
+        <li>
+            <a href="#" class="main-link is-active">Люди</a>
+        </li>
+    </ul>
+
+    <div class="people">
+        <div class="people__container container-inner">
+            <div class="people__cards">
+                {{card()}}
+                {{card()}}
+                {{card()}}
+                {{card()}}
+                {{card()}}
+                {{card()}}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

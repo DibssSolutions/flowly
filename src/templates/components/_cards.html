@@ -25,7 +25,7 @@
 {% endmacro %}
 
 {% macro productCard(props) %}
-    <a href="#" class="card">
+    <a href="#" class="card{% if props.modifier %} {{props.modifier}}{% endif %}">
         <img class="card__image" src="img/cards/{{props.image}}" alt='prod'/>
         <div class="card__descr">
             {% if props.special %}

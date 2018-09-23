@@ -4,21 +4,34 @@
     <div class="company-page__container container-narrow">
         <div class="company-page__top">
             <div class="company-page__logo">
-                <a class="logo">
+                <a href="#">
                     <img src="img/asos_logo.png" alt="logo">
                 </a>
+                <div class="mob-block">
+                    <h1 class="company-page__title">
+                        <span>ASOS Russia</span>
+                        {% if not args.followed %}
+                            <span class="is-follow follow-mark">
+                                {{mixins.icon('check')}}
+                            </span>
+                        {% endif %}
+                    </h1>
+                    <div class="company-page__location text-muted">
+                        {{mixins.icon('map')}}
+                        Россия, Москва
+                    </div>
+                </div>
             </div>
             <section class="company-page__descr">
-                <h1 class="company-page__title">
+                <h1 class="company-page__title mob-hide">
                     <span>ASOS Russia</span>
                     {% if not args.followed %}
                         <span class="is-follow follow-mark">
                             {{mixins.icon('check')}}
                         </span>
                     {% endif %}
-
                 </h1>
-                <div class="company-page__location text-muted">
+                <div class="company-page__location text-muted mob-hide">
                     {{mixins.icon('map')}}
                     Россия, Москва
                 </div>
@@ -32,8 +45,11 @@
                         <button class="btn btn_small btn_blue" type="button">
                             Подписаться
                         </button>
-                        <button class="btn btn_small btn_light" type="button">
+                        <button class="btn btn_small btn_light mob-hide" type="button">
                             Сообщение
+                        </button>
+                        <button class="btn-circle btn_light mob-block" type="button">
+                            {{mixins.icon('messanger')}}
                         </button>
                     {% endif %}
                     <button class="btn-circle btn-share" type="button">

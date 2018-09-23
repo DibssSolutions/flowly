@@ -5,7 +5,7 @@ $(document).ready(function() {
   var elem = document.querySelector('.grid');
   var msnry = new Masonry(elem, {
     // options
-    itemSelector: '.card',
+    itemSelector: '.js-masonry',
     columnWidth: '.card',
     gutter: '.gutter-sizer',
     horizontalOrder: true

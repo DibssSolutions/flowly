@@ -1,0 +1,28 @@
+.search-empty
+    +vertical
+    position: absolute
+    top: 153px
+    left: 0
+    width: 100%
+    height: calc(100% - 153px)
+    &__container
+        display: inline-block
+        +icenter
+    &__title
+        font-size: 24px
+        color: $grey
+    img 
+        max-width: 100%
+
+.people
+    &__cards
+        +flex-center
+        flex-wrap: wrap
+        margin: 0 -12px
+    &__card
+        flex: 0 0 33.33%
+        padding: 0 12px 24px
+        p 
+            margin-bottom: 20px
+
+    

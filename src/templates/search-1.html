@@ -1,0 +1,27 @@
+--- title: Search Page ---
+{% import "partials/_mixins.html" as mixins %}
+{% extends "layouts/_layout.html" %}
+{% block content %}
+
+    <ul class="links links_search">
+        <li>
+            <a href="#" class="main-link">Товары</a>
+        </li>
+        <li>
+            <a href="#" class="main-link">Коллекции</a>
+        </li>
+        <li>
+            <a href="#" class="main-link is-active">Люди</a>
+        </li>
+    </ul>
+    <div class="search-empty">
+        <div class="search-empty__container">
+            <h2 class="search-empty__title title-grey">
+                Ничего не найдено
+            </h2>
+            <img src="img/illustration_1.jpg" alt="">
+        </div>
+
+    </div>
+
+{% endblock %}

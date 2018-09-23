@@ -17,6 +17,12 @@ PageList:
   ready: 50
 - file: profile-page.html
   ready: 50
+- file: search-1.html
+  ready: 50
+- file: search-2.html
+  ready: 50
+- file: search-3.html
+  ready: 50
 - file: modal-01.html
   ready: 50
 - file: modal-02.html

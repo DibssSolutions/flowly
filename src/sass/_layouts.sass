@@ -20,13 +20,27 @@
 		padding: 0 70px
 	+sm 
 		padding: 0 10px
+
 .tablet-hide
 	+md 
 		display: none
 
-.mod-hide
+.mob-hide
 	+sm 
 		display: none
+
+.mob-block
+	display: none
+	&.btn,
+	&.btn-circle
+		display: none
+	+sm 
+		display: block
+		&.btn,
+		&.btn-circle
+			display: inline-block
+
+
 
 
 
