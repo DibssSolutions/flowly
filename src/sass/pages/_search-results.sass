@@ -9,20 +9,75 @@
         display: inline-block
         +icenter
     &__title
-        font-size: 24px
+        font-size: 25px
         color: $grey
+        margin-bottom: 42px
     img 
         max-width: 100%
 
 .people
+    margin-top: 36px
     &__cards
         +flex-center
         flex-wrap: wrap
         margin: 0 -12px
+        align-items: stretch
     &__card
         flex: 0 0 33.33%
+        width: 33.33%
         padding: 0 12px 24px
+        min-height: 192px
+        +md 
+            flex: 0 0 50%
+            width: 50%
+        +xs 
+            flex: 0 0 100%
+            width: 100%
         p 
-            margin-bottom: 20px
+            padding-bottom: 10px
+            min-height: 67px
+        .user
+            margin-bottom: 11px
+        .card-outline
+            min-height: 193px
 
-    
+.search-results
+    position: absolute
+    top: 100%   
+    left: 0
+    right: 0
+    padding-bottom: 25px
+    z-index: 100
+    background-color: rgba(#fff, 0.9)
+    &:before, 
+    &:after
+        position: absolute
+        top: 0
+        bottom: 0
+        width: 300%
+        content: ''
+        background-color: inherit
+        z-index: 100
+    &:before
+        right: 100%
+    &:after
+        left: 100%
+    &__list
+        margin-top: 24px
+        margin-bottom: 12px
+    &__link
+        font-size: 20px
+        font-weight: 700
+        line-height: 1.5
+    &__highlighted
+        color: $grey
+    &__title
+        font-size: 15px
+        line-height: 2
+        margin-bottom: 10px
+    &__collection
+        margin-bottom: 15px
+        .product__title
+            font-size: 15px
+        .product__details
+            color: $grey

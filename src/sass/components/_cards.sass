@@ -13,10 +13,12 @@
         border-bottom: 1px solid $extra-light-grey
     &__body
         padding: 15px
+    &__body-wide
+        padding: 20px
 
 .image-card
     display: block
-    width: 300px
+    width: 300px 
     height: 350px
     padding: 25px 20px 20px
     +cover
@@ -26,15 +28,33 @@
     display: flex
     flex-flow: column
     justify-content: space-between
+    +md 
+        height: 310px
+        padding-bottom: 15px
+    +sm 
+        padding: 20px 15px 15px
+    +r(900)
+        width: 266px
+        height: 256px
+    +r(500) 
+        width: 219px
     &__type
         font-size: 15px
         font-weight: 500
         margin-bottom: 4px
+        +md 
+            font-size: 13px
+        +xs 
+            font-size: 11px
     &__title
         font-size: 25px
         font-weight: 500
         line-height: 1.2
         letter-spacing: 0.02em
+        +md 
+            font-size: 22px
+        +xs 
+            font-size: 18px
         &_single
             margin-top: -7px
     &__author
@@ -42,13 +62,21 @@
     &__avatar
         display: inline-block
         vertical-align: middle
+        .avatar
+            +md 
+                +circle(30)
+            +xs
+                +circle(26)
     &__name
         display: inline-block
         vertical-align: middle
         margin-left: 10px
         font-size: 15px
         font-weight: 500
-
+        +md 
+            font-size: 13px
+        +xs
+            font-size: 11px
 .card
     display: block
     width: 222px
@@ -63,6 +91,8 @@
         display: block
         border-radius: $radiusBig
         margin-bottom: 8px
+        +xs
+            margin-bottom: 10px
     &__descr
         position: relative
         font-size: 13px
@@ -70,21 +100,32 @@
         color: $grey
         font-weight: 500
         margin-bottom: 2px
-        // max-width: 212px
+        width: 100%
+        padding-right: 20px
+        +xs
+            font-size: 10px
+            line-height: 1.2
+            padding-right: 20px
     &__product_special
         color: $black
     &__price
         font-weight: 500
+        +xs     
+            font-size: 11px
     &__special
         position: absolute
         right: 0
         top: 0
+        +xs 
+            display: none
         .icon
             color: $blue
             font-size: 16px
     .rouble
         font-weight: 500
         font-size: 14px
+        +xs
+            font-size: 10px
 
 // ===== MASONRY =====
 

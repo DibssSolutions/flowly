@@ -3,6 +3,8 @@ ProjectTitle: flowly
 PageList:
 - file: main.html
   ready: 50
+- file: main_v2.html
+  ready: 50
 - file: page-2-1.html
   ready: 50
 - file: page-2-2.html
@@ -17,11 +19,11 @@ PageList:
   ready: 50
 - file: profile-page.html
   ready: 50
-- file: search-1.html
+- file: search-people.html
   ready: 50
-- file: search-2.html
+- file: search-empty.html
   ready: 50
-- file: search-3.html
+- file: search-results.html
   ready: 50
 - file: modal-01.html
   ready: 50
@@ -53,6 +55,8 @@ PageList:
   ready: 50
 - file: modal-33.html
   ready: 50
+- file: modal-34.html
+  ready: 50
 - file: modal-41.html
   ready: 50
 - file: modal-51.html
@@ -74,6 +78,4 @@ PageList:
 - file: dropdown-3.html
   ready: 50
 - file: dropdown-4.html
-  ready: 50
-- file: dropdown-5.html
   ready: 50

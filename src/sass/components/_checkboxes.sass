@@ -5,6 +5,8 @@
     display: block
     user-select: none
     text-align: left
+    +sm 
+        padding-left: 70px
     input
         position: absolute
         top: 0
@@ -15,12 +17,16 @@
                 background-color: $blue
             &:after
                 transform: translateX(40px)
+                +sm 
+                    transform: translateX(30px)
     &__text
         display: inline-block
         vertical-align: middle
         line-height: 40px
         font-size: 15px
         font-weight: 500
+        +sm 
+            line-height: 30px
         .is-disabled &
             color: $grey
         &:before,
@@ -36,6 +42,9 @@
             outline: none
             border-radius: 20px
             transition: background-color .3s
+            +sm 
+                width: 60px
+                height: 30px
         &:after
             width: 34px
             height: 34px
@@ -44,6 +53,9 @@
             left: 3px
             background-color: $white
             transition: transform .3s
+            +sm 
+                width: 24px
+                height: 24px
 
 .toggler.is-disabled
     input:checked ~ .toggler__text

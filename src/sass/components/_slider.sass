@@ -8,11 +8,13 @@
         background-color: $light-bg
         +cover
         border-radius: $radiusBig
+        position: relative
         +md 
             width: 653px !important
             padding-bottom: 326px
         +sm 
             width: 285px !important
+            padding-bottom: 168px
     .slick-slide
         margin: 0 12px
         +sm 
@@ -22,12 +24,80 @@
             left: calc(50% - 480px)
         &_next
             right: calc(50% - 480px)
+    &__text-first
+        font-size: 25px
+        line-height: 1.2
+        font-weight: 700
+        position: absolute
+        left: 40px
+        top: 40px
+        +sm 
+            left: 10px
+            top: 10px
+            font-size: 15px
+    &__text-second
+        position: absolute
+        top: 70px
+        right: 50px
+        +sm 
+            top: 15px
+            right: 15px
+        h2 
+            font-size: 60px
+            font-weight: 700
+            line-height: 1
+            margin-bottom: 40px
+            +sm 
+                font-size: 20px
+                margin-bottom: 16px
+        p 
+            font-size: 20px
+            line-height: 1.25
+            +sm 
+                font-size: 15px
+    &__text-third
+        position: absolute
+        left: 40px
+        bottom: 40px
+        +sm 
+            left: 20px
+            bottom: 10px
+        p 
+            font-size: 20px
+            line-height: 1.25
+            +sm 
+                font-size: 15px
+        h2 
+            font-size: 50px
+            line-height: 1
+            +sm     
+                font-size: 24px
+
+
 
 .slick-arrow
     position: absolute
     top: 50%
     transform: translateY(-50%)
 
+.cards-slider
+    margin: 0 -15px 26px
+    display: flex
+    +md 
+        overflow: visible
+        margin-right: -50px
+    +sm 
+        margin-bottom: 4px
+    .card-slide
+        margin: 15px
+    .slick-slide
+        margin: 0 12px
+        width: 300px !important
+        +r(900)
+            width: 266px !important
+        +r(500)
+            width: 219px !important
+            margin: 0 5px
 
 .slider-single
     overflow: hidden

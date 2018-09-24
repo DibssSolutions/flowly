@@ -4,40 +4,55 @@
         margin-top: 8px
         +sm 
             flex-flow: column
+            margin-top: -4px
     &__logo
         flex: 0 0 120px
         +sm
+            flex: 0 0 auto
             display: flex
             align-items: center
-            margin-bottom: 20px
+            margin-bottom: 15px
         a 
             display: inline-block
+            +sm
+                width: 70px
+        img 
+            max-width: 100% 
         .mob-block
             margin-left: 20px
     &__location
-        margin-bottom: 18px
+        margin-bottom: 20px
+        +xs
+            font-size: 13px
         .icon
             margin-right: 3px
             font-size: 12px
+            +xs
+                margin-right: 0
     &__descr
         padding-left: 40px
         +sm 
             padding-left: 0
     &__title
         font-size: 0
-        margin-bottom: 2px
+        margin-bottom: 3px
         span:first-child
             display: inline-block
             vertical-align: middle
             font-size: 25px
             font-weight: 700
+            +sm 
+                font-size: 15px
+                margin-top: 10px
     &__cite-link
         display: block
         margin-top: 4px
-        margin-bottom: 8px
+        margin-bottom: 5px
     &__buttons
         margin-bottom: 26px
         font-size: 0
+        +xs 
+            margin-bottom: 23px
         & > * 
             margin-right: 9px
     &__row 
@@ -56,8 +71,12 @@
         width: 300px
         margin: 0 15px
         .card,
-        .collection
+        .collection,
+        .add-collection
             margin-bottom: 40px 
+            +xs
+                margin-bottom: 26px
+
 
     &__private-collection
         margin-bottom: 100px
@@ -75,7 +94,6 @@
 .add-collection
     display: block
     width: 222px
-    margin-bottom: 28px
     text-align: left
     +xs
         width: 145px
@@ -102,6 +120,8 @@
         color: $grey
         font-weight: 500
         margin-bottom: 2px
+        .add-collection_full-width &
+            font-size: 15px
 
 .follow-mark
     display: inline-block
@@ -112,9 +132,18 @@
     background-color: $blue
     color: $white
     position: relative
+    &_small
+        height: 12px
+        width: 12px
     .icon
         font-size: 6px
         +vcenter
+
+.follow-mark_small 
+    .icon
+        font-size: 5px
+            
+
 
 .instagram-info
     color: $grey
@@ -123,12 +152,12 @@
     &__nickname,
     &__followers
         position: relative
-        margin-right: 17px
+        margin-right: 20px
         &:after
             content: '.'
             position: absolute
-            bottom: 1px
-            right: -10px
+            bottom: 3px
+            right: -13px
     &__nickname 
         +xs
             width: 100%

@@ -1,7 +1,7 @@
 .user
     display: flex
     align-items: center
-    margin-bottom: 22px
+    margin-bottom: 23px
     position: relative
     cursor: pointer
     &__text
@@ -51,7 +51,7 @@
         font-size: 15px
     &_dropdown
         &:not(:last-child)
-            margin-bottom: 7px
+            margin-bottom: 9px
         &:last-child
             margin-bottom: 0
         
@@ -146,7 +146,7 @@
     &__connections
         float: left
         width: 400px
-        padding: 18px $paddingDT 22px
+        padding: 14px $paddingDT 22px
         +md 
             width: 50%
         +sm 
@@ -155,15 +155,11 @@
             padding: 10px
             .is-active & 
                 display: none
-        h2 
-            font-size: 20px
-            font-weight: 500
-            line-height: 1.5
     &__messages
         float: left
         width: 500px
         min-height: 670px
-        padding: 18px $paddingDT 22px
+        padding: 22px $paddingDT 22px
         position: relative
         display: flex
         flex-flow: column
@@ -191,10 +187,21 @@
         display: flex
         justify-content: space-between
         align-items: center
-        margin-bottom: 32px
+        margin-bottom: 28px
+        +sm 
+            margin-bottom: 9px
+        h2 
+            font-size: 20px
+            font-weight: 500
+            line-height: 1.5
+            letter-spacing: 0.03em
+            +sm 
+                margin-top: 9px
     &__find
         position: relative
         margin-bottom: 40px
+        +sm 
+            margin-bottom: 14px
     &__connection
         margin-bottom: 38px
     &__top
@@ -251,7 +258,7 @@
 
 .message-to
     max-width: 330px
-    padding: 7px 9px 
+    padding: 7px 12px 4px
     text-align: left
     color: $white
     background-color: $blue

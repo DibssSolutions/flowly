@@ -9,15 +9,18 @@
         </div>
         <div class="header__search">
             <form action="/" class="main-search">
-                <input type="text" class="main-search__input" placeholder="Поиск">
+                <input type="text" class="main-search__input" placeholder="{{ searchWord  or 'Поиск' }}" {% if searchResults %}value="кросовки"{% endif %}>
                 <button class="main-search__icon" type="button">{{ mixins.icon('search') }}</button>
             </form>
+            {% if searchResults %}
+                {% include "partials/_search-results.html" %}
+            {% endif %}
         </div>
         {% if differentHeader %}
-            <div class="header__action">
+            <div class="header__login">
                 <button type="button" class="btn btn_small btn_blue">Войти</button>
             </div>
-            <div class="header__user">
+            <div class="header__menu">
                 {{mixins.menuBtn()}}
             </div>
         {% else %}
@@ -26,6 +29,7 @@
             </div>
             <button type="button" class="header__user btn-circle" style="background-image: url(./img/avatar.jpg)"></button>
         {% endif %}
+
         {% if dd_1 %}
             <div class="dropdown dropdown_user dropdown_menu is-open">
                 <div class="dropdown__header">
@@ -54,6 +58,7 @@
                 </div>
             </div>
         {% endif %}
+
         {% if dd_2 %}
             <div class="dropdown dropdown_user dropdown_menu is-open is-some-state">
                 <div class="dropdown__header">
@@ -82,6 +87,7 @@
                 </div>
             </div>
         {% endif %}
+
         {% if dd_3 %}
             <div class="dropdown dropdown_user dropdown_menu is-open">
                 <div class="dropdown__body">
@@ -102,6 +108,7 @@
                 </div>
             </div>
         {% endif %}
+
         {% if dd_4 %}
             <div class="dropdown dropdown_action dropdown_menu is-open">
                 <div class="dropdown__body">

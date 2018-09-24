@@ -1,0 +1,107 @@
+--- title: Search Page ---
+{% set searchWord = 'кросовки' %}
+{% import "partials/_mixins.html" as mixins %}
+{% extends "layouts/_layout.html" %}
+
+{% macro card1() %}
+    <div class="people__card">
+        <div class="card-outline">
+            <div class="card-outline__body-wide">
+                {{mixins.user({
+                    image: 'avatar.jpg',
+                    mainText: 'Asos Russia',
+                    secondaryText: '@asos.ru'
+                })}}
+                <p class="text-small text-muted">
+                    Добро пожаловать на официальную страницу Asos Russia, где вы откроете для себя мир моды онлайн.
+                </p>
+                <button class="btn btn_blue btn_small">
+                    Подписаться
+                </button>
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+{% macro card2() %}
+    <div class="people__card">
+        <div class="card-outline">
+            <div class="card-outline__body-wide">
+                {{mixins.user({
+                    mainText: 'Очень длинный никнейм очень высокого человека',
+                    secondaryText: '@asos.ru'
+                })}}
+                <p class="text-small text-muted">
+                    Добро пожаловать на официальную страницу Asos Russia, где вы откроете для себя мир моды онлайн.
+                </p>
+                <button class="btn btn_blue btn_small">
+                    Подписаться
+                </button>
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+{% macro card3() %}
+    <div class="people__card">
+        <div class="card-outline">
+            <div class="card-outline__body-wide">
+                {{mixins.user({
+                    mainText: 'Asos Russia',
+                    secondaryText: '@asos.ru'
+                })}}
+                <p class="text-small text-muted">
+                    Короткое описание
+                </p>
+                <button class="btn btn_blue btn_small">
+                    Подписаться
+                </button>
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+{% macro card4() %}
+    <div class="people__card">
+        <div class="card-outline">
+            <div class="card-outline__body-wide">
+                {{mixins.user({
+                    mainText: 'Asos Russia',
+                    secondaryText: '@asos.ru'
+                })}}
+                <p class="text-small text-muted">
+                    Добро пожаловать на официальную описание в две строчки
+                </p>
+                <button class="btn btn_blue btn_small">
+                    Подписаться
+                </button>
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+
+{% block content %}
+
+    <ul class="links links_search">
+        <li>
+            <a href="#" class="main-link">Товары</a>
+        </li>
+        <li>
+            <a href="#" class="main-link">Коллекции</a>
+        </li>
+        <li>
+            <a href="#" class="main-link is-active">Люди</a>
+        </li>
+    </ul>
+
+    <div class="people">
+        <div class="people__container container-inner">
+            <div class="people__cards">
+                {{card1()}}
+                {{card2()}}
+                {{card3()}}
+                {{card4()}}
+                {{card4()}}
+                {{card4()}}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

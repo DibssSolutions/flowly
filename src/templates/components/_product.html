@@ -28,7 +28,12 @@
         <div class="product__image" style="background-image: url(./img/{{props.image}});"></div>
         <div class="product__main">
             <div class="product__title">{{props.title}}</div>
-            <div class="product__price">{{props.price}}</div>
+            {% if props.price %}
+                <div class="product__price">{{props.price}}</div>
+            {% endif %}
+            {% if props.details %}
+                <div class="product__details">{{props.details}}</div>
+            {% endif %}
         </div>
         {% if props.descr %}
             <div class="product__descr">{{props.descr}}</div>

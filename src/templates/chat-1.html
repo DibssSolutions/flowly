@@ -40,7 +40,9 @@
             <div class="chat__connections">
                 <div class="chat__title">
                     <h2>Сообщения</h2>
-                    <span class="mob-block">{{mixins.addBtn()}}</span>
+                    <div class="mob-block">
+                        {{mixins.deleteBtn({modifier: 'btn-delete_dark'})}}
+                    </div>
                 </div>
                 <div class="chat__find">
                     {{mixins.inputSearch()}}

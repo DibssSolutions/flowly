@@ -1,0 +1,81 @@
+{% import "components/_cards.html" as Cards %}
+{% extends "layouts/_layout.html" %}
+{% set searchResults = true %}
+{% set imageCards = [
+    {
+        image: 'image-card_1.jpg', 
+        type: 'Коллекция',
+        title: 'Кросовки <br> с улиц Лондана', 
+        avatar: 'avatar_1.png', 
+        name: 'Punkrock_pixxie'
+    }, 
+    {
+        image: 'image-card_2.jpg', 
+        type: 'Коллекция',
+        title: 'Кросовки <br> с улиц Лондана', 
+        avatar: 'avatar_1.png', 
+        name: 'Punkrock_pixxie'
+    },
+    {
+        image: 'image-card_3.jpg', 
+        type: 'Коллекция',
+        title: 'Кросовки <br> с улиц Лондана', 
+        avatar: 'avatar_1.png', 
+        name: 'Punkrock_pixxie'
+    }
+] %}
+
+{% block content %}
+    <!-- MAIN SLIDER -->
+    <div class="slider js-slider">
+        <div>
+            <div class="slider__slide" style="background-image: url(./img/slider_1/slider_1.jpg);"></div>
+        </div>
+        <div>
+            <div class="slider__slide" style="background-image: url(./img/slider_1/slider_3.jpg);"></div>
+        </div>
+        <div>
+            <div class="slider__slide" style="background-image: url(./img/slider_1/slider_1.jpg);"></div>
+        </div>
+        <div>
+            <div class="slider__slide" style="background-image: url(./img/slider_1/slider_3.jpg);"></div>
+        </div>
+        <div>
+            <div class="slider__slide" style="background-image: url(./img/slider_1/slider_1.jpg);"></div>
+        </div>
+        <div>
+            <div class="slider__slide" style="background-image: url(./img/slider_1/slider_3.jpg);"></div>
+        </div>
+    </div>
+
+    <div class="container-inner">
+        <ul class="links links_main">
+            <li>
+                <a href="#" class="main-link">Моя лента</a>
+            </li>
+            <li>
+                <a href="#" class="main-link is-active">Трендовое</a>
+            </li>
+            <li>
+                <a href="#" class="main-link">Новое</a>
+            </li>
+            <li>
+                <a href="#" class="main-link">Популярное</a>
+            </li>
+        </ul>
+        <!-- CARDS SLIDER (MOBILE ONLY SLIDER) -->
+        <div class="cards-slider js-mobile-slider">
+            {% for card in imageCards %}
+                <div class="card-slide">
+                    {{Cards.imageCard(card)}}
+                </div>
+            {% endfor %}
+        </div>
+        <div class="cards-bottom">
+            {% include "partials/_cards.html" %}
+        </div>
+    </div>
+
+    
+
+{% endblock %}

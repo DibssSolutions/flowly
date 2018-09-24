@@ -26,25 +26,81 @@
 ] %}
 
 {% block content %}
-
+    <!-- MAIN SLIDER -->
     <div class="slider js-slider">
         <div>
-            <div class="slider__slide" style="background-image: url(./img/slider_1/slider_1.jpg);"></div>
+            <div class="slider__slide" style="background-image: url(./img/slider_1/slider_1.jpg);">
+                <div class="slider__text-first">
+                    Откройте для себя
+                    <br>
+                    мир новых брендов
+                    <br>
+                    со всего мира.
+                </div>
+            </div>
         </div>
         <div>
-            <div class="slider__slide" style="background-image: url(./img/slider_1/slider_3.jpg);"></div>
+            <div class="slider__slide" style="background-image: url(./img/slider_1/slider_2.jpg);">
+                <div class="slider__text-second">
+                    <h2>
+                        Будьте
+                        <br>
+                        в курсе
+                    </h2>
+                    <p>Подписывайтесь
+                        <br>
+                        только на лучших</p>
+                </div>
+            </div>
         </div>
         <div>
-            <div class="slider__slide" style="background-image: url(./img/slider_1/slider_1.jpg);"></div>
+            <div class="slider__slide" style="background-image: url(./img/slider_1/slider_3.jpg);">
+                <div class="slider__text-third">
+                    <p>Следите за нами
+                        <br>
+                        в Instagram</p>
+                    <h2>
+                        @goflowly
+                    </h2>
+                </div>
+            </div>
         </div>
         <div>
-            <div class="slider__slide" style="background-image: url(./img/slider_1/slider_3.jpg);"></div>
+            <div class="slider__slide" style="background-image: url(./img/slider_1/slider_1.jpg);">
+                <div class="slider__text-first">
+                    Откройте для себя
+                    <br>
+                    мир новых брендов
+                    <br>
+                    со всего мира.
+                </div>
+            </div>
         </div>
         <div>
-            <div class="slider__slide" style="background-image: url(./img/slider_1/slider_1.jpg);"></div>
+            <div class="slider__slide" style="background-image: url(./img/slider_1/slider_2.jpg);">
+                <div class="slider__text-second">
+                    <h2>
+                        Будьте
+                        <br>
+                        в курсе
+                    </h2>
+                    <p>Подписывайтесь
+                        <br>
+                        только на лучших</p>
+                </div>
+            </div>
         </div>
         <div>
-            <div class="slider__slide" style="background-image: url(./img/slider_1/slider_3.jpg);"></div>
+            <div class="slider__slide" style="background-image: url(./img/slider_1/slider_3.jpg);">
+                <div class="slider__text-third">
+                    <p>Следите за нами
+                        <br>
+                        в Instagram</p>
+                    <h2>
+                        @goflowly
+                    </h2>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -63,15 +119,19 @@
                 <a href="#" class="main-link">Популярное</a>
             </li>
         </ul>
-        <div class="cards-top">
+        <!-- CARDS SLIDER (MOBILE ONLY SLIDER) -->
+        <div class="cards-slider js-mobile-slider">
             {% for card in imageCards %}
-                {{Cards.imageCard(card)}}
+                <div class="card-slide">
+                    {{Cards.imageCard(card)}}
+                </div>
             {% endfor %}
         </div>
         <div class="cards-bottom">
             {% include "partials/_cards.html" %}
         </div>
     </div>
+
     <div class="to-top">
         <button class="btn-circle btn-circle_big btn-to-top" type="button">{{ mixins.icon('chevron-up') }}</button>
     </div>

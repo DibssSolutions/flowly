@@ -1,0 +1,77 @@
+{% import "components/_product.html" as Product %}
+
+<div class="search-results">
+    <ul class="search-results__list">
+        <li class="search-results__item">
+            <a href="#" class="search-results__link">
+                <span class="search-results__highlighted">
+                    Кросовки
+                </span>
+            </a>
+        </li>
+        <li class="search-results__item">
+            <a href="#" class="search-results__link">
+                <span class="search-results__highlighted">
+                    Кросовки
+                </span>
+                женские
+            </a>
+        </li>
+        <li class="search-results__item">
+            <a href="#" class="search-results__link">
+                <span class="search-results__highlighted">
+                    Кросовки
+                </span>
+                2018
+            </a>
+        </li>
+        <li class="search-results__item">
+            <a href="#" class="search-results__link">
+                <span class="search-results__highlighted">
+                    Кросовки
+                </span>
+                fila
+            </a>
+        </li>
+        <li class="search-results__item">
+            <a href="#" class="search-results__link">
+                <span class="search-results__highlighted">
+                    Кросовки
+                </span>
+                мужские
+            </a>
+        </li>
+    </ul>
+    <h5 class="search-results__title">
+        Коллекции
+    </h5>
+    <ul class="search-results__collections">
+        <li class="search-results__collection">
+            <a href="#">
+                {{Product.product({
+                image: 'collection-1.jpg',
+                title: "Кросовки", 
+                details: "@judio"
+            })}}
+            </a>
+        </li>
+        <li class="search-results__collection">
+            <a href="#">
+                {{Product.product({
+            image: 'collection-1.jpg',
+            title: "Кросовки", 
+            details: "@judio"
+        })}}
+            </a>
+        </li>
+        <li class="search-results__collection">
+            <a href="#">
+                {{Product.product({
+                image: 'collection-1.jpg',
+                title: "Кросовки", 
+                details: "@judio"
+            })}}
+            </a>
+        </li>
+    </ul>
+</div>

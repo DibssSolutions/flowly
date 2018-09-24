@@ -30,7 +30,7 @@
                         {{mixins.icon('close')}}
                     </button>
                     <h4 class="modal__title">
-                        {{modalTitle}}
+                        {{modalTitle | safe}}
                     </h4>
                     {% block content %}{% endblock %}
                 </div>

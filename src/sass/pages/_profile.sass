@@ -22,15 +22,21 @@
     margin-bottom: 60px
     fieldset
         margin-bottom: 50px
+        +sm 
+            margin-bottom: 24px
     &__title 
         margin-bottom: 24px
         font-size: 20px
         font-weight: 500
         line-height: 1.5
         letter-spacing: 0.02em
+        +sm 
+            margin-bottom: 12px
     &__group
         &:not(:last-child)
             margin-bottom: 28px
+            +sm     
+                margin-bottom: 16px
         &_toggler:not(:last-child)
             margin-bottom: 38px
         .input-helper-text
@@ -39,8 +45,8 @@
             display: flex
             align-items: center
             flex-wrap: wrap
-            margin-bottom: 32px !important
-            button
+            margin-bottom: 31px !important
+            button:not(:last-child)
                 margin-right: 10px
             label
                 width: 100%
@@ -58,6 +64,9 @@
         margin-right: 25px
         +circle(100)
         +cover
+        +sm 
+            +circle(70)
+            margin-right: 15px
     &__social
         padding-top: 7px
         margin-bottom: 
@@ -103,3 +112,12 @@
             font-size: 15px
             line-height: 1
             vertical-align: middle
+
+.profile-list
+    &__link
+        font-weight: 500
+        line-height: 2
+        letter-spacing: 0.01em
+        color: $grey
+        &.is-active
+            color: $black
