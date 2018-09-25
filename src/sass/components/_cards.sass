@@ -28,6 +28,16 @@
     display: flex
     flex-flow: column
     justify-content: space-between
+    &:after
+        content: ''
+        +coverdiv
+        background-color: rgba(black, 0.2)
+        z-index: 1
+        border-radius: $radiusBig
+        transition: background-color 0.4s
+    &:hover
+        &:after
+            background-color: rgba(black, 0.15)
     +md 
         height: 310px
         padding-bottom: 15px
@@ -38,6 +48,9 @@
         height: 256px
     +r(500) 
         width: 219px
+    &__top
+        position: relative
+        z-index: 2
     &__type
         font-size: 15px
         font-weight: 500
@@ -59,6 +72,8 @@
             margin-top: -7px
     &__author
         font-size: 0
+        position: relative
+        z-index: 2
     &__avatar
         display: inline-block
         vertical-align: middle
@@ -77,10 +92,11 @@
             font-size: 13px
         +xs
             font-size: 11px
+
 .card
     display: block
     width: 222px
-    margin-bottom: 28px
+    margin-bottom: 26px
     text-align: left
     +sm 
         margin-bottom: 20px

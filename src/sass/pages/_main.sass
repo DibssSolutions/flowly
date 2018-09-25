@@ -55,7 +55,7 @@
     position: fixed
     left: calc(50% - 530px)
     bottom: 20px
-    width: 380px
+    width: 384px
     padding: 20px 20px 14px
     background-color: $white
     border-radius: $radiusBig
@@ -76,3 +76,20 @@
         &_grey
             color: $mainGrey
 
+.add-cards
+    text-align: center
+    padding-bottom: 80px
+    padding-top: 9px
+    &__mark
+        display: inline-block
+        +circle(15)
+        background-color: $blue
+        position: relative
+        &:after
+            content: ''
+            position: absolute
+            top: -30px
+            left: -30px
+            right: -30px
+            bottom: -30px
+        

@@ -23,6 +23,9 @@
     &__title
         font-size: 15px
         font-weight: 500
+        transition: color $tr
+    .text-muted
+        transition: color $tr
     &__header,
     &__footer
         position: relative
@@ -35,8 +38,13 @@
             background-color: $light-bg
     &__header
         padding: 8px 20px
-        color: $white
-        background-color: $blue
+        transition: background-color $tr
+        &:hover
+            background-color: $blue
+            .dropdown__title
+                color: $white
+            .text-muted
+                color: $white
         &:after
             bottom: 0
     &__body
@@ -53,6 +61,11 @@
         line-height: 2
 
 .list
+    &:hover 
+        .list__item:hover:after
+            +vis
+        .list__item:not(:hover) .list__link
+            color: $grey
     &__item
         position: relative
         &:after
@@ -66,14 +79,12 @@
             background-color: #f2f2f2
             z-index: -1
             +invis
-        &:hover
-            &:after
-                +vis
     &__link
         font-size: 15px
         font-weight: 500
         color: $black
         line-height: 2
+        transition: color $tr
     &__messages-mark
         display: block
         position: absolute
