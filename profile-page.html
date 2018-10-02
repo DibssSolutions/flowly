@@ -60,7 +60,9 @@
               </svg>
             </button>
           </div>
-          <button type="button" class="header__user btn-circle" style="background-image: url(./img/avatar.jpg)"></button>
+          <div class="header__user">
+            <button type="button" class="btn-user btn-circle" style="background-image: url(./img/avatar.jpg)"></button>
+          </div>
         </div>
       </header>
       <div class="profile">
@@ -107,8 +109,8 @@
                   <div class="input-helper-text"> Электронная почта никогда не будет отображаться. </div>
                 </div>
                 <div class="profile-form__group">
-                  <div class="profile-form__label">Приватный профиль</div>
-                  <label class="toggler is-disabled">
+                  <div class="profile-form__label profile-form__label">Приватный профиль</div>
+                  <label class="toggler is-disabled toggler_private">
                     <input type="checkbox" name="checkbox">
                     <span class="toggler__text">Сделать профиль приватным</span>
                   </label>
