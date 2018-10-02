@@ -21,7 +21,11 @@
     &__left
         display: flex
         flex: calc(100% - 177px)
+        min-width: calc(100% - 177px)
         padding-right: 15px
+        .form-group_currency &
+            +flex-size(calc(100% - 150px))
+            min-width: calc(100% - 150px)
         +sm 
             flex: 0 0 100%
             padding-right: 0
@@ -33,6 +37,8 @@
     &__right
         width: 177px
         flex: 0 0 177px
+        .form-group_currency &
+            +flex-size(150px)
         +sm 
             width: 100%
             flex: 0 0 100%

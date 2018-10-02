@@ -1,7 +1,10 @@
 .slider
-    +sm 
+    +sm
         margin-left: 10px
     +invis
+    &:hover
+        .btn-slider
+            +vis
     &__slide
         width: 700px !important
         padding-bottom: 350px
@@ -20,6 +23,7 @@
         +sm 
             margin: 0 5px
     .btn-slider
+        +invis
         &_prev
             left: calc(50% - 480px)
         &_next
@@ -81,7 +85,7 @@
     transform: translateY(-50%)
 
 .cards-slider
-    margin: 0 -15px 26px
+    margin: 0 -14px 26px
     display: flex
     +md 
         overflow: visible
@@ -89,7 +93,7 @@
     +sm 
         margin-bottom: 4px
     .card-slide
-        margin: 15px
+        margin: 14px
     .slick-slide
         margin: 0 12px
         width: 300px !important

@@ -17,8 +17,8 @@
     </button>
 {% endmacro %}
 
-{% macro toggler(text, radio, checked, disabled) %}
-    <label class="toggler{% if disabled %} is-disabled{% endif %}">
+{% macro toggler(text, radio, checked, disabled, modifierClass) %}
+    <label class="toggler{% if disabled %} is-disabled{% endif %}{% if modifierClass %} {{modifierClass}}{% endif %}">
         <input type="{{radio or 'checkbox'}}" name="checkbox" {% if checked %}checked='true'{% endif %}>
         <span class="toggler__text">{{ text or 'Видно только мне' }}</span>
     </label>

@@ -95,6 +95,9 @@
     display: block
     width: 222px
     text-align: left
+    margin-bottom: 26px
+    +sm 
+        margin-bottom: 20px
     +xs
         width: 145px
     &_full-width
@@ -135,6 +138,10 @@
     &_small
         height: 12px
         width: 12px
+        .icon
+            font-size: 8px
+            +vcenter
+            
     .icon
         font-size: 6px
         +vcenter

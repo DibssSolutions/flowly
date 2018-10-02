@@ -1,9 +1,11 @@
+{% set withoutHeader = true %}
+
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
     <div class="product-page">
         <div class="product-page__container container-inner">
-            <main class="product-page__main">
+            <main class="product-page__main product-page__main_modal">
                 <div class="product-page__close">
                     {{mixins.deleteBtn({modifier: 'btn-delete_dark'})}}
                 </div>
