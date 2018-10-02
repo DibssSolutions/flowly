@@ -5,7 +5,9 @@
         <input type="checkbox">
         <span class="preview__image" style="background-image: url(./img/{{img}});"></span>
         <span class="preview__check">
-            {{ mixins.icon('check') }}
+            <button class="btn-circle btn-check">
+                {{ mixins.icon('check') }}
+            </button>
         </span>
     </label>
 {% endmacro %}

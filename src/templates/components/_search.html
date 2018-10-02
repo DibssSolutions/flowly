@@ -1,7 +1,7 @@
 {% import "partials/_mixins.html" as mixins %}
 
 {% macro modalSearch(props) %}
-    <form action="/" class="modal-search">
+    <form action="/" class="modal-search{% if props.modifier %} {{props.modifier}}{% endif %}">
 
         <button class="modal-search__find" type="button">{{ mixins.icon('search') }}</button>
 

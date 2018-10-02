@@ -1,6 +1,9 @@
 .preview
 	position: relative
 	display: block
+	&:hover
+		.preview__check
+			opacity: 0.7
 	input
 		position: absolute
 		left: 0
@@ -19,20 +22,20 @@
 		border-radius: $radiusBig
 		+cover
 	&__check
-		+flex-center
+		// +flex-center
 		position: absolute
 		top: 10px
 		right: 10px
-		height: 35px
-		width: 35px
-		border-radius: 50%
-		background-color: #fff
-		font-size: 0
+		// height: 35px
+		// width: 35px
+		// border-radius: 50%
+		// background-color: #fff
+		// font-size: 0
 		opacity: 0
 		transition: opacity .3s
-		.icon
-			font-size: 15px 
-			color: $blue
+		// .icon
+		// 	font-size: 15px 
+		// 	color: $blue
 	&__delete
 		position: absolute
 		top: 10px

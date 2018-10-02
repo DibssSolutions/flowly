@@ -144,21 +144,20 @@
         top: 50%
         right: 20px
         transform: translateY(-50%)
-        
     &__helper
         font-size: 13px
         color: $grey
-        margin-top: 16px
+        margin-top: 12px
         display: none
 
 .check-collection.is-repeated
     input:checked 
         ~ .check-collection__bg
-            bottom: 32px
+            bottom: 30px
         ~ .check-collection__helper
             display: block
         ~ .check-collection__private
-            top: calc(50% - 17px)
+            top: calc(50% - 15px)
 
 .private-icon
     display: inline-block
@@ -173,6 +172,12 @@
     transition: background-color $tr, color $tr
     &_light
         color: $extra-light-grey
+    &.btn-private
+        background-color: $extra-light-grey
+        &:hover
+            background-color: $light-bgHovered
+        &:active
+            background-color: $light-bgClicked
     .icon
         font-size: 9px
         vertical-align: middle
