@@ -7,6 +7,8 @@
     border: 1px solid $extra-light-grey
     border-radius: $radius
     text-align: left
+    &_people
+        border-radius: $radiusBig
     &__header
         line-height: 1.25
         padding: 10px 15px
@@ -15,6 +17,8 @@
         padding: 15px
     &__body-wide
         padding: 20px
+        .card-outline_people &
+            padding-top: 17px
 
 .image-card
     display: block

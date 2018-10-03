@@ -1,11 +1,45 @@
----
-title: Index page
----
+--- title: Index page ---
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-	
-	{# partial example #}
-	{% include "partials/_header.html" %}
+
+    {# partial example #}
+    <div class="dropdown dropdown_state is-open">
+        <div class="dropdown__body">
+            <ul class="list">
+                <li class="list__item">
+                    <a href="#" class="list__link">Новое с биркой</a>
+                </li>
+                <li class="list__item">
+                    <a href="#" class="list__link">Новое без бирки</a>
+                </li>
+                <li class="list__item">
+                    <a href="#" class="list__link">Есть дефекты</a>
+                </li>
+                <li class="list__item">
+                    <a href="#" class="list__link">Использовалось один раз</a>
+                </li>
+                <li class="list__item">
+                    <a href="#" class="list__link">Использовалось несколько раз</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="dropdown dropdown_options is-open">
+        <div class="dropdown__body">
+            <ul class="list">
+                <li class="list__item">
+                    <a href="#" class="list__link">Пожаловаться</a>
+                </li>
+                <li class="list__item">
+                    <a href="#" class="list__link">Копировать ссылку</a>
+                </li>
+                <li class="list__item">
+                    <a href="#" class="list__link">Поделиться</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
 {% endblock %}

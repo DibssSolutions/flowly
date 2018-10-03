@@ -6,6 +6,8 @@
         margin-bottom: 66px
         &_modal
             margin-top: 40px
+            +sm 
+                margin-top: 60px
         +md 
             margin-bottom: 73px
         +xs
@@ -20,7 +22,9 @@
             width: 327px
         +sm 
             float: none
-            width: 100%
+            width: calc(100% + 33px)
+            margin-left: -11px
+            margin-right: -22px
     &__details
         float: left
         width: calc(100% - 550px)
@@ -30,8 +34,8 @@
             padding-left: 30px
         +sm     
             float: none
-            width: 100%
             padding-left: 0
+            width: 100%
     &__close
         display: block
         position: absolute
@@ -39,7 +43,7 @@
         top: 0
         +md 
             right: 0
-        +xs
+        +sm
             top: -47px
     &__title
         font-size: 20px

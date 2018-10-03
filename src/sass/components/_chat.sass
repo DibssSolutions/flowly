@@ -1,13 +1,17 @@
 .user
     display: flex
     align-items: center
-    margin-bottom: 23px
     position: relative
     cursor: pointer
+    margin-bottom: 23px
+    &_search
+        margin-bottom: 13px
     &__text
         margin-left: 12px
         text-align: left
-        padding-right: 24px
+        // padding-right: 24px
+        .user_dropdown &
+            padding-right: 24px
     &__main
         font-family: $helv
         display: block
@@ -16,6 +20,9 @@
         +text-overflow
         .user_collection &
             max-width: initial
+            padding-right: 24px
+        .user_search &
+            max-width: 205px
     &__secondary
         max-width: 160px
         font-family: $helv
@@ -25,6 +32,8 @@
             max-width: 260px
             +sm
                 max-width: 200px
+        .user_search &
+            max-width: 205px
         .is-online &
             color: $black
         .user_collection &
@@ -50,11 +59,9 @@
         background: $blue
         font-size: 15px
     &_dropdown
-        &:not(:last-child)
-            margin-bottom: 9px
+        margin-bottom: 9px
         &:last-child
             margin-bottom: 0
-        
     &_chat
         margin-bottom: 0
         &:after
@@ -113,26 +120,8 @@
     border: 1px solid $extra-light-grey
     .user
         margin-bottom: 0
-
-.add-members
-    &__row
-        +flex-beetween
-        flex-wrap: nowrap
-        margin-bottom: 10px
-        width: 100%
-    &__input
-        flex-grow: 1
-        margin-left: 12px
-        font-weight: 500
-        font-size: 15px
-        font-family: $helv
-    &__next
-        +invis
-        .is-active & 
-            +vis
-            .btn-next
-                color: $blue
-                background-color: $light-blue
+        &_dropdown:not(:last-child)
+            margin-bottom: 9px
 
 .chat
     padding: 0
@@ -159,7 +148,7 @@
         float: left
         width: 500px
         min-height: 670px
-        padding: 22px $paddingDT 22px
+        padding: 22px 10px 22px $paddingDT
         position: relative
         display: flex
         flex-flow: column
@@ -207,11 +196,12 @@
     &__top
         position: relative
         padding-bottom: $paddingDT
+        padding-right: 10px
         &:after
             position: absolute
             content: ''
             left: -20px
-            right: -20px
+            right: -10px
             bottom: 0
             height: 1px
             background-color: $extra-light-grey
@@ -234,15 +224,29 @@
         margin-top: auto
         display: flex
         flex-flow: column
+        padding-right: 10px
+        max-height: 470px
+        overflow-y: scroll
+        overflow-x: hidden
+        &::-webkit-scrollbar-track
+            background-color: transparent
+        &::-webkit-scrollbar
+            width: 5px
+        &::-webkit-scrollbar-thumb:vertical
+            border-radius: 2px
+            background-color: $grey
     &__new-message
         display: flex
         align-items: flex-end
         margin-top: 30px
+        padding-right: 10px
     &__input
         width: auto
         height: 35px
         flex-grow: 1
         margin: 0 15px
+        color: $grey
+        font-weight: 400
     &__input-card
         flex-grow: 1
         margin: 0 15px
@@ -253,7 +257,7 @@
     align-self: flex-end
     margin-left: 52px
     border-radius: 17px 17px 5px 17px
-    + .message-from
+    + .message-from,
         margin-top: 20px
 
 .message-to
@@ -262,16 +266,24 @@
     text-align: left
     color: $white
     background-color: $blue
+    + .message-to,
+    + .image-to
+        margin-top: 10px
     &_card
         background-color: $chat-card-bg
         color: $black
         padding-bottom: 8px
 
 
+
 .image-to
     width: 230px
     padding-bottom: 230px
     +cover
+    + .image-to,
+    + .message-to
+        margin-top: 10px
+
 
 .message-from
     position: relative

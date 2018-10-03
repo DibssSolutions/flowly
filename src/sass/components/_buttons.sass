@@ -33,6 +33,10 @@
     &_light-grey
         background-color: $light-bg
         color: $grey
+        &:hover
+            background-color: $light-bgHovered
+        &:active
+            background-color: $light-bgClicked
     &_green
         background-color: $green
     &_white
@@ -124,6 +128,10 @@
     background-color: $white
     &_dark
         background-color: $light-bg
+        &:hover
+            background-color: $light-bgHovered
+        &:active
+            background-color: $light-bgClicked
     .icon
         font-size: 12px
         color: $grey
@@ -144,30 +152,48 @@
         color: $white
     .icon
         font-size: 10px
+
 .btn-add, 
 .btn-prev,
 .btn-menu,
 .btn-share
     background-color: $light-bg
     color: $grey
+    &:hover
+        background-color: $light-bgHovered
+    &:active
+        background-color: $light-bgClicked
 
 .btn-add
+    cursor: pointer
     &_blue
         height: 40px
         width: 40px
         background-color: $blue
         color: $white
+        &:hover
+            background-color: $blueHovered
+        &:active
+            background-color: $blueClicked
     &_dark
         color: $white
         background-color: #d8d8d8
 
-.btn-next,
-.btn-up
+.btn-next
     color: $blue
     background-color: $light-blue
     .is-active &
         color: $white
         background-color: $blue
+
+
+
+.btn-up
+    color: $white
+    background-color: $blue
+    .is-active &
+        color: $blue
+        background-color: $light-blue
 
 .btn-check
     background-color: $white
@@ -181,8 +207,12 @@
 
 .btn-share
     .icon
-        font-size: 15px
-        margin-bottom: 2px
+        font-size: 14px
+        margin-bottom: 1px
+
+.btn-message-mobile
+    .icon
+        font-size: 20px
 
 .btn-slider
     +circle(40)
@@ -222,11 +252,19 @@
 .btn-fb
     background-color: $fb
     color: $white
+    &:hover
+        background-color: darken($fb, 5%)
+    &:active
+        background-color: darken($fb, 10%)
     .icon
         font-size: 20px
 .btn-vk
     background-color: $vk
     color: $white
+    &:hover
+        background-color: darken($vk, 5%)
+    &:active
+        background-color: darken($vk, 10%)
     .icon
         font-size: 12px
 
@@ -247,14 +285,26 @@
             font-size: 14px
     &.btn-twitter
         background-color: $twitter
+        &:hover
+            background-color: darken($twitter, 5%)
+        &:active
+            background-color: darken($twitter, 10%)
         .icon
             font-size: 17px
     &.btn-pinterest
         background-color: $pinterest
+        &:hover
+            background-color: darken($pinterest, 5%)
+        &:active
+            background-color: darken($pinterest, 10%)
         .icon
             font-size: 26px
     &.btn-messanger
         background-color: $messanger
+        &:hover
+            background-color: darken($messanger, 5%)
+        &:active
+            background-color: darken($messanger, 10%)
         .icon
             font-size: 24px
 

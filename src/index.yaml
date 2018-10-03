@@ -77,4 +77,5 @@ PageList:
   ready: 50
 - file: dropdown-3.html
   ready: 50
-
+- file: page.html
+  ready: 50

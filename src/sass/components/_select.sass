@@ -256,6 +256,7 @@
       color: #999
     &[aria-selected=true]
       background-color: #ddd
+      transition: background-color $tr
     .select2-results__option
       padding-left: 1em
       .select2-results__group
@@ -455,10 +456,10 @@
 // ================= CUSTOM STYLES =======================
 
 .select2-container--default.select_ordinary .select2-selection--single .select2-selection__arrow b
-    background: url(../img/arrow-down.png)
+    background: url(../img/chevron-down.svg)
     background-size: cover
     width: 12px
-    height: 8px
+    height: 12px
     margin: 0 3px
     border: none
     left: -8px
@@ -503,12 +504,44 @@
     border: 1px solid $extra-light-grey
 
 .select2-results__option
-    padding-right: 8px
+    padding-right: 14px
+    padding-left: 14px
     font-family: $helv
     font-weight: 500
     font-size: 15px
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      left: 7px
+      right: 7px
+      border-radius: $radius
+      // width: 100%
+      height: 100%
+      opacity: 0
+      visibility: hidden
+      transition: opacity $tr, visibility $tr, background-color $tr
+      background-color: #f2f2f2
+      z-index: -1
 
-.select2-container--default.select_ordinary .select2-results__option--highlighted[aria-selected]
+.select2-container--default.select_ordinary .select2-results__option.select2-results__option--highlighted
+  color: $black
+  background-color: transparent
+  &:after
+    +vis
+    background-color: #f2f2f2
+
+.select2-container--default.select_ordinary .select2-results__option--highlighted[aria-selected=true]
+    color: $white
     background-color: transparent
-    color: $black
+    &:after
+      +vis
+      background-color: $blue
+
+.select2-results
+  padding: 6px 0
+
+.select2-container--default .select2-results__option[aria-selected=true]
+  background-color: none
 

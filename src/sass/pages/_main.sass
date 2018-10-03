@@ -28,6 +28,10 @@
     &.is-active
         background-color: #e5e5e5
         color: $black
+        &:hover
+            background-color: $light-bgHovered
+        &:active
+            background-color: $light-bgClicked
 
 .company-link
     display: block
@@ -37,8 +41,12 @@
     padding: 11px 20px 
     border-radius: 20px
     &.is-active
-        background-color: #e5e5e5
+        background-color: $light-bg
         color: $black
+        &:hover
+            background-color: $light-bgHovered
+        &:active
+            background-color: $light-bgClicked
 
 .to-top
     position: fixed
@@ -59,6 +67,7 @@
     background-color: $white
     border-radius: $radiusBig
     box-shadow: $shadow
+    z-index: 2000
     +sm 
         left: 10px
         width: calc(100% - 20px)

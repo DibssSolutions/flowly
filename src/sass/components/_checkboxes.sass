@@ -96,10 +96,16 @@
 .new-element
     &:hover
         background-color: $light-bg
+    &__image 
+        &:after
+            +coverdiv
+            content: ''
+            background-color: rgba($black, 0.2)
     &__plus
         position: absolute
         +vcenter
         color: $white
+        z-index: 5
         .icon
             font-size: 15px 
 

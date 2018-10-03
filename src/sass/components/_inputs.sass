@@ -5,23 +5,23 @@
     height: 70px
     display: block
     text-align: left
-    padding-left: 60px
+    padding-left: 62px
     // +sm 
     //     padding-left: 60px
     &_dotted
         display: flex
         align-items: center
         justify-content: center
-        border: none
+        border: 1px dashed $extra-light-grey
         height: 100%
         width: 100%
         border-radius: $radiusBig
         padding-left: 0
-        background-image: linear-gradient(to right, $grey 50%, transparent 0%), linear-gradient(to bottom, $grey 50%, transparent 0%), 
-        linear-gradient(to right, $grey 50%, transparent 0%), linear-gradient(to bottom, $grey 50%, transparent 0%)
-        background-position: top, right, bottom, left
-        background-repeat: repeat-x, repeat-y
-        background-size: 8px 1px, 1px 8px
+        // background-image: linear-gradient(to right, $grey 50%, transparent 0%), linear-gradient(to bottom, $grey 50%, transparent 0%), 
+        // linear-gradient(to right, $grey 50%, transparent 0%), linear-gradient(to bottom, $grey 50%, transparent 0%)
+        // background-position: top, right, bottom, left
+        // background-repeat: repeat-x, repeat-y
+        // background-size: 8px 1px, 1px 8px
 
     &.is-selected
         height: auto

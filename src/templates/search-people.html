@@ -5,15 +5,16 @@
 
 {% macro card1() %}
     <div class="people__card">
-        <div class="card-outline">
+        <div class="card-outline card-outline_people">
             <div class="card-outline__body-wide">
                 {{mixins.user({
+                    modifier: 'user_search',
                     image: 'avatar.jpg',
                     mainText: 'Asos Russia',
-                    secondaryText: '@asos.ru'
+                    secondaryText: '@asos_ru'
                 })}}
                 <p class="text-small text-muted">
-                    Добро пожаловать на официальную страницу Asos Russia, где вы откроете для себя мир моды онлайн.
+                    Добро пожаловать на официальную страницу ASOS Russia, где вы откроете для себя мир моды онлайн.
                 </p>
                 <button class="btn btn_blue btn_small">
                     Подписаться
@@ -24,14 +25,15 @@
 {% endmacro %}
 {% macro card2() %}
     <div class="people__card">
-        <div class="card-outline">
+        <div class="card-outline card-outline_people">
             <div class="card-outline__body-wide">
                 {{mixins.user({
+                    modifier: 'user_search',
                     mainText: 'Очень длинный никнейм очень высокого человека',
-                    secondaryText: '@asos.ru'
+                    secondaryText: '@asos_ru'
                 })}}
                 <p class="text-small text-muted">
-                    Добро пожаловать на официальную страницу Asos Russia, где вы откроете для себя мир моды онлайн.
+                    Добро пожаловать на официальную страницу ASOS Russia, где вы откроете для себя мир моды онлайн.
                 </p>
                 <button class="btn btn_blue btn_small">
                     Подписаться
@@ -42,11 +44,12 @@
 {% endmacro %}
 {% macro card3() %}
     <div class="people__card">
-        <div class="card-outline">
+        <div class="card-outline card-outline_people">
             <div class="card-outline__body-wide">
                 {{mixins.user({
+                    modifier: 'user_search',
                     mainText: 'Asos Russia',
-                    secondaryText: '@asos.ru'
+                    secondaryText: '@asos_ru'
                 })}}
                 <p class="text-small text-muted">
                     Короткое описание
@@ -60,11 +63,12 @@
 {% endmacro %}
 {% macro card4() %}
     <div class="people__card">
-        <div class="card-outline">
+        <div class="card-outline card-outline_people">
             <div class="card-outline__body-wide">
                 {{mixins.user({
+                    modifier: 'user_search',
                     mainText: 'Asos Russia',
-                    secondaryText: '@asos.ru'
+                    secondaryText: '@asos_ru'
                 })}}
                 <p class="text-small text-muted">
                     Добро пожаловать на официальную описание в две строчки

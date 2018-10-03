@@ -1,74 +1,112 @@
 .modal
-	&__search
-		margin-bottom: 36px
-	&__text
-		padding: 0 5px
-		font-size: 15px
-		color: $black
-		&_bold
-			font-weight: 500
-		&_left
-			text-align: left
-			padding: 0
-	&__image
-		+vcenter
-		width: 100%
-		padding-bottom: 100%
-		background-repeat: no-repeat
-		background-position: 50% 50%
-		background-size: contain
-		+rh(750)
-			position: static
-			transform: none
-		+sm
-			+rh(950)
-				position: static
-				transform: none
-				margin-top: 50px
-	&__products
-		display: flex
-		flex-wrap: wrap
-		margin: 24px -7px 0
-		padding-bottom: 100px
-		position: relative
-		.preview
-			flex: 0 0 50%
-			width: 50%
-			padding: 0 7px
-			margin-bottom: 16px
-			&__check
-				right: 18px
-	&__buttons
-		margin-top: 40px
-	&__buttons-bottom
-		position: fixed
-		bottom: 0
-		right: 0
-		width: 400px
-		padding-bottom: 20px
-		padding-top: 20px
-		background-color: $white
-		z-index: 10
-		+r(401)  
-			width: 100%
-			padding-bottom: 0
-	.card-form
-		margin-top: 24px
-		
+    &__search
+        margin-bottom: 36px
+    &__text
+        padding: 0 5px
+        font-size: 15px
+        color: $black
+        &_bold
+            font-weight: 500
+        &_left
+            text-align: left
+            padding: 0
+    &__image
+        +vcenter
+        width: 100%
+        padding-bottom: 100%
+        background-repeat: no-repeat
+        background-position: 50% 50%
+        background-size: contain
+        +rh(750)
+            position: static
+            transform: none
+        +sm
+            +rh(950)
+                position: static
+                transform: none
+                margin-top: 50px
+    &__products
+        display: flex
+        flex-wrap: wrap
+        margin: 24px -7px 0
+        padding-bottom: 100px
+        position: relative
+        .preview
+            flex: 0 0 50%
+            width: 50%
+            padding: 0 7px
+            margin-bottom: 16px
+            &__check
+                right: 18px
+    &__buttons
+        margin-top: 40px
+    &__buttons-bottom
+        position: fixed
+        bottom: 0
+        right: 0
+        width: 400px
+        padding-bottom: 20px
+        padding-top: 20px
+        background-color: $white
+        z-index: 10
+        +r(401)  
+            width: 100%
+            padding-bottom: 0
+    .card-form
+        margin-top: 24px
+        
 
 
 .card-form
-	// margin-top: 10px
-	padding-bottom: 110px
-	&__selection
-		margin-top: 44px
-	.modal__text
-		margin-bottom: 24px
-		
+    padding-bottom: 110px
+    &__selection
+        margin-top: 44px
+    .modal__text
+        margin-bottom: 24px
+
+        
 .collection-invitation
-	display: inline-block
-	margin: 0 auto
-	padding: 10px 10px 15px
-	border-radius: $radiusBig
-	background-color: $light-bg
-	text-align: left
+    display: inline-block
+    margin: 0 auto
+    padding: 10px 10px 15px
+    border-radius: $radiusBig
+    background-color: $light-bg
+    text-align: left
+
+.add-members
+    position: relative
+    &__row
+        +flex-beetween
+        flex-wrap: nowrap
+        margin-bottom: 10px
+        width: 100%
+        position: relative
+    &__input
+        flex-grow: 1
+        margin-left: 12px
+        font-weight: 500
+        font-size: 15px
+        font-family: $helv
+    &__next
+        +invis
+        .is-active & 
+            +vis
+            .btn-next
+                color: $blue
+                background-color: $light-blue
+    .dropdown_add-members
+        top: 65px
+        left: 0
+
+.subscribers
+    max-height: 600px
+    overflow-y: scroll
+    overflow-x: hidden
+    padding-right: 10px
+    &::-webkit-scrollbar-track
+        background-color: transparent
+    &::-webkit-scrollbar
+        width: 5px
+    &::-webkit-scrollbar-thumb:vertical
+        border-radius: 2px
+        background-color: $grey

@@ -2,7 +2,7 @@
 {% import "partials/_mixins.html" as mixins %}
 {% extends "layouts/_modal.html" %}
 
-{% set modalModifier = 'modal__container_w400 modal__container_pb-0' %}
+{% set modalModifier = 'modal__container_w400 modal__container_subscr' %}
 {% set modalTitle = 'Подписчики' %}
 {% set subcriptions = [
     {
@@ -79,12 +79,32 @@
                 text: "Подписаться"
             }
         ]
+    }, {
+        mainText: "Overflow text",
+        secondaryText: "@judio",
+        button: [
+            {
+                action: "subscr",
+                text: "Подписаться"
+            }
+        ]
+    }, {
+        mainText: "Long Overflow Text lorem lorem dsaaaaaaaaaa",
+        secondaryText: "@judio",
+        button: [
+            {
+                action: "subscr",
+                text: "Подписаться"
+            }
+        ]
     }
 
 ] %}
 
 {% block content %}
-    {% for item in subcriptions %}
-        {{mixins.user(item)}}
-    {% endfor %}
+    <div class="subscribers">
+        {% for item in subcriptions %}
+            {{mixins.user(item)}}
+        {% endfor %}
+    </div>
 {% endblock %}
