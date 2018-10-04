@@ -60,6 +60,7 @@
 	&__main
 		flex: 0 0 calc(100% - 55px)
 		padding-left: 16px
+		position: relative
 	&__title,
 	&__price
 		color: $black
@@ -71,4 +72,14 @@
 		line-height: 1.23
 		color: $grey
 		margin-top: 14px
-		
+	&__close
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		right: 0
+		background-color: transparent
+		color: $light-grey
+		.icon
+			font-size: 12px
+
+

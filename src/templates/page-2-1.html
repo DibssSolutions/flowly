@@ -92,12 +92,15 @@
                     </div>
                 </div>
             </main>
-            <div class="product-page__cards">
+        </div>
+        <div class="product-page__cards">
+            <div class="product-page__container container-inner">
                 <h3 class="product-page__cards-title">
                     Вам может также понравиться
                 </h3>
-                {% include "partials/_cards.html" %}
             </div>
+
+            {% include "partials/_cards.html" %}
         </div>
     </div>
 {% endblock %}

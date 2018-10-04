@@ -78,25 +78,26 @@
                         price: "10 495 ₽",
                         descr: "Куртка выполнена из денима @sdklimov. Подкладка выполнена из искусственного гладкого текстиля. Детали: отложной..."})}}
                     </div>
-
-                    <div class="chat__new-message">
-                        {{mixins.addBtn({modifier: "btn-add_dark"})}}
-                        <div class="card-outline chat__input-card">
-                            <div class="card-outline__header">
-                                <p>Здравствуйте!</p>
-                                <p>Мне интересен этот товар.</p>
-                            </div>
-                            <div class="card-outline__body">
-                                {{Product.product({
+                </div>
+                <div class="chat__new-message">
+                    {{mixins.addBtn({modifier: "btn-add_dark"})}}
+                    <div class="card-outline chat__input-card">
+                        <div class="card-outline__header">
+                            <textarea class="chat__textarea" style="height: 40px">Здравствуйте! 
+Мне интересен этот товар.</textarea>
+                        </div>
+                        <div class="card-outline__body">
+                            {{Product.product({
                                     image: 'collection-1.jpg',
                                     title: "Куртка джинсовая Wrangler", 
-                                    price: "10 495 ₽"
+                                    price: "10 495 ₽",
+                                    close: true
                                 })}}
-                            </div>
                         </div>
-                        {{mixins.upBtn()}}
                     </div>
+                    {{mixins.upBtn()}}
                 </div>
             </div>
         </div>
-    {% endblock %}
+    </div>
+{% endblock %}

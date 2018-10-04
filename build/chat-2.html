@@ -187,41 +187,47 @@
                   </section>
                 </div>
               </div>
-              <div class="chat__new-message">
-                <button class="btn-circle btn-add btn-add_dark" type="button">
-                  <svg class="icon icon-plus">
-                    <use xlink:href="img/sprite.svg#icon-plus"></use>
-                  </svg>
-                </button>
-                <div class="card-outline chat__input-card">
-                  <div class="card-outline__header">
-                    <p>Здравствуйте!</p>
-                    <p>Мне интересен этот товар.</p>
-                  </div>
-                  <div class="card-outline__body">
-                    <section class="product">
-                      <div class="product__image" style="background-image: url(./img/collection-1.jpg);"></div>
-                      <div class="product__main">
-                        <div class="product__title">Куртка джинсовая Wrangler</div>
-                        <div class="product__price">10 495 ₽</div>
-                      </div>
-                    </section>
-                  </div>
+            </div>
+            <div class="chat__new-message">
+              <button class="btn-circle btn-add btn-add_dark" type="button">
+                <svg class="icon icon-plus">
+                  <use xlink:href="img/sprite.svg#icon-plus"></use>
+                </svg>
+              </button>
+              <div class="card-outline chat__input-card">
+                <div class="card-outline__header">
+                  <textarea class="chat__textarea" style="height: 40px">Здравствуйте! 
+Мне интересен этот товар.</textarea>
                 </div>
-                <button class="btn-circle btn-up" type="button">
-                  <svg class="icon icon-arrow-up">
-                    <use xlink:href="img/sprite.svg#icon-arrow-up"></use>
-                  </svg>
-                </button>
+                <div class="card-outline__body">
+                  <section class="product">
+                    <div class="product__image" style="background-image: url(./img/collection-1.jpg);"></div>
+                    <div class="product__main">
+                      <div class="product__title">Куртка джинсовая Wrangler</div>
+                      <div class="product__price">10 495 ₽</div>
+                      <button type="button" class="product__close">
+                        <svg class="icon icon-close">
+                          <use xlink:href="img/sprite.svg#icon-close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </section>
+                </div>
               </div>
+              <button class="btn-circle btn-up" type="button">
+                <svg class="icon icon-arrow-up">
+                  <use xlink:href="img/sprite.svg#icon-arrow-up"></use>
+                </svg>
+              </button>
             </div>
           </div>
         </div>
       </div>
-      <!-- END content -->
-      <!-- BEGIN scripts -->
-      <script type="text/javascript" src="js/app.js"></script>
-      <!-- END scripts -->
+    </div>
+    <!-- END content -->
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- END scripts -->
   </body>
 
 </html>

@@ -36,6 +36,12 @@
             {% if props.details %}
                 <div class="product__details">{{props.details}}</div>
             {% endif %}
+            {% if props.close %}
+                <button type="button" class="product__close">
+                    {{ mixins.icon('close') }}
+                </button>
+            {% endif %}
+
         </div>
         {% if props.descr %}
             <div class="product__descr">{{props.descr}}</div>

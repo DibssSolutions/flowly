@@ -1,8 +1,8 @@
 import { buildIcon } from './_utils';
 import slick from 'slick-carousel';
 
-var prev = buildIcon('chevron-left');
-var next = buildIcon('chevron-right');
+var prev = buildIcon('chevron-left-1');
+var next = buildIcon('chevron-right-1');
 
 $(document).ready(function() {
 
@@ -86,8 +86,8 @@ $(document).ready(function() {
     autoplay: true,
     speed: 1000,
     infinite: false,
-    prevArrow: `<button class="btn-slider btn-single-slider_prev is-hidden" type="button">${prev}</button>`,
-    nextArrow: `<button class="btn-slider btn-single-slider_next" type="button">${next}</button>`,
+    prevArrow: `<button class="btn-slider btn-slider_prev btn-single-slider_prev is-hidden" type="button">${prev}</button>`,
+    nextArrow: `<button class="btn-slider btn-slider_next btn-single-slider_next" type="button">${next}</button>`,
     cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
     fade: true,
     responsive: [

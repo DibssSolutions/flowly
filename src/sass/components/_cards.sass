@@ -106,13 +106,15 @@
     text-align: left
     +sm 
         margin-bottom: 20px
-    +xs
         width: 145px
     &__image
-        max-width: 100%
-        display: block
         border-radius: $radiusBig
         margin-bottom: 8px
+        background-color: $extra-light-grey
+        overflow: hidden
+        img 
+            max-width: 100%
+            display: block
         +xs
             margin-bottom: 10px
     &__descr
@@ -153,6 +155,9 @@
 
 .cards-wrapper
     text-align: center
+    padding: 0 27px
+    +sm
+        padding: 0 10px
 
 .gutter-sizer
     width: 24px
@@ -164,12 +169,14 @@
 .grid
     margin: 0 auto
     display: inline-block
-    width: 960px
-    +md
-        width: 714px
-    +sm 
-        width: 464px
-    +xs
-        width: 300px
+//     // width: 100%
+//     width: 960px
+//     +md
+//         width: 714px
+//     +sm 
+//         width: 464px
+//     +xs
+//         width: 300px
+//         width: 100%
 
 

@@ -202,8 +202,10 @@
         color: $blue
 
 .btn-menu
+    position: relative
     .icon
         font-size: 4px
+        +vcenter
 
 .btn-share
     .icon
@@ -222,10 +224,14 @@
     background-color: rgba($black, 0.3)
     color: $white
     z-index: 50
+    &_prev .icon
+        margin-right: 2px
+    &_next .icon
+        margin-left: 2px
     &:hover
         background-color: rgba($black, 0.7)
     .icon 
-        font-size: 20px
+        font-size: 15px
         vertical-align: middle
 
 // =============== SOCIAL ===============

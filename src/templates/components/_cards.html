@@ -26,22 +26,27 @@
 
 {% macro productCard(props) %}
     <a href="#" class="card{% if props.modifier %} {{props.modifier}}{% endif %}">
-        <img class="card__image" src="img/cards/{{props.image}}" alt='prod'/>
-        <div class="card__descr">
-            {% if props.special %}
-                <span class="card__product_special">{{props.product | safe}}</span>
-                <span class="card__special">
-                    {{mixins.icon('special')}}
-                </span>
-            {% else %}
-                <span class="card__brand">{{props.brand | safe}}</span>
-                /
-                <span class="card__product">{{props.product | safe}}</span>
-            {% endif %}
+        <div class="card__image">
+            <img src="img/cards/{{props.image}}" alt='{{props.product}}'/>
         </div>
-        <div class="card__price">
-            {{props.price | safe}}
-            <span class="rouble">Ь</span>
+        <div class="card__bottom">
+            <div class="card__descr">
+                {% if props.special %}
+                    <span class="card__product_special">{{props.product | safe}}</span>
+                    <span class="card__special">
+                        {{mixins.icon('special')}}
+                    </span>
+                {% else %}
+                    <span class="card__brand">{{props.brand | safe}}</span>
+                    /
+                    <span class="card__product">{{props.product | safe}}</span>
+                {% endif %}
+            </div>
+            <div class="card__price">
+                {{props.price | safe}}
+                <span class="rouble">Ь</span>
+            </div>
         </div>
+
     </a>
 {% endmacro %}

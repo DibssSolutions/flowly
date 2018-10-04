@@ -8,7 +8,8 @@ $(document).ready(function() {
     itemSelector: '.js-masonry',
     columnWidth: '.card',
     gutter: '.gutter-sizer',
-    horizontalOrder: true
+    horizontalOrder: true,
+    isFitWidth: true
   });
 });
 
