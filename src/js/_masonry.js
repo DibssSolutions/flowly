@@ -8,13 +8,6 @@ $(document).ready(function() {
     itemSelector: '.js-masonry',
     columnWidth: '.card',
     gutter: '.gutter-sizer',
-    horizontalOrder: true,
-    isFitWidth: true
+    horizontalOrder: true
   });
 });
-
-// $('.grid').masonry({
-//   // options
-//   itemSelector: '.card',
-//   columnWidth: 200
-// });

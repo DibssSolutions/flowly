@@ -42,38 +42,38 @@ $(document).ready(function() {
   });
 
 
-  /* MOBILE ONLY SLIDER ON MAIN PAGE */
+  // /* MOBILE ONLY SLIDER ON MAIN PAGE */
 
-  var mobSlider = $('.js-mobile-slider');
+  // var mobSlider = $('.js-mobile-slider');
   
-  /* Initialisation */
-  function mobileOnlySlider() {
-    $(mobSlider).slick({
-      variableWidth: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      mobileFirst: true,
-      arrows: false,
-      responsive: [
-        {
-          breakpoint: 1022,
-          settings: 'unslick'
-        }
-      ]
-    });
-  }
+  // /* Initialisation */
+  // function mobileOnlySlider() {
+  //   $(mobSlider).slick({
+  //     variableWidth: true,
+  //     slidesToShow: 1,
+  //     slidesToScroll: 1,
+  //     mobileFirst: true,
+  //     arrows: false,
+  //     responsive: [
+  //       {
+  //         breakpoint: 1022,
+  //         settings: 'unslick'
+  //       }
+  //     ]
+  //   });
+  // }
 
-  $(window).on('load resize orientationchange', function(e) {
-    if (window.innerWidth < 1022) {
-      if (!$(mobSlider).hasClass('slick-initialized')) {
-        mobileOnlySlider();
-      }
-    } else {
-      if ($(mobSlider).hasClass('slick-initialized')) {
-        $(mobSlider).removeClass('slick-initialized');
-      }
-    }
-  });
+  // $(window).on('load resize orientationchange', function(e) {
+  //   if (window.innerWidth < 1022) {
+  //     if (!$(mobSlider).hasClass('slick-initialized')) {
+  //       mobileOnlySlider();
+  //     }
+  //   } else {
+  //     if ($(mobSlider).hasClass('slick-initialized')) {
+  //       $(mobSlider).removeClass('slick-initialized');
+  //     }
+  //   }
+  // });
 
 
   /* SINGLE IMAGE SLIDER */
@@ -119,4 +119,5 @@ $(document).ready(function() {
       ? $('.btn-single-slider_prev').addClass('is-hidden')
       : $('.btn-single-slider_prev').removeClass('is-hidden');
   });
+
 });

@@ -120,14 +120,28 @@
             </li>
         </ul>
         <!-- CARDS SLIDER (MOBILE ONLY SLIDER) -->
-        <div class="cards-slider js-mobile-slider">
+
+        {# <div class="image-cards">
+            {% for card in imageCards %}
+                <div class="image-cards__item">
+                    {{Cards.imageCard(card)}}
+                </div>
+            {% endfor %}
+        </div> #}
+        <div class="image-cards">
+            {% for card in imageCards %}
+                <div class="image-cards__item">
+                    {{Cards.imageCard(card)}}
+                </div>
+            {% endfor %}
+        </div>
+        {# <div class="cards-slider js-mobile-slider">
             {% for card in imageCards %}
                 <div class="card-slide">
                     {{Cards.imageCard(card)}}
                 </div>
             {% endfor %}
-        </div>
-
+        </div> #}
     </div>
 
     <div class="cards-bottom">

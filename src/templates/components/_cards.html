@@ -10,7 +10,9 @@
 {% macro imageCard(props) %}
     <a href="#" class="image-card" style="background-image: url(./img/cards/{{props.image}});">
         <div class="image-card__top">
-            <div class="image-card__type">{{props.type | safe}}</div>
+            {% if props.type %}
+                <div class="image-card__type">{{props.type | safe}}</div>
+            {% endif %} 
             <h4 class="image-card__title{% if props.titleModifier %} {{props.titleModifier}}{% endif %}">{{props.title | safe}}</h4>
         </div>
         {% if not props.withoutAvatars %}

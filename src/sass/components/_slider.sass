@@ -105,6 +105,10 @@
 
 .slider-single
     overflow: hidden
+    &:hover
+        .btn-single-slider_next,
+        .btn-single-slider_prev,
+            +vis
     +sm 
         overflow: visible
         padding-left: 11px
@@ -124,13 +128,15 @@
             margin: 0 6px
     .btn-single-slider
         &_prev
+            +invis
             left: 20px
-            transition: visibility 0.1s
+            transition: visibility $tr
             &.is-hidden
-                visibility: hidden
+                display: none
         &_next
+            +invis
             right: 20px
-            transition: visibility 0.1s
+            transition: visibility $tr
             &.is-hidden
-                visibility: hidden
+                display: none
                
