@@ -1,5 +1,5 @@
 {% set withoutHeader = true %}
-
+{% import "partials/_mixins.html" as mixins %}
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
@@ -10,25 +10,23 @@
                     {{mixins.deleteBtn({modifier: 'btn-delete_dark'})}}
                 </div>
                 <div class="product-page__slider">
-                    <div class="slider-single js-slider-single">
-                        <div>
-                            <div class="slider-single__slide" style="background-image: url(./img/slider_2/red_bg.jpg);"></div>
+                    <div class="slider-single js-slider-single swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="slider-single__slide swiper-slide" style="background-image: url(./img/slider_2/red_bg.jpg);"></div>
+
+                            <div class="slider-single__slide swiper-slide" style="background-image: url(./img/slider_2/card_img_2.jpg);"></div>
+
+                            <div class="slider-single__slide swiper-slide" style="background-image: url(./img/slider_2/card_img_6.jpg);"></div>
+
+                            <div class="slider-single__slide swiper-slide" style="background-image: url(./img/slider_2/red_bg.jpg);"></div>
+
+                            <div class="slider-single__slide swiper-slide" style="background-image: url(./img/slider_2/card_img_2.jpg);"></div>
+
+                            <div class="slider-single__slide swiper-slide" style="background-image: url(./img/slider_2/card_img_6.jpg);"></div>
                         </div>
-                        <div>
-                            <div class="slider-single__slide" style="background-image: url(./img/slider_2/card_img_2.jpg);"></div>
-                        </div>
-                        <div>
-                            <div class="slider-single__slide" style="background-image: url(./img/slider_2/card_img_6.jpg);"></div>
-                        </div>
-                        <div>
-                            <div class="slider-single__slide" style="background-image: url(./img/slider_2/red_bg.jpg);"></div>
-                        </div>
-                        <div>
-                            <div class="slider-single__slide" style="background-image: url(./img/slider_2/card_img_2.jpg);"></div>
-                        </div>
-                        <div>
-                            <div class="slider-single__slide" style="background-image: url(./img/slider_2/card_img_6.jpg);"></div>
-                        </div>
+                        <div class="swiper-pagination swiper-pagination-white"></div>
+                        <button class="btn-slider btn-slider_prev btn-single-slider btn-single-slider_prev" type="button">{{mixins.icon('chevron-left-1')}}</button>
+                        <button class="btn-slider btn-slider_next btn-single-slider btn-single-slider_next" type="button">{{mixins.icon('chevron-right-1')}}</button>
                     </div>
                 </div>
                 <div class="product-page__details">

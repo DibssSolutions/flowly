@@ -125,28 +125,22 @@
           </div>
         </div>
         <div class="company-page__container container-inner">
-          <div class="company-page__row">
-            <div class="company-page__col">
-              <div class="add-collection add-collection_full-width">
+          <div class="company-page__row js-collections-masonry">
+            <div class="gutter-sizer-wide"></div>
+            <div class="grid-sizer"></div>
+            <div class="company-page__col js-collections-item">
+              <a href="#" class="add-collection add-collection_full-width">
                 <div class="add-collection__bg">
-                  <button class="btn-circle btn-add btn-circle_big btn-add_blue" type="button">
+                  <span class="btn-circle btn-add btn-circle_big btn-add_blue" role="button">
                     <svg class="icon icon-plus">
                       <use xlink:href="img/sprite.svg#icon-plus"></use>
                     </svg>
-                  </button>
+                  </span>
                 </div>
                 <div class="add-collection__descr"> Создать коллекцию </div>
-              </div>
-              <a href="#" class="collection">
-                <div class="collection__images">
-                  <div class="collection__image collection__image_main" style="background-image: url(./img/cards/);"></div>
-                  <div class="collection__image collection__image_secondary" style="background-image: url(./img/cards/);"></div>
-                  <div class="collection__image collection__image_secondary" style="background-image: url(./img/cards/);"></div>
-                </div>
-                <div class="collection__title">На зиму</div>
               </a>
             </div>
-            <div class="company-page__col">
+            <div class="company-page__col js-collections-item">
               <a href="#" class="collection">
                 <div class="collection__images">
                   <div class="collection__image collection__image_main" style="background-image: url(./img/cards/card_img_1.jpg);"></div>
@@ -156,17 +150,27 @@
                 <div class="collection__title">Хочу на день рождения</div>
               </a>
             </div>
-            <div class="company-page__col tablet-hide">
+            <div class="company-page__col company-page__col_narrow js-collections-item">
               <a href="#" class="image-card" style="background-image: url(./img/cards/image-card_1.jpg);">
                 <div class="image-card__top">
                   <h4 class="image-card__title image-card__title_single">Кросовки <br> с улиц Лондана</h4>
                 </div>
               </a>
             </div>
+            <div class="company-page__col js-collections-item">
+              <a href="#" class="collection">
+                <div class="collection__images">
+                  <div class="collection__image collection__image_main" style="background-image: url(./img/cards/);"></div>
+                  <div class="collection__image collection__image_secondary" style="background-image: url(./img/cards/);"></div>
+                  <div class="collection__image collection__image_secondary" style="background-image: url(./img/cards/);"></div>
+                </div>
+                <div class="collection__title">На зиму</div>
+              </a>
+            </div>
           </div>
           <div class="company-page__private-collection">
-            <h3>Приватные коллекции</h3>
             <div class="company-page__row">
+              <h3>Приватные коллекции</h3>
               <div class="company-page__col">
                 <a href="#" class="collection">
                   <div class="collection__images">

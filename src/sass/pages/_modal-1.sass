@@ -78,7 +78,6 @@
     &__row
         +flex-beetween
         flex-wrap: nowrap
-        margin-bottom: 10px
         width: 100%
         position: relative
     &__input
@@ -97,12 +96,16 @@
     .dropdown_add-members
         top: 65px
         left: 0
+        right: 0
 
 .subscribers
     max-height: 600px
     overflow-y: scroll
     overflow-x: hidden
     padding-right: 10px
+    &:hover
+        &::-webkit-scrollbar-thumb:vertical
+            +vis
     &::-webkit-scrollbar-track
         background-color: transparent
     &::-webkit-scrollbar
@@ -110,3 +113,4 @@
     &::-webkit-scrollbar-thumb:vertical
         border-radius: 2px
         background-color: $grey
+        +invis

@@ -3,7 +3,7 @@
 	display: block
 	&:hover
 		.preview__check
-			opacity: 0.7
+			opacity: 1
 	input
 		position: absolute
 		left: 0
@@ -16,13 +16,15 @@
 				opacity: 1
 			~ .preview__main
 				+vis
+		&:hover 
+			~ .preview__main
+				+vis
 	&__image
 		display: block
 		padding-bottom: calc(100% + 3px)
 		border-radius: $radiusBig
 		+cover
 	&__check
-		// +flex-center
 		position: absolute
 		top: 10px
 		right: 10px

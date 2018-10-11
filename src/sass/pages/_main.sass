@@ -23,6 +23,9 @@
     padding: 7px 20px 6px
     border-radius: 18px
     line-height: 1.5
+    transition: color $tr
+    &:hover
+        color: $black
     +sm 
         padding: 7px 20px
     &.is-active
@@ -40,6 +43,9 @@
     color: #aaaaaa
     padding: 11px 20px 
     border-radius: 20px
+    transition: color $tr
+    &:hover
+        color: $black
     &.is-active
         background-color: $light-bg
         color: $black

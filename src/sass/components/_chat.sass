@@ -118,6 +118,7 @@
         margin-left: 10px
         font-weight: 500
         color: $grey
+        line-height: 12px
 
 .card-small
     padding: 15px
@@ -237,6 +238,9 @@
         max-height: 520px
         overflow-y: scroll
         overflow-x: hidden
+        &:hover
+            &::-webkit-scrollbar-thumb:vertical
+                +vis
         &::-webkit-scrollbar-track
             background-color: transparent
         &::-webkit-scrollbar
@@ -244,13 +248,14 @@
         &::-webkit-scrollbar-thumb:vertical
             border-radius: 2px
             background-color: $grey
+            +invis
         .card-small
             margin-top: 4px
 
     &__new-message
         display: flex
         align-items: flex-end
-        margin-top: 10px
+        margin-top: 5px
         padding-right: 10px
         +sm 
             margin-top: 10px
@@ -259,8 +264,10 @@
         height: 35px
         flex-grow: 1
         margin: 0 15px
-        color: $grey
+        color: $black
         font-weight: 400
+        &:placeholder
+            color: $grey
     &__input-card
         flex-grow: 1
         margin: 0 15px
