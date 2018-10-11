@@ -1,5 +1,6 @@
 import { buildIcon } from './_utils';
 import slick from 'slick-carousel';
+import Swiper from 'swiper';
 
 var prev = buildIcon('chevron-left-1');
 var next = buildIcon('chevron-right-1');
@@ -42,83 +43,73 @@ $(document).ready(function() {
 
   // /* MOBILE ONLY SLIDER ON MAIN PAGE */
 
-  // var mobSlider = $('.js-mobile-slider');
+  var mobSlider = $('.js-mobile-slider');
 
-  // /* Initialisation */
-  // function mobileOnlySlider() {
-  //   $(mobSlider).slick({
-  //     variableWidth: true,
-  //     slidesToShow: 1,
-  //     slidesToScroll: 1,
-  //     mobileFirst: true,
-  //     arrows: false,
-  //     responsive: [
-  //       {
-  //         breakpoint: 1022,
-  //         settings: 'unslick'
-  //       }
-  //     ]
-  //   });
-  // }
+  var mySwiper = undefined;
 
-  // $(window).on('load resize orientationchange', function(e) {
-  //   if (window.innerWidth < 1022) {
-  //     if (!$(mobSlider).hasClass('slick-initialized')) {
-  //       mobileOnlySlider();
-  //     }
-  //   } else {
-  //     if ($(mobSlider).hasClass('slick-initialized')) {
-  //       $(mobSlider).removeClass('slick-initialized');
-  //     }
-  //   }
-  // });
+  function initSwiper() {
+    var screenWidth = $(window).width();
+    if (screenWidth < 1022 && mySwiper === undefined) {
+      mySwiper = new Swiper(mobSlider, {
+        spaceBetween: 0,
+        slidesPerView: 'auto',
+        freeMode: true
+      });
+    } else if (screenWidth > 1023 && mySwiper !== undefined) {
+      mySwiper.destroy();
+      mySwiper = undefined;
+      jQuery('.swiper-wrapper').removeAttr('style');
+      jQuery('.swiper-slide').removeAttr('style');
+    }
+  }
 
-  /* SINGLE IMAGE SLIDER */
+  //Swiper plugin initialization
+  initSwiper();
+
+  //Swiper plugin initialization on window resize
+  $(window).on('load resize orientationchange', function() {
+    initSwiper();
+  });
 
   var singleSlider = $('.js-slider-single');
+  var singleSwiper = undefined;
 
-  $(singleSlider).on('init', function(event, slick) {
-    $(singleSlider).css({ opacity: '1', visibility: 'visible' });
-    $('.btn-single-slider_prev').hide();
-  });
-
-  $(singleSlider).slick({
-    slidesToShow: 1,
-    arrows: true,
-    autoplay: true,
-    speed: 1000,
-    infinite: false,
-    prevArrow: `<button class="btn-slider btn-slider_prev btn-single-slider_prev" type="button">${prev}</button>`,
-    nextArrow: `<button class="btn-slider btn-slider_next btn-single-slider_next" type="button">${next}</button>`,
-    cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
-    fade: true,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          variableWidth: true,
-          slidesToShow: 1,
-          arrows: false,
-          fade: false,
-          infinite: true,
-          centerMode: false
-        }
+  singleSwiper = new Swiper(singleSlider, {
+    slidesPerView: 1,
+    navigation: {
+      nextEl:
+        '.btn-slider.btn-slider_next.btn-single-slider.btn-single-slider_next',
+      prevEl:
+        '.btn-slider.btn-slider_prev.btn-single-slider.btn-single-slider_prev'
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    on: {
+      init: function() {
+        $(singleSlider).css({ opacity: '1', visibility: 'visible' });
+        $('.btn-single-slider_prev').hide();
       }
-    ]
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 'auto',
+        navigation: false,
+        spaceBetween: 10,
+        freeMode: true,
+        pagination: false
+      }
+    }
   });
 
-  /* SINGLE IMAGE SLIDER CHANGING VISIBILITY OF PREV/NEXT BUTTONS */
-  $(singleSlider).on('beforeChange', function(
-    event,
-    slick,
-    currentSlide,
-    nextSlide
-  ) {
-    nextSlide === slick.$slides.length - 1
-      ? $('.btn-single-slider_next').hide(400)
-      : $('.btn-single-slider_next').show(400);
-    nextSlide === 0
-      ? $('.btn-single-slider_prev').hide(400)
-      : $('.btn-single-slider_prev').show(400);
+  singleSwiper.on('slideChange', function() {
+    singleSwiper.activeIndex === 0
+      ? $('.btn-single-slider_prev').hide(200)
+      : $('.btn-single-slider_prev').show(200);
+
+    singleSwiper.activeIndex === singleSwiper.slides.length - 1
+      ? $('.btn-single-slider_next').hide(200)
+      : $('.btn-single-slider_next').show(200);
   });
 });
