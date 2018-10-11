@@ -25,41 +25,33 @@
         </div>
 
         {% if props.addMembers %}
-            <div class="card-small add-members">
-                        <label class="add-members__row {% if props.inputActive %}is-active{% endif %}">
-                        <span class="add-members__add">
-                            {{mixins.addBtn({modifier: 'btn-add_blue'})}}
-                        </span>
-                        <input class="add-members__input" value="{% if props.inputActive %}{% else %}Добавить участников{% endif %}" placeholder="Введите логин" {% if not props.inputActive %}readonly{% endif %}>
-                        <span class="add-members__next">
-                            {{mixins.nextBtn()}}
-                        </span>
-                    </label>
-                    {{mixins.user({image: "avatar.jpg", mainText: "Ivan Klimov", secondaryText: "Автор"})}}
-                    {% if props.dd %}
+            <div class="card-small card-small_border add-members">
+                <label class="add-members__row{% if props.inputActive %} is-active{% endif %}">
+                    <span class="add-members__add">
+                        {{mixins.addBtn({modifier: 'btn-add_blue'})}}
+                    </span>
+                    <input class="add-members__input" value="{% if props.inputActive %}{% else %}Добавить участников{% endif %}" placeholder="Введите логин" {% if not props.inputActive %} readonly="readonly" {% endif %}>
+                    <span class="add-members__next">
+                        {{mixins.nextBtn()}}
+                    </span>
+                </label>
+                {% if props.dd_single %}
+                    <div class="dropdown dropdown_add-members is-open">
+                        {{mixins.user({image: "avatar.jpg", mainText: "Ivan Klimov", secondaryText: "Автор"})}}
+                    </div>
+                {% endif %}
+                {% if props.dd %}
                     <div class="dropdown dropdown_add-members is-open">
                         {% set subcriptions = [
                             {
                                 modifier: "user_dropdown",
                                 image: "avatar.jpg",
                                 mainText: "Ivan Klimov",
-                                secondaryText: "@sdklimov",
-                                button: [
-                                    {
-                                        action: "subscr",
-                                        text: "Подписаться"
-                                    }
-                                ]
+                                secondaryText: "@sdklimov"
                             }, {
                                 modifier: "user_dropdown",
                                 mainText: "Валера Певнев",
-                                secondaryText: "@pevnev",
-                                button: [
-                                    {
-                                        action: "subscr",
-                                        text: "Подписаться"
-                                    }
-                                ]
+                                secondaryText: "@pevnev"
                             }
                         ] %}
                         {% for item in subcriptions %}

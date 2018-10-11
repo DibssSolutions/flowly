@@ -62,14 +62,16 @@
             <div class="cards-wrapper">
                 <div class="grid">
                     <div class="gutter-sizer"></div>
-                    <div class="add-collection js-masonry">
+                    <a href="#" class="add-collection js-masonry">
                         <div class="add-collection__bg">
-                            {{mixins.addBtn({modifier: 'btn-circle_big btn-add_blue'})}}
+                            <span class="btn-circle btn-add btn-circle_big btn-add_blue" role="button">
+                                {{ mixins.icon('plus') }}
+                            </span>
                         </div>
                         <div class="add-collection__descr">
                             Добавить товар
                         </div>
-                    </div>
+                    </a>
                     {% for item in productCards %}
                         {{Cards.productCard(item)}}
                     {% endfor %}

@@ -54,11 +54,11 @@
                     <span class="file__preview-text">Кросовки <br> с улиц Лондона</span>
                   </span>
                   <span class="file__add">
-                    <button class="btn-circle btn-add " type="button">
+                    <span class="btn-circle btn-add" role="button">
                       <svg class="icon icon-plus">
                         <use xlink:href="img/sprite.svg#icon-plus"></use>
                       </svg>
-                    </button>
+                    </span>
                     <span class="file__another-photo text-muted">Загрузить другое фото</span>
                   </span>
                 </div>
@@ -71,7 +71,7 @@
                 <span class="toggler__text">Видно только мне</span>
               </label>
             </div>
-            <div class="card-small add-members">
+            <div class="card-small card-small_border add-members">
               <label class="add-members__row is-active">
                 <span class="add-members__add">
                   <button class="btn-circle btn-add btn-add_blue" type="button">
@@ -89,13 +89,15 @@
                   </button>
                 </span>
               </label>
-              <div class="user">
-                <div class="user__avatar">
-                  <div class="avatar" style="background-image: url(./img/avatar.jpg)"></div>
-                </div>
-                <div class="user__text">
-                  <div class="user__main">Ivan Klimov</div>
-                  <div class="user__secondary">Автор</div>
+              <div class="dropdown dropdown_add-members is-open">
+                <div class="user">
+                  <div class="user__avatar">
+                    <div class="avatar" style="background-image: url(./img/avatar.jpg)"></div>
+                  </div>
+                  <div class="user__text">
+                    <div class="user__main">Ivan Klimov</div>
+                    <div class="user__secondary">Автор</div>
+                  </div>
                 </div>
               </div>
             </div>

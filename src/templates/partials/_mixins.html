@@ -104,7 +104,7 @@
                     <span class="file__preview-text">{{props.text | safe}}</span>
                 </span>
                 <span class="file__add">
-                    {{addBtn()}}
+                    <span class="btn-circle btn-add" role="button">{{ icon('plus') }}</span>
                     <span class="file__another-photo text-muted">Загрузить другое фото</span>
                 </span>
             </div>
@@ -113,7 +113,7 @@
     {% elif props.productAdd %}
         <label class="file file_dotted" for="add-cover">
             <span class="file__add">
-                {{addBtn()}}
+                <span class="btn-circle btn-add" role="button">{{ icon('plus') }}</span>
                 <span class="file__another-photo text-muted">Загрузить фото</span>
             </span>
             <input type="file" id="add-cover">

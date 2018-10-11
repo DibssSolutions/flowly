@@ -30,6 +30,11 @@
             background-color: $light-bgClicked
     &_dark-grey
         background-color: $mainGrey
+        transition: background-color 0.4s
+        &:hover
+            background-color: #a0a0a0
+        &:active
+            background-color: #969696
     &_light-grey
         background-color: $light-bg
         color: $grey
@@ -68,6 +73,9 @@
         padding: 11px 30px 
     &_link
         color: $grey
+        transition: color $tr
+        &:hover
+            color: $black
     &_link-collection
         padding: 12px 16px 12px
         margin-bottom: 9px

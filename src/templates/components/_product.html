@@ -31,7 +31,9 @@
         <div class="product__main">
             <div class="product__title">{{props.title}}</div>
             {% if props.price %}
-                <div class="product__price">{{props.price}}</div>
+                <div class="product__price">{{props.price}}
+                    <span class="rouble">Ь</span>
+                </div>
             {% endif %}
             {% if props.details %}
                 <div class="product__details">{{props.details}}</div>

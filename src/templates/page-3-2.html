@@ -1,4 +1,5 @@
 {% import "partials/_company.html" as Company %}
+{% import "partials/_mixins.html" as mixins %}
 {% import "components/_cards.html" as Cards %}
 {% import "components/_collection.html" as Collection %}
 
@@ -8,21 +9,22 @@
     <div class="company-page">
         {{Company.companyTop({activeSecond: true, followed: true})}}
         <div class="company-page__container container-inner">
-            <div class="company-page__row">
-                <div class="company-page__col">
-                    <div class="add-collection add-collection_full-width">
+            <div class="company-page__row js-collections-masonry">
+                <div class="gutter-sizer-wide"></div>
+                <div class="grid-sizer"></div>
+                <div class="company-page__col js-collections-item">
+                    <a href="#" class="add-collection add-collection_full-width">
                         <div class="add-collection__bg">
-                            {{mixins.addBtn({modifier: 'btn-circle_big btn-add_blue'})}}
+                            <span class="btn-circle btn-add btn-circle_big btn-add_blue" role="button">
+                                {{ mixins.icon('plus') }}
+                            </span>
                         </div>
                         <div class="add-collection__descr">
                             Создать коллекцию
                         </div>
-                    </div>
-                    {{Collection.collection({
-                                title: 'На зиму'
-                    })}}
+                    </a>
                 </div>
-                <div class="company-page__col">
+                <div class="company-page__col js-collections-item">
                     {{Collection.collection({
                                 imageMain: "card_img_1.jpg",
                                 imagesSecondary: ["card_img_3.jpg", "card_img_5.jpg"], 
@@ -30,7 +32,7 @@
                                 
                     })}}
                 </div>
-                <div class="company-page__col tablet-hide">
+                <div class="company-page__col company-page__col_narrow js-collections-item">
                     {{Cards.imageCard({
                             image: 'image-card_1.jpg', 
                             title: 'Кросовки <br> с улиц Лондана', 
@@ -38,10 +40,15 @@
                             withoutAvatars: true
                     })}}
                 </div>
+                <div class="company-page__col js-collections-item">
+                    {{Collection.collection({
+                        title: 'На зиму'
+                    })}}
+                </div>
             </div>
             <div class="company-page__private-collection">
-                <h3>Приватные коллекции</h3>
                 <div class="company-page__row">
+                <h3>Приватные коллекции</h3>
                     <div class="company-page__col">
                         {{Collection.collection({
                         imageMain: "card_img_1.jpg",
