@@ -118,6 +118,52 @@
             right: 20px
     .slider-wrapper
         transform: translate3d(0,0,0)
+    &__thumb
+        +cover
+        padding-bottom: calc(100% / 6 + 3px)
+        width: calc(100% / 6 + 3px)
+        border-radius: $radius
+    
+.slider-single-thumbs-wrapper
+    position: relative
+    margin-top: 16px
+    +sm 
+        display: none
+    .btn-slider-thumbs 
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        z-index: 100
+        transform-origin: center
+        &_prev
+            left: 25px
+            +md 
+                left: 0
+        &_next
+            right: 25px
+            +md 
+                right: 0
+        +sm 
+            display: none
+
+.slider-single-thumbs
+    position: relative
+    
+    &.swiper-container
+        width: calc(100% - 160px)
+        border-radius: $radius
+        +md    
+            width: calc(100% - 80px)
+    // .swiper-wrapper
+    //     padding-left: 10%
+    //     padding-right: 10%
+    .swiper-wrapper
+        // // transform: translate3d(50px,0,0) !important
+        
+        // overflow: hidden
+    .swiper-slide-thumb-active
+        opacity: 0.5
+    
 
 .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet
     margin: 0 5px
