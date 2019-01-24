@@ -80,7 +80,6 @@ $(document).ready(function() {
   function initThumbsSwiper() {
     var screenWidth = $(window).width();
     if (screenWidth > 768 && thumbsSwiper === undefined) {
-      console.log(333);
       thumbsSwiper = new Swiper(thumbsSlider, {
         slidesPerView: 5,
         // centeredSlides: true,
