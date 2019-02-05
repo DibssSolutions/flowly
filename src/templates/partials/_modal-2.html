@@ -26,7 +26,7 @@
 
         {% if props.addMembers %}
             <div class="card-small card-small_border add-members">
-                <label class="add-members__row{% if props.inputActive %} is-active{% endif %}">
+                <div class="add-members__row{% if props.inputActive %} is-active{% endif %}">
                     <span class="add-members__add">
                         {{mixins.addBtn({modifier: 'btn-add_blue'})}}
                     </span>
@@ -34,12 +34,8 @@
                     <span class="add-members__next">
                         {{mixins.nextBtn()}}
                     </span>
-                </label>
-                {% if props.dd_single %}
-                    <div class="dropdown dropdown_add-members is-open">
-                        {{mixins.user({image: "avatar.jpg", mainText: "Ivan Klimov", secondaryText: "Автор"})}}
-                    </div>
-                {% endif %}
+                </div>
+                {{mixins.user({image: "avatar.jpg", mainText: "Ivan Klimov", secondaryText: "Автор"})}}
                 {% if props.dd %}
                     <div class="dropdown dropdown_add-members is-open">
                         {% set subcriptions = [

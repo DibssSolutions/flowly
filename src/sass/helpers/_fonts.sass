@@ -5,33 +5,20 @@
 	font-family: $name
 	font-style: $style
 	font-weight: $weight
-	
-$helvLatin: 'HelveticaNeue'
-$helv: 'HelveticaNeueCyr'
-$rouble: 'PTRouble'
 
+$SanFrancisko: 'San Francisco'
+$rouble: 'PTRouble'
 
 @font-face
 	+fontdefault(normal, 500, $rouble)
 	+fontpath('PTRoubleSans', 'PTRoubleSans', PTRoubleSans)
-	
-@font-face
-	+fontdefault(normal, 400, $helvLatin)
-	+fontpath('HelveticaNeue', 'HelveticaNeue', HelveticaNeue)
-@font-face
-	+fontdefault(normal, 500, $helvLatin)
-	+fontpath('HelveticaNeue-Medium', 'HelveticaNeue-Medium', HelveticaNeue-Medium)
-@font-face
-	+fontdefault(normal, 700, $helvLatin)
-	+fontpath('HelveticaNeue-Bold', 'HelveticaNeue-Bold', HelveticaNeue-Bold)
 
 @font-face
-	+fontdefault(normal, 700, $helv)
-	+fontpath('HelveticaNeueCyr-Bold', 'HelveticaNeueCyr-Bold', HelveticaNeueCyr-Bold)
+	+fontdefault(normal, 700, $SanFrancisko)
+	+fontpath('SFUIText-Bold', 'SFUIText-Bold', SFUIText-Bold)
 @font-face
-	+fontdefault(normal, 500, $helv)
-	+fontpath('HelveticaNeueCyr-Medium', 'HelveticaNeueCyr-Medium', HelveticaNeueCyr-Medium)
+	+fontdefault(normal, 500, $SanFrancisko)
+	+fontpath('SFUIText-Medium', 'SFUIText-Medium', SFUIText-Medium)
 @font-face
-	+fontdefault(normal, 400, $helv)
-	+fontpath('HelveticaNeueCyr-Roman', 'HelveticaNeueCyr-Roman', HelveticaNeueCyr-Roman)
-	
+	+fontdefault(normal, 400, $SanFrancisko)
+	+fontpath('SFUIDisplay-Regular', 'SFUIDisplay-Regular', SFUIDisplay-Regular)

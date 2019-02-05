@@ -1,104 +1,151 @@
-{% set withoutHeader = true %}
-{% import "partials/_mixins.html" as mixins %}
-{% extends "layouts/_layout.html" %}
-
-{% block content %}
-    <div class="product-page">
-        <div class="product-page__container container-inner">
-            <main class="product-page__main product-page__main_modal">
-                <div class="product-page__close">
-                    {{mixins.deleteBtn({modifier: 'btn-delete_dark'})}}
-                </div>
-                <div class="product-page__slider">
-                    <div class="slider-single js-slider-single swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="slider-single__slide swiper-slide" style="background-image: url(./img/slider_2/red_bg.jpg);"></div>
-
-                            <div class="slider-single__slide swiper-slide" style="background-image: url(./img/slider_2/card_img_2.jpg);"></div>
-
-                            <div class="slider-single__slide swiper-slide" style="background-image: url(./img/slider_2/card_img_6.jpg);"></div>
-
-                            <div class="slider-single__slide swiper-slide" style="background-image: url(./img/slider_2/red_bg.jpg);"></div>
-
-                            <div class="slider-single__slide swiper-slide" style="background-image: url(./img/slider_2/card_img_2.jpg);"></div>
-
-                            <div class="slider-single__slide swiper-slide" style="background-image: url(./img/slider_2/card_img_6.jpg);"></div>
-                        </div>
-                        <div class="swiper-pagination swiper-pagination-white"></div>
-                        <button class="btn-slider btn-slider_prev btn-single-slider btn-single-slider_prev" type="button">{{mixins.icon('chevron-left-1')}}</button>
-                        <button class="btn-slider btn-slider_next btn-single-slider btn-single-slider_next" type="button">{{mixins.icon('chevron-right-1')}}</button>
-                    </div>
-                </div>
-                <div class="product-page__details">
-
-                    <h2 class="product-page__title">
-                        Champion / Свитшот Crewneck Sweatshirt
-                    </h2>
-                    <div class="product-page__price">
-                        10 594
-                        <span class="rouble">Ь</span>
-                    </div>
-                    <button class="btn btn_upper btn_middle-wide btn-watch btn_dark-grey btn_text-white btn_text-wide">
-                        <span>СМОТРЕТЬ</span>
-                        {{mixins.icon('arrow-up-right')}}
-                    </button>
-                    <div class="product-page__info text-small-muted">
-                        <p>Сохранено с сайта</p>
-                        <a href="#" class="text-medium">
-                            lamoda.ru
-                        </a>
-                    </div>
-                    <div class="product-page__descr">
-                        Куртка выполнена из денима
-                        <span class="text-tag">@sdklimov</span>
-                        . Подкладка выполнена из искусственного меха и гладкого текстиля. Детали: отложной воротник, застежка на пуговицы, четыре
-                        <span class="text-tag">#кармана</span>.
-                    </div>
-                    <div class="product-page__buttons">
-                        <button class="btn btn_blue btn_middle btn_collection-add">
-                            {{mixins.icon('special')}}
-                            <span class="btn_text">В коллекцию</span>
-                        </button>
-                        <button class="btn-circle btn-circle_big btn-share" type="button">
-                            {{mixins.icon('share')}}
-                        </button>
-                        {{mixins.menuBtn({modifier: 'btn-circle_big'})}}
-
-                    </div>
-                    <div class="product-page__followers">
-                        <div class="followers">
-                            <div class="followers__avatar avatar avatar_small" style="background-image: url(./img/avatar.jpg)"></div>
-                            <div class="followers__avatar avatar avatar_small"></div>
-                            <div class="followers__avatar avatar avatar_small"></div>
-                            <div class="followers__avatar avatar avatar_small"></div>
-                            <div class="followers__avatar avatar avatar_small"></div>
-                            <div class="followers__number">+39</div>
-                        </div>
-                    </div>
-                    <div class="product-page__user">
-                        {{mixins.user({
-                        modifier: "user_collection",
-                        image: "avatar.jpg",
-                        mainText: "Ivan Klimov <span class='text-muted text-regular'>сохранил в коллекцию</span>",
-                        secondaryText: "Мне на день рождения <span class='text-muted'>1 день назад</span>"
-                    })}}
-                    </div>
-                    <div class="product-page__views">
-                        <div class="text-small-muted">
-                            5 просмотров, 1 сегодня
-                        </div>
-                    </div>
-                </div>
-            </main>
-        </div>
-        <div class="product-page__cards">
-            <div class="product-page__container container-inner">
-                <h3 class="product-page__cards-title">
-                    Вам может также понравиться
-                </h3>
+{% set withoutHeader = true %} {% import "partials/_mixins.html" as mixins %} {% extends "layouts/_layout.html" %} {% block
+content %}
+<div class="product-page">
+    <div class="product-page__container container-inner">
+        <main class="product-page__main product-page__main_modal">
+            <div class="product-page__close">
+                {{mixins.deleteBtn({modifier: 'btn-delete_dark'})}}
             </div>
+            <div class="product-page__slider">
+                <div class="slider-single js-slider-single swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="slider-single__slide swiper-slide" style="background-image: url(./img/slider_2/red_bg.jpg);"></div>
 
-            {% include "partials/_cards.html" %}
-        </div>
+                        <div class="slider-single__slide swiper-slide" style="background-image: url(./img/slider_2/card_img_2.jpg);"></div>
+
+                        <div class="slider-single__slide swiper-slide" style="background-image: url(./img/slider_2/card_img_6.jpg);"></div>
+
+                        <div class="slider-single__slide swiper-slide" style="background-image: url(./img/slider_2/red_bg.jpg);"></div>
+
+                        <div class="slider-single__slide swiper-slide" style="background-image: url(./img/slider_2/card_img_2.jpg);"></div>
+
+                        <div class="slider-single__slide swiper-slide" style="background-image: url(./img/slider_2/card_img_6.jpg);"></div>
+
+                        <div class="slider-single__slide swiper-slide" style="background-image: url(./img/slider_2/red_bg.jpg);"></div>
+
+                        <div class="slider-single__slide swiper-slide" style="background-image: url(./img/slider_2/card_img_2.jpg);"></div>
+
+                        <div class="slider-single__slide swiper-slide" style="background-image: url(./img/slider_2/card_img_6.jpg);"></div>
+
+                        <div class="slider-single__slide swiper-slide" style="background-image: url(./img/slider_2/red_bg.jpg);"></div>
+
+                        <div class="slider-single__slide swiper-slide" style="background-image: url(./img/slider_2/card_img_2.jpg);"></div>
+
+                        <div class="slider-single__slide swiper-slide" style="background-image: url(./img/slider_2/card_img_6.jpg);"></div>
+                    </div>
+                    <div class="swiper-pagination swiper-pagination-white"></div>
+                    <button class="btn-slider btn-slider_prev btn-single-slider btn-single-slider_prev js-single-slider-prev" type="button">{{mixins.icon('chevron-left-1')}}</button>
+                    <button class="btn-slider btn-slider_next btn-single-slider btn-single-slider_next js-single-slider-next" type="button">{{mixins.icon('chevron-right-1')}}</button>
+                </div>
+                <div class="slider-single-thumbs-wrapper">
+                    <div class="slider-single-thumbs js-slider-single-thumbs swiper-container swiper-thumbs">
+                        <div class="swiper-wrapper">
+                            <div class="slider-single__thumb swiper-slide" style="background-image: url(./img/slider_2/red_bg.jpg);"></div>
+
+                            <div class="slider-single__thumb swiper-slide" style="background-image: url(./img/slider_2/card_img_2.jpg);"></div>
+
+                            <div class="slider-single__thumb swiper-slide" style="background-image: url(./img/slider_2/card_img_6.jpg);"></div>
+
+                            <div class="slider-single__thumb swiper-slide" style="background-image: url(./img/slider_2/red_bg.jpg);"></div>
+
+                            <div class="slider-single__thumb swiper-slide" style="background-image: url(./img/slider_2/card_img_2.jpg);"></div>
+
+                            <div class="slider-single__thumb swiper-slide" style="background-image: url(./img/slider_2/card_img_6.jpg);"></div>
+
+                            <div class="slider-single__thumb swiper-slide" style="background-image: url(./img/slider_2/red_bg.jpg);"></div>
+
+                            <div class="slider-single__thumb swiper-slide" style="background-image: url(./img/slider_2/card_img_2.jpg);"></div>
+
+                            <div class="slider-single__thumb swiper-slide" style="background-image: url(./img/slider_2/card_img_6.jpg);"></div>
+
+                            <div class="slider-single__thumb swiper-slide" style="background-image: url(./img/slider_2/red_bg.jpg);"></div>
+
+                            <div class="slider-single__thumb swiper-slide" style="background-image: url(./img/slider_2/card_img_2.jpg);"></div>
+
+                            <div class="slider-single__thumb swiper-slide" style="background-image: url(./img/slider_2/card_img_6.jpg);"></div>
+                        </div>
+
+                    </div>
+                    <button class="btn-slider-thumbs btn-slider-thumbs_prev js-single-slider-prev js-thumb-prev" type="button">
+                        <span class="btn-slider-thumbs__inner">
+                            {{mixins.icon('chevron-left-1')}}
+                        </span>
+                    </button>
+                    <button class="btn-slider-thumbs btn-slider-thumbs_next js-single-slider-next js-thumb-next" type="button">
+                        <span class="btn-slider-thumbs__inner">
+                            {{mixins.icon('chevron-right-1')}}
+                        </span>
+                    </button>
+                </div>
+
+            </div>
+            <div class="product-page__details">
+
+                <h2 class="product-page__title">
+                    Champion / Свитшот Crewneck Sweatshirt
+                </h2>
+                <div class="product-page__price">
+                    10 594
+                    <span class="rouble">Ь</span>
+                </div>
+                <button class="btn btn_upper btn_middle-wide btn-watch btn_dark-grey btn_text-white btn_text-wide">
+                    <span>СМОТРЕТЬ</span>
+                    {{mixins.icon('arrow-up-right')}}
+                </button>
+                <div class="product-page__info text-small-muted">
+                    <p>Сохранено с сайта</p>
+                    <a href="#" class="text-medium">
+                        lamoda.ru
+                    </a>
+                </div>
+                <div class="product-page__descr">
+                    Куртка выполнена из денима
+                    <span class="text-tag">@sdklimov</span>
+                    . Подкладка выполнена из искусственного меха и гладкого текстиля. Детали: отложной воротник, застежка на пуговицы, четыре
+                    <span class="text-tag">#кармана</span>.
+                </div>
+                <div class="product-page__buttons">
+                    <button class="btn btn_blue btn_middle btn_collection-add">
+                        {{mixins.icon('special')}}
+                        <span class="btn_text">В коллекцию</span>
+                    </button>
+                    <button class="btn-circle btn-circle_big btn-share" type="button">
+                        {{mixins.icon('share')}}
+                    </button>
+                    {{mixins.menuBtn({modifier: 'btn-circle_big'})}}
+
+                </div>
+                <div class="product-page__followers">
+                    <div class="followers">
+                        <div class="followers__avatar avatar avatar_small" style="background-image: url(./img/avatar.jpg)"></div>
+                        <div class="followers__avatar avatar avatar_small"></div>
+                        <div class="followers__avatar avatar avatar_small"></div>
+                        <div class="followers__avatar avatar avatar_small"></div>
+                        <div class="followers__avatar avatar avatar_small"></div>
+                        <div class="followers__number">+39</div>
+                    </div>
+                </div>
+                <div class="product-page__user">
+                    {{mixins.user({ modifier: "user_collection", image: "avatar.jpg", mainText: "Ivan Klimov
+                    <span class='text-muted text-regular'>сохранил в коллекцию</span>", secondaryText: "Мне на день рождения
+                    <span class='text-muted'>1 день назад</span>" })}}
+                </div>
+                <div class="product-page__views">
+                    <div class="text-small-muted">
+                        5 просмотров, 1 сегодня
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
+    <div class="product-page__cards">
+        <div class="product-page__container container-inner">
+            <h3 class="product-page__cards-title">
+                Вам может также понравиться
+            </h3>
+        </div>
+
+        {% include "partials/_cards.html" %}
+    </div>
+</div>
 {% endblock %}

@@ -6,27 +6,23 @@
 {% set imageCards = [
     {
         image: 'image-card_1.jpg', 
-        type: 'Коллекция',
         title: 'Кросовки <br> с улиц Лондана', 
         avatar: 'avatar_1.png', 
         name: 'Punkrock_pixxie'
     }, 
     {
         image: 'image-card_2.jpg', 
-        type: 'Коллекция',
         title: 'Кросовки <br> с улиц Лондана', 
         avatar: 'avatar_1.png', 
         name: 'Punkrock_pixxie'
     },
     {
         image: 'image-card_3.jpg', 
-        type: 'Коллекция',
         title: 'Кросовки <br> с улиц Лондана', 
         avatar: 'avatar_1.png', 
         name: 'Punkrock_pixxie'
     }
 ] %}
-
 {% block content %}
     <!-- MAIN SLIDER -->
     <div class="slider js-slider">
@@ -65,16 +61,18 @@
                 <a href="#" class="main-link">Популярное</a>
             </li>
         </ul>
-        <!-- CARDS SLIDER (MOBILE ONLY SLIDER) -->
-        <div class="cards-slider js-mobile-slider">
+    </div>
+    <!-- CARDS SLIDER (MOBILE ONLY SLIDER) -->
+
+    <div class="js-mobile-slider swiper-container cards-slider-container">
+        <div class="swiper-wrapper cards-slider">
             {% for card in imageCards %}
-                <div class="card-slide">
+                <div class="card-slide swiper-slide">
                     {{Cards.imageCard(card)}}
                 </div>
             {% endfor %}
         </div>
     </div>
-
 
     <div class="cards-bottom">
         {% include "partials/_cards.html" %}
