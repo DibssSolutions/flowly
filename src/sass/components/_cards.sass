@@ -115,7 +115,8 @@
         .card__btn
             +vis
         .card__image:after
-            +vis
+            opacity: 0.5
+            visibility: visible
     &__image
         border-radius: $radiusBig
         margin-bottom: 8px
@@ -130,7 +131,9 @@
         &:after
           content: ''
           +coverdiv
-          background-image: linear-gradient(to top, rgba($black, 0.4), transparent)
+          // background-image: linear-gradient(to top, rgba($black, 0.4), transparent)
+          background : radial-gradient(circle farthest-corner, rgba(51, 51, 51, 0) 27.87%, rgba(51, 51, 51, 0.5) 99.81%)
+          background-size: 50% 50%
           +invis
     &__descr
         position: relative
