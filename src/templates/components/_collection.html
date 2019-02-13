@@ -7,6 +7,7 @@
             <div class="collection__image collection__image_secondary" style="background-image: url(./img/cards/{{props.imagesSecondary[1]}});"></div>
         </div>
         <div class="collection__title">{{props.title}}</div>
+        <div class="collection__subtitle">{{props.subtitle or 'Куратор - Бодил Контрерас'}}</div>
         {% if props.private %}
             <div class="collection__private">
                 <span class="private-icon">{{ mixins.icon('lock') }}</span>

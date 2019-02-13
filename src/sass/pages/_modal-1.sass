@@ -47,14 +47,14 @@
         width: 400px
         padding-bottom: 20px
         padding-top: 20px
-        background-color: $white
+        background-color: #ffffffc4
         z-index: 10
-        +r(401)  
+        +r(401)
             width: 100%
             padding-bottom: 0
     .card-form
         margin-top: 24px
-        
+
 
 
 .card-form
@@ -80,12 +80,16 @@
         flex-wrap: nowrap
         width: 100%
         position: relative
+        margin-bottom: 10px
     &__input
         flex-grow: 1
         margin-left: 12px
         font-weight: 500
         font-size: 15px
-        font-family: $helv
+        font-family: $SanFrancisko
+    &__add 
+        position: relative
+        z-index: 100
     &__next
         +invis
         .is-active & 

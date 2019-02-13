@@ -24,7 +24,7 @@
 
 .image-card
     display: block
-    width: 300px 
+    width: 300px
     height: 350px
     padding: 25px 20px 20px
     +cover
@@ -69,9 +69,10 @@
             font-size: 11px
     &__title
         font-size: 25px
-        font-weight: 500
+        font-weight: 700
         line-height: 1.2
         letter-spacing: 0.02em
+        text-align: left
         +md 
             font-size: 22px
         +xs 
@@ -110,16 +111,27 @@
         margin-bottom: 20px
     +xs
         width: 145px
+    &:hover
+        .card__btn
+            +vis
+        .card__image:after
+            +vis
     &__image
         border-radius: $radiusBig
         margin-bottom: 8px
         background-color: $extra-light-grey
         overflow: hidden
+        position: relative
         img 
             max-width: 100%
             display: block
         +xs
             margin-bottom: 10px
+        &:after
+          content: ''
+          +coverdiv
+          background-image: linear-gradient(to top, rgba($black, 0.4), transparent)
+          +invis
     &__descr
         position: relative
         font-size: 13px
@@ -155,6 +167,13 @@
         font-size: 14px
         +xs
             font-size: 10px
+    &__btn
+        position: absolute
+        bottom: 10px
+        left: 50%
+        transform: translateX(-50%)
+        +invis
+        z-index: 3
 
 // ===== MASONRY =====
 

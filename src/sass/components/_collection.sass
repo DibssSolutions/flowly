@@ -2,6 +2,7 @@
     display: block
     position: relative
     width: 300px
+    text-align: left
     &__images
         display: flex
         flex-direction: column
@@ -22,13 +23,16 @@
             &:last-of-type
                 margin-top: 6px
     &__title
-        font-weight: 500
+        font-weight: 600
         line-height: 1.1
-        letter-spacing: 0.02em
-        margin-top: 4px
+        margin-top: 7px
+        margin-bottom: 4px
     &__private
         font-size: 0
         position: absolute
         bottom: -2px
         right: 0
-            
+    &__subtitle
+        font-size: 13px
+        color: $mainGrey
+        line-height: 1

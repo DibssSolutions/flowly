@@ -15,7 +15,7 @@ $(document).ready(function() {
 
   var msnry_2 = new Masonry(collections, {
     // options
-    itemSelector: '.company-page__col',
+    itemSelector: '.js-collections-item',
     columnWidth: '.grid-sizer',
     gutter: '.gutter-sizer-wide',
     horizontalOrder: true, 

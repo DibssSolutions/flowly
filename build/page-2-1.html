@@ -25,25 +25,64 @@
               </button>
             </div>
             <div class="product-page__slider">
-              <div class="slider-single js-slider-single">
-                <div>
-                  <div class="slider-single__slide" style="background-image: url(./img/slider_2/red_bg.jpg);"></div>
+              <div class="slider-single js-slider-single swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="slider-single__slide swiper-slide" style="background-image: url(./img/slider_2/red_bg.jpg);"></div>
+                  <div class="slider-single__slide swiper-slide" style="background-image: url(./img/slider_2/card_img_2.jpg);"></div>
+                  <div class="slider-single__slide swiper-slide" style="background-image: url(./img/slider_2/card_img_6.jpg);"></div>
+                  <div class="slider-single__slide swiper-slide" style="background-image: url(./img/slider_2/red_bg.jpg);"></div>
+                  <div class="slider-single__slide swiper-slide" style="background-image: url(./img/slider_2/card_img_2.jpg);"></div>
+                  <div class="slider-single__slide swiper-slide" style="background-image: url(./img/slider_2/card_img_6.jpg);"></div>
+                  <div class="slider-single__slide swiper-slide" style="background-image: url(./img/slider_2/red_bg.jpg);"></div>
+                  <div class="slider-single__slide swiper-slide" style="background-image: url(./img/slider_2/card_img_2.jpg);"></div>
+                  <div class="slider-single__slide swiper-slide" style="background-image: url(./img/slider_2/card_img_6.jpg);"></div>
+                  <div class="slider-single__slide swiper-slide" style="background-image: url(./img/slider_2/red_bg.jpg);"></div>
+                  <div class="slider-single__slide swiper-slide" style="background-image: url(./img/slider_2/card_img_2.jpg);"></div>
+                  <div class="slider-single__slide swiper-slide" style="background-image: url(./img/slider_2/card_img_6.jpg);"></div>
                 </div>
-                <div>
-                  <div class="slider-single__slide" style="background-image: url(./img/slider_2/card_img_2.jpg);"></div>
+                <div class="swiper-pagination swiper-pagination-white"></div>
+                <button class="btn-slider btn-slider_prev btn-single-slider btn-single-slider_prev js-single-slider-prev" type="button">
+                  <svg class="icon icon-chevron-left-1">
+                    <use xlink:href="img/sprite.svg#icon-chevron-left-1"></use>
+                  </svg>
+                </button>
+                <button class="btn-slider btn-slider_next btn-single-slider btn-single-slider_next js-single-slider-next" type="button">
+                  <svg class="icon icon-chevron-right-1">
+                    <use xlink:href="img/sprite.svg#icon-chevron-right-1"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="slider-single-thumbs-wrapper">
+                <div class="slider-single-thumbs js-slider-single-thumbs swiper-container swiper-thumbs">
+                  <div class="swiper-wrapper">
+                    <div class="slider-single__thumb swiper-slide" style="background-image: url(./img/slider_2/red_bg.jpg);"></div>
+                    <div class="slider-single__thumb swiper-slide" style="background-image: url(./img/slider_2/card_img_2.jpg);"></div>
+                    <div class="slider-single__thumb swiper-slide" style="background-image: url(./img/slider_2/card_img_6.jpg);"></div>
+                    <div class="slider-single__thumb swiper-slide" style="background-image: url(./img/slider_2/red_bg.jpg);"></div>
+                    <div class="slider-single__thumb swiper-slide" style="background-image: url(./img/slider_2/card_img_2.jpg);"></div>
+                    <div class="slider-single__thumb swiper-slide" style="background-image: url(./img/slider_2/card_img_6.jpg);"></div>
+                    <div class="slider-single__thumb swiper-slide" style="background-image: url(./img/slider_2/red_bg.jpg);"></div>
+                    <div class="slider-single__thumb swiper-slide" style="background-image: url(./img/slider_2/card_img_2.jpg);"></div>
+                    <div class="slider-single__thumb swiper-slide" style="background-image: url(./img/slider_2/card_img_6.jpg);"></div>
+                    <div class="slider-single__thumb swiper-slide" style="background-image: url(./img/slider_2/red_bg.jpg);"></div>
+                    <div class="slider-single__thumb swiper-slide" style="background-image: url(./img/slider_2/card_img_2.jpg);"></div>
+                    <div class="slider-single__thumb swiper-slide" style="background-image: url(./img/slider_2/card_img_6.jpg);"></div>
+                  </div>
                 </div>
-                <div>
-                  <div class="slider-single__slide" style="background-image: url(./img/slider_2/card_img_6.jpg);"></div>
-                </div>
-                <div>
-                  <div class="slider-single__slide" style="background-image: url(./img/slider_2/red_bg.jpg);"></div>
-                </div>
-                <div>
-                  <div class="slider-single__slide" style="background-image: url(./img/slider_2/card_img_2.jpg);"></div>
-                </div>
-                <div>
-                  <div class="slider-single__slide" style="background-image: url(./img/slider_2/card_img_6.jpg);"></div>
-                </div>
+                <button class="btn-slider-thumbs btn-slider-thumbs_prev js-single-slider-prev js-thumb-prev" type="button">
+                  <span class="btn-slider-thumbs__inner">
+                    <svg class="icon icon-chevron-left-1">
+                      <use xlink:href="img/sprite.svg#icon-chevron-left-1"></use>
+                    </svg>
+                  </span>
+                </button>
+                <button class="btn-slider-thumbs btn-slider-thumbs_next js-single-slider-next js-thumb-next" type="button">
+                  <span class="btn-slider-thumbs__inner">
+                    <svg class="icon icon-chevron-right-1">
+                      <use xlink:href="img/sprite.svg#icon-chevron-right-1"></use>
+                    </svg>
+                  </span>
+                </button>
               </div>
             </div>
             <div class="product-page__details">
@@ -116,6 +155,14 @@
               <a href="#" class="card js-masonry">
                 <div class="card__image">
                   <img src="img/cards/card_img_1.jpg" alt='Куртка джинсовая Wrangler' />
+                  <div class="card__btn">
+                    <span role="button" class="btn btn_light-grey btn_save-card">
+                      <svg class="icon icon-special-filled">
+                        <use xlink:href="img/sprite.svg#icon-special-filled"></use>
+                      </svg>
+                      <span class="btn__text">Сохранить</span>
+                    </span>
+                  </div>
                 </div>
                 <div class="card__bottom">
                   <div class="card__descr">
@@ -133,6 +180,14 @@
               <a href="#" class="card js-masonry">
                 <div class="card__image">
                   <img src="img/cards/card_img_2.jpg" alt='Свитшот Crewneck Sweatshirt' />
+                  <div class="card__btn">
+                    <span role="button" class="btn btn_light-grey btn_save-card">
+                      <svg class="icon icon-special-filled">
+                        <use xlink:href="img/sprite.svg#icon-special-filled"></use>
+                      </svg>
+                      <span class="btn__text">Сохранить</span>
+                    </span>
+                  </div>
                 </div>
                 <div class="card__bottom">
                   <div class="card__descr">
@@ -145,6 +200,14 @@
               <a href="#" class="card js-masonry">
                 <div class="card__image">
                   <img src="img/cards/card_img_3.jpg" alt='Рубашка - DAHM' />
+                  <div class="card__btn">
+                    <span role="button" class="btn btn_light-grey btn_save-card">
+                      <svg class="icon icon-special-filled">
+                        <use xlink:href="img/sprite.svg#icon-special-filled"></use>
+                      </svg>
+                      <span class="btn__text">Сохранить</span>
+                    </span>
+                  </div>
                 </div>
                 <div class="card__bottom">
                   <div class="card__descr">
@@ -157,6 +220,14 @@
               <a href="#" class="card js-masonry">
                 <div class="card__image">
                   <img src="img/cards/card_img_4.jpg" alt='Рубашка - DAHM' />
+                  <div class="card__btn">
+                    <span role="button" class="btn btn_light-grey btn_save-card">
+                      <svg class="icon icon-special-filled">
+                        <use xlink:href="img/sprite.svg#icon-special-filled"></use>
+                      </svg>
+                      <span class="btn__text">Сохранить</span>
+                    </span>
+                  </div>
                 </div>
                 <div class="card__bottom">
                   <div class="card__descr">
@@ -169,6 +240,14 @@
               <a href="#" class="card js-masonry">
                 <div class="card__image">
                   <img src="img/cards/card_img_5.jpg" alt='Рубашка - DAHM' />
+                  <div class="card__btn">
+                    <span role="button" class="btn btn_light-grey btn_save-card">
+                      <svg class="icon icon-special-filled">
+                        <use xlink:href="img/sprite.svg#icon-special-filled"></use>
+                      </svg>
+                      <span class="btn__text">Сохранить</span>
+                    </span>
+                  </div>
                 </div>
                 <div class="card__bottom">
                   <div class="card__descr">
@@ -181,6 +260,14 @@
               <a href="#" class="card js-masonry">
                 <div class="card__image">
                   <img src="img/cards/card_img_6.jpg" alt='Рубашка - DAHM' />
+                  <div class="card__btn">
+                    <span role="button" class="btn btn_light-grey btn_save-card">
+                      <svg class="icon icon-special-filled">
+                        <use xlink:href="img/sprite.svg#icon-special-filled"></use>
+                      </svg>
+                      <span class="btn__text">Сохранить</span>
+                    </span>
+                  </div>
                 </div>
                 <div class="card__bottom">
                   <div class="card__descr">
@@ -193,6 +280,14 @@
               <a href="#" class="card js-masonry">
                 <div class="card__image">
                   <img src="img/cards/card_img_7.jpg" alt='Рубашка - DAHM' />
+                  <div class="card__btn">
+                    <span role="button" class="btn btn_light-grey btn_save-card">
+                      <svg class="icon icon-special-filled">
+                        <use xlink:href="img/sprite.svg#icon-special-filled"></use>
+                      </svg>
+                      <span class="btn__text">Сохранить</span>
+                    </span>
+                  </div>
                 </div>
                 <div class="card__bottom">
                   <div class="card__descr">
@@ -205,6 +300,14 @@
               <a href="#" class="card js-masonry">
                 <div class="card__image">
                   <img src="img/cards/card_img_8.jpg" alt='Рубашка - DAHM' />
+                  <div class="card__btn">
+                    <span role="button" class="btn btn_light-grey btn_save-card">
+                      <svg class="icon icon-special-filled">
+                        <use xlink:href="img/sprite.svg#icon-special-filled"></use>
+                      </svg>
+                      <span class="btn__text">Сохранить</span>
+                    </span>
+                  </div>
                 </div>
                 <div class="card__bottom">
                   <div class="card__descr">
@@ -217,6 +320,14 @@
               <a href="#" class="card js-masonry">
                 <div class="card__image">
                   <img src="img/cards/card_img_9.png" alt='Рубашка - DAHM' />
+                  <div class="card__btn">
+                    <span role="button" class="btn btn_light-grey btn_save-card">
+                      <svg class="icon icon-special-filled">
+                        <use xlink:href="img/sprite.svg#icon-special-filled"></use>
+                      </svg>
+                      <span class="btn__text">Сохранить</span>
+                    </span>
+                  </div>
                 </div>
                 <div class="card__bottom">
                   <div class="card__descr">
@@ -229,6 +340,14 @@
               <a href="#" class="card js-masonry">
                 <div class="card__image">
                   <img src="img/cards/card_img_1.jpg" alt='Куртка джинсовая Wrangler' />
+                  <div class="card__btn">
+                    <span role="button" class="btn btn_light-grey btn_save-card">
+                      <svg class="icon icon-special-filled">
+                        <use xlink:href="img/sprite.svg#icon-special-filled"></use>
+                      </svg>
+                      <span class="btn__text">Сохранить</span>
+                    </span>
+                  </div>
                 </div>
                 <div class="card__bottom">
                   <div class="card__descr">
@@ -246,6 +365,14 @@
               <a href="#" class="card js-masonry">
                 <div class="card__image">
                   <img src="img/cards/card_img_2.jpg" alt='Свитшот Crewneck Sweatshirt' />
+                  <div class="card__btn">
+                    <span role="button" class="btn btn_light-grey btn_save-card">
+                      <svg class="icon icon-special-filled">
+                        <use xlink:href="img/sprite.svg#icon-special-filled"></use>
+                      </svg>
+                      <span class="btn__text">Сохранить</span>
+                    </span>
+                  </div>
                 </div>
                 <div class="card__bottom">
                   <div class="card__descr">
@@ -258,6 +385,14 @@
               <a href="#" class="card js-masonry">
                 <div class="card__image">
                   <img src="img/cards/card_img_3.jpg" alt='Рубашка - DAHM' />
+                  <div class="card__btn">
+                    <span role="button" class="btn btn_light-grey btn_save-card">
+                      <svg class="icon icon-special-filled">
+                        <use xlink:href="img/sprite.svg#icon-special-filled"></use>
+                      </svg>
+                      <span class="btn__text">Сохранить</span>
+                    </span>
+                  </div>
                 </div>
                 <div class="card__bottom">
                   <div class="card__descr">
@@ -270,6 +405,14 @@
               <a href="#" class="card js-masonry">
                 <div class="card__image">
                   <img src="img/cards/card_img_4.jpg" alt='Рубашка - DAHM' />
+                  <div class="card__btn">
+                    <span role="button" class="btn btn_light-grey btn_save-card">
+                      <svg class="icon icon-special-filled">
+                        <use xlink:href="img/sprite.svg#icon-special-filled"></use>
+                      </svg>
+                      <span class="btn__text">Сохранить</span>
+                    </span>
+                  </div>
                 </div>
                 <div class="card__bottom">
                   <div class="card__descr">
@@ -282,6 +425,14 @@
               <a href="#" class="card js-masonry">
                 <div class="card__image">
                   <img src="img/cards/card_img_5.jpg" alt='Рубашка - DAHM' />
+                  <div class="card__btn">
+                    <span role="button" class="btn btn_light-grey btn_save-card">
+                      <svg class="icon icon-special-filled">
+                        <use xlink:href="img/sprite.svg#icon-special-filled"></use>
+                      </svg>
+                      <span class="btn__text">Сохранить</span>
+                    </span>
+                  </div>
                 </div>
                 <div class="card__bottom">
                   <div class="card__descr">
@@ -294,6 +445,14 @@
               <a href="#" class="card js-masonry">
                 <div class="card__image">
                   <img src="img/cards/card_img_6.jpg" alt='Рубашка - DAHM' />
+                  <div class="card__btn">
+                    <span role="button" class="btn btn_light-grey btn_save-card">
+                      <svg class="icon icon-special-filled">
+                        <use xlink:href="img/sprite.svg#icon-special-filled"></use>
+                      </svg>
+                      <span class="btn__text">Сохранить</span>
+                    </span>
+                  </div>
                 </div>
                 <div class="card__bottom">
                   <div class="card__descr">
@@ -306,6 +465,14 @@
               <a href="#" class="card js-masonry">
                 <div class="card__image">
                   <img src="img/cards/card_img_7.jpg" alt='Рубашка - DAHM' />
+                  <div class="card__btn">
+                    <span role="button" class="btn btn_light-grey btn_save-card">
+                      <svg class="icon icon-special-filled">
+                        <use xlink:href="img/sprite.svg#icon-special-filled"></use>
+                      </svg>
+                      <span class="btn__text">Сохранить</span>
+                    </span>
+                  </div>
                 </div>
                 <div class="card__bottom">
                   <div class="card__descr">
@@ -318,6 +485,14 @@
               <a href="#" class="card js-masonry">
                 <div class="card__image">
                   <img src="img/cards/card_img_8.jpg" alt='Рубашка - DAHM' />
+                  <div class="card__btn">
+                    <span role="button" class="btn btn_light-grey btn_save-card">
+                      <svg class="icon icon-special-filled">
+                        <use xlink:href="img/sprite.svg#icon-special-filled"></use>
+                      </svg>
+                      <span class="btn__text">Сохранить</span>
+                    </span>
+                  </div>
                 </div>
                 <div class="card__bottom">
                   <div class="card__descr">
@@ -330,6 +505,14 @@
               <a href="#" class="card js-masonry">
                 <div class="card__image">
                   <img src="img/cards/card_img_9.png" alt='Рубашка - DAHM' />
+                  <div class="card__btn">
+                    <span role="button" class="btn btn_light-grey btn_save-card">
+                      <svg class="icon icon-special-filled">
+                        <use xlink:href="img/sprite.svg#icon-special-filled"></use>
+                      </svg>
+                      <span class="btn__text">Сохранить</span>
+                    </span>
+                  </div>
                 </div>
                 <div class="card__bottom">
                   <div class="card__descr">

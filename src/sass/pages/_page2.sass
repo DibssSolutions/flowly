@@ -50,12 +50,12 @@
         line-height: 1.25
         font-weight: 400
         margin-bottom: 4px
-        margin-top: 36px
+        // margin-top: 36px
         padding-right: 50px
         +md 
-            margin-top: 26px
+            // margin-top: 26px
         +xs
-            margin-top: 20px
+            // margin-top: 20px
             padding-right: 30px
     &__price
         font-weight: 700
@@ -66,46 +66,75 @@
             font-weight: 500
     &__info
         margin-bottom: 22px
-        margin-top: 14px
-        p 
-            margin-bottom: 2px
+        margin-top: 12px
+        // p 
+        //     margin-bottom: 2px
+    &__date
+      margin-top: 4px
+    &__size
+      margin-top: 10px
     &__buttons
-        margin-top: 24px
+        margin-top: 29px
         font-size: 0
         & > *
             margin-right: 10px
+            margin-bottom: 10px
     &__descr
         line-height: 1.35
+    .btn
+        + .product-page__descr
+            margin-top: 26px
     &__followers
-        margin-top: 14px
         margin-bottom: 24px
     &__user
-        .user
-            margin-bottom: 16px
-            +xs
-                align-items: flex-start
-                margin-bottom: 6px
-                .user__text
-                    max-width: 200px
-                .user__main,
-                .user__secondary
-                    white-space: pre-wrap
-                    display: inline
-                    padding-right: 0
+        margin-top: 26px
+        margin-bottom: 24px
+        +xs
+          margin-top: 20px
+          margin-bottom: 16px
+        // .user
+        //     margin-bottom: 16px
+        //     +xs
+        //         align-items: flex-start
+        //         margin-bottom: 6px
+        //         .user__text
+        //             max-width: 200px
+        //         .user__main,
+        //         .user__secondary
+        //             white-space: pre-wrap
+        //             display: inline
+        //             padding-right: 0
     &__cards-title
         font-size: 20px
-        font-weight: 500
+        font-weight: 600
         line-height: 1.25
         margin-bottom: 33px
         text-align: left
         +xs
-            max-width: 175px
+            // max-width: 175px
             margin-bottom: 23px
-
     &__cards
         margin: 0 auto
         text-align: center
-            
+    &__collections
+        width: 960px
+        display: inline-block
+        margin-bottom: 25px
+        +md
+            width: 630px
+        +sm
+            width: 300px
+    &__collection
+        width: 300px
+        margin-bottom: 40px
+        // height: 300px
+        &_narrow
+            +r(900)
+                width: 266px
+        +xs
+            margin-bottom: 26px
+    
+
 .views-details
     color: $grey
     font-size: 13px
