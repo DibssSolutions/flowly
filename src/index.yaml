@@ -9,6 +9,10 @@ PageList:
   ready: 50
 - file: page-2-2.html
   ready: 50
+- file: page-2-1_v2.html
+  ready: 50
+- file: page-2-2_v2.html
+  ready: 50
 - file: page-3-1.html
   ready: 50
 - file: page-3-2.html

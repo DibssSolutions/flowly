@@ -30,6 +30,12 @@
     <a href="#" class="card{% if props.modifier %} {{props.modifier}}{% endif %}">
         <div class="card__image">
             <img src="img/cards/{{props.image}}" alt='{{props.product}}'/>
+            <div class="card__btn">
+                <span role="button" class="btn btn_light-grey btn_save-card">
+                    {{mixins.icon('special-filled')}}
+                    <span class="btn__text">Сохранить</span>
+                </span>
+            </div>
         </div>
         <div class="card__bottom">
             <div class="card__descr">
