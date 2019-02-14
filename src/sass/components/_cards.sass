@@ -107,6 +107,7 @@
     width: 222px
     margin-bottom: 26px
     text-align: left
+    overflow: hidden
     +sm 
         margin-bottom: 20px
     +xs
@@ -157,6 +158,15 @@
             font-size: 11px
     &__bottom
         width: 100%
+        display: block
+        position: relative
+        &:before
+          content: ''
+          position: absolute
+          bottom: 100%
+          left: 0
+          height: 500px
+          width: 100%
     &__special
         position: absolute
         right: 0

@@ -27,17 +27,17 @@
 {% endmacro %}
 
 {% macro productCard(props) %}
-    <a href="#" class="card{% if props.modifier %} {{props.modifier}}{% endif %}">
+    <div class="card{% if props.modifier %} {{props.modifier}}{% endif %}">
         <div class="card__image">
             <img src="img/cards/{{props.image}}" alt='{{props.product}}'/>
             <div class="card__btn">
-                <span role="button" class="btn btn_light-grey btn_save-card js-add-collection-btn">
+                <button type="button" class="btn btn_light-grey btn_save-card js-add-collection-btn">
                     {{mixins.icon('special-filled')}}
                     <span class="btn__text">Сохранить</span>
-                </span>
+                </button>
             </div>
         </div>
-        <div class="card__bottom">
+        <a href="#" class="card__bottom">
             <div class="card__descr">
                 {% if props.special %}
                     <span class="card__product_special">{{props.product | safe}}</span>
@@ -54,7 +54,6 @@
                 {{props.price | safe}}
                 <span class="rouble">Ь</span>
             </div>
-        </div>
-
-    </a>
+          </a>
+    </div>
 {% endmacro %}
